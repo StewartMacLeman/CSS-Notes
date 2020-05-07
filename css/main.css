@@ -1,3 +1,65 @@
 body {
-  background-color: tomato;
+  font-family: Verdana, Helvetica, sans-serif;
+  font-size: 100%;
+  color: black;
+  background-color: palegreen;
+  margin: 0 auto;
+  padding: 0;
+}
+header { margin: 0 auto;
+}
+/* Fonts-------------------------------------- */
+/* 1em = 16px (approx.) */
+h1 {
+  font-size: 4em;
+  color: darkgreen;
+  margin: 0 auto;
+  padding: 10px;
+  text-align: center;
+}
+p {
+  font-size: 2em;
+  color: darkgreen;
+  margin: 20px auto;
+  text-align: center;
+}
+/* Home Page------------------------------------- */
+
+#home_page_image_container {
+  font-size: 1.5em;
+  width: 60vw;
+  height: 60vh;
+  margin: 0 auto;
+  background-color: linen;
+  border: 2px solid white;
+  overflow-x: scroll;
+}
+#home_page_image_container:hover {
+  border: 2px solid black;
+  cursor: pointer;
+}
+#home_page_image_container h2 {
+  font-size: 1.5em;
+  text-decoration: underline;
+  margin: 5px 0px 25px 0px;
+  padding: 2px;
+  text-align: center;
+}
+#home_page_image_container h3 {
+  font-size: 1.25em;
+  margin: 10px auto;
+  padding: 2px;
+  text-align: left;
+}
+.imageHomePage{
+  position: relative;
+  width: 60%;
+  height: 60%;
+  margin: 10px auto;
+  border: 2px solid black;
+}
+img {
+  position: absolute;
+  /* width: 100%;
+  height: 100%; */
 }
