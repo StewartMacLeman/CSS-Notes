@@ -8,6 +8,7 @@ body {
 }
 header { margin: 0 auto;
 }
+hr { border-color: palegreen;}
 /* Fonts-------------------------------------- */
 /* 1em = 16px (approx.) */
 h1 {
@@ -23,6 +24,27 @@ p {
   margin: 20px auto;
   text-align: center;
 }
+section h2 {
+  font-size: 1.5em;
+  text-decoration: underline;
+  margin: 5px 0px 0px 5px;
+  padding: 2px;
+}
+section p {
+  font-size: 1.5em;
+  color: black;
+  margin: 5px 0px 0px 5px;
+  padding: 2px;
+  text-align: left;
+}
+section pre {
+  margin: 0px;
+  padding: 0px;
+}
+code { font-size: 1.5em }
+
+
+
 /* Navigation------------------------------------ */
 
 nav {
@@ -101,4 +123,42 @@ img {
   position: absolute;
   /* width: 100%;
   height: 100%; */
+}
+/* Code Examples Container------------------------ */
+
+.content_container {
+  width: 85%;
+  margin: 0 auto 10px;
+  background-color: linen;
+  border: 2px solid white;
+  border-radius: 5px;
+}
+.content_container:hover {
+  border: 2px solid black;
+}
+
+.change_button {
+  position: relative;
+  left: 33.33%;
+  width: 33.34%;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  font-size: 1.5em;
+  color: darkgreen;
+  background-color: palegreen;
+}
+.change_button:hover {
+  background-color: darkgreen;
+  color: white;
+  cursor: pointer;
+}
+
+.sample_Content {
+  margin: 0 auto 10PX;
+  padding: 4px;
+  text-align: center;
+  font-size: 1.5em;
+  font-style: normal;
+  font-weight: normal;
+  color: black;
 }
