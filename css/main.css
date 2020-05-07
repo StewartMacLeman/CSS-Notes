@@ -23,6 +23,45 @@ p {
   margin: 20px auto;
   text-align: center;
 }
+/* Navigation------------------------------------ */
+
+nav {
+  position: relative;
+  background-color: linen;
+  width: 85%;
+  margin: 0 auto;
+}
+.dropdownP {
+  cursor: pointer;
+  margin: 0 auto;
+  background-color: linen;
+}
+.dropdown_Content {
+  position: absolute;
+  display: none;
+  background-color: linen;
+  width: 100%;
+  margin: 0 auto;
+  z-index: 1;
+}
+.dropdown_Content a {
+  display: block;
+  font-size: 2em;
+  color: darkgreen;
+  text-align: center;
+  text-decoration: none;
+  padding: 3px 0px;
+}
+nav:hover .dropdown_Content {
+  display: block;
+}
+ a:hover{
+  background: darkgreen;
+  color: white;
+  border: 2px solid black;
+}
+
+
 /* Home Page------------------------------------- */
 
 #home_page_image_container {
