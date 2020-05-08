@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="../css/main.css">
     <link rel="stylesheet" href="../css/text.css">
     <script src="../scripts/text.js" defer></script>
+    <script src="../scripts/upToTop.js" defer></script>
     <title>CSS Notes: Text</title>
   </head>
 
@@ -27,6 +28,29 @@
     <main>
       <p>The examples below relate to various CSS text techniques.</p>
       <p>Review the code per section, then click the buttons to see the outcomes.</p>
+
+      <section class="content_container">
+        <h2>Starting CCS</h2>
+        <p>Below is the original CSS for the sample content paragraphs.</p>
+        <hr>
+        <h2>CSS Code:</h2>
+        <div class="pre_block">
+        <pre><code>
+        p {
+          margin: 0 auto 10PX;
+          padding: 4px;
+          font-size: 1.5em;
+          font-style: normal;
+          font-weight: normal;
+          color: black;
+          text-align: center;
+          }
+        </code></pre>
+        </div>
+        <hr>
+        <h2>Sample Content:</h2>
+        <p class="sample_Content" id="textSample_1">I am the sample content!</p>
+      </section>
 
       <section class="content_container">
         <h2>Text Example 1: font-size</h2>
@@ -67,6 +91,49 @@
         <br>
         <button type="button" class="change_button" id="reset_btn_2">Reset</button>
       </section>
+
+      <section class="content_container">
+        <h2>Text Example 3: color</h2>
+        <p>Check the code below and click the button to see the change to the sample content.</p>
+        <hr>
+        <h2>CSS Code:</h2>
+        <div class="pre_block">
+        <pre><code>
+        p {
+          color: tomato;
+          }
+        </code></pre>
+        </div>
+        <hr>
+        <h2>Sample Content:</h2>
+        <p class="sample_Content" id="textSample_3">I am the sample content!</p>
+        <button type="button" class="change_button" id="text_btn_3">Click Me!</button>
+        <br>
+        <button type="button" class="change_button" id="reset_btn_3">Reset</button>
+      </section>
+
+      <section class="content_container">
+        <h2>Text Example 4: text-align</h2>
+        <p>Check the code below and click the button to see the change to the sample content.</p>
+        <hr>
+        <h2>CSS Code:</h2>
+        <div class="pre_block">
+        <pre><code>
+        p {
+          text-align: left;
+          }
+        </code></pre>
+        </div>
+        <hr>
+        <h2>Sample Content:</h2>
+        <p class="sample_Content" id="textSample_4">I am the sample content!</p>
+        <button type="button" class="change_button" id="text_btn_4">Click Me!</button>
+        <br>
+        <button type="button" class="change_button" id="reset_btn_4">Reset</button>
+      </section>
+
+      <!-- Back to the top of the page button. -->
+      <button type="button" class="pageTop" title="Click the button to go back to the top of the page.">Up</button>
 
     </main>
 

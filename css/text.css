@@ -6,3 +6,11 @@
 .textChange_2 {
   font-weight: bold;
 }
+/* Text Example 3: color */
+.textChange_3 {
+  color: tomato;
+}
+/* Text Example 4: text-align */
+.textChange_4 {
+  text-align: left;
+}
