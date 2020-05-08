@@ -1,16 +1,186 @@
+/* Default css for the reset functions---------------- */
+
+.sample_Content {
+  margin: 0 auto 10PX;
+  padding: 4px;
+  font-size: 1.5em;
+  font-style: normal;
+  font-weight: normal;
+  color: black;
+  text-align: center;
+}
+/* -------------------------------------------------- */
+
 /* Text Example 1: font-size */
 .textChange_1 {
+  margin: 0 auto 10PX;
+  padding: 4px;
+  font-style: normal;
+  font-weight: normal;
+  color: black;
+  text-align: center;
   font-size: 4em;
  }
 /* Text Example 2: font-weight */
 .textChange_2 {
+  margin: 0 auto 10PX;
+  padding: 4px;
+  font-size: 1.5em;
+  font-style: normal;
+  color: black;
+  text-align: center;
   font-weight: bold;
 }
 /* Text Example 3: color */
 .textChange_3 {
+  margin: 0 auto 10PX;
+  padding: 4px;
+  font-size: 1.5em;
+  font-style: normal;
+  font-weight: normal;
+  text-align: center;
   color: tomato;
 }
 /* Text Example 4: text-align */
 .textChange_4 {
+  margin: 0 auto 10PX;
+  padding: 4px;
+  font-size: 1.5em;
+  font-style: normal;
+  font-weight: normal;
+  color: black;
   text-align: left;
+}
+/* Text Example 5: text-indent */
+.textChange_5 {
+  margin: 0 auto 10PX;
+  padding: 4px;
+  font-size: 1.5em;
+  font-style: normal;
+  font-weight: normal;
+  color: black;
+  text-align: center;
+  text-indent: 60px;
+}
+/* Text Example 6: font-family */
+.textChange_6 {
+  margin: 0 auto 10PX;
+  padding: 4px;
+  font-size: 1.5em;
+  font-style: normal;
+  font-weight: normal;
+  color: black;
+  text-align: center;
+  /* font-family: "Lucida Grande", Tahoma; */
+  font-family: monospace;
+}
+/* Text Example 7: font-style */
+.textChange_7 {
+  margin: 0 auto 10PX;
+  padding: 4px;
+  font-size: 1.5em;
+  font-style: normal;
+  font-weight: normal;
+  color: black;
+  text-align: center;
+  font-style: italic;
+}
+/* Text Example 8: text-transform */
+.textChange_8 {
+  margin: 0 auto 10PX;
+  padding: 4px;
+  font-size: 1.5em;
+  font-style: normal;
+  font-weight: normal;
+  color: black;
+  text-align: center;
+  text-transform: uppercase;
+}
+/* Text Example 9: text-decoration */
+.textChange_9 {
+  margin: 0 auto 10PX;
+  padding: 4px;
+  font-size: 1.5em;
+  font-style: normal;
+  font-weight: normal;
+  color: black;
+  text-align: center;
+  text-decoration: line-through;
+}
+/* Text Example 10: text-shadow */
+.textChange_10 {
+  margin: 0 auto 10PX;
+  padding: 4px;
+  font-size: 1.5em;
+  font-style: normal;
+  font-weight: normal;
+  color: black;
+  text-align: center;
+  text-shadow: 3px 5px;
+}
+/* Text Example 11: text-shadow */
+.textChange_11 {
+  margin: 0 auto 10PX;
+  padding: 4px;
+  font-size: 1.5em;
+  font-style: normal;
+  font-weight: normal;
+  color: black;
+  text-align: center;
+  text-shadow: 3px 5px tomato;
+}
+/* Text Example 12: text-shadow */
+.textChange_12 {
+  margin: 0 auto 10PX;
+  padding: 4px;
+  font-size: 1.5em;
+  font-style: normal;
+  font-weight: normal;
+  color: black;
+  text-align: center;
+  text-shadow: 3px 5px 5px tomato;
+}
+/* Text Example 13: letter-spacing */
+.textChange_13 {
+  margin: 0 auto 10PX;
+  padding: 4px;
+  font-size: 1.5em;
+  font-style: normal;
+  font-weight: normal;
+  color: black;
+  text-align: center;
+  letter-spacing: 4px;
+}
+/* Text Example 14: word-spacing */
+.textChange_14 {
+  margin: 0 auto 10PX;
+  padding: 4px;
+  font-size: 1.5em;
+  font-style: normal;
+  font-weight: normal;
+  color: black;
+  text-align: center;
+  word-spacing: 10px;
+}
+/* Text Example 15: word-spacing */
+.textChange_15 {
+  margin: 0 auto 10PX;
+  padding: 4px;
+  font-size: 1.5em;
+  font-style: normal;
+  font-weight: normal;
+  color: black;
+  text-align: center;
+  word-spacing: -10px;
+}
+/* Text Example 16: white-space */
+.textChange_16 {
+  margin: 0 auto 10PX;
+  padding: 4px;
+  font-size: 1.5em;
+  font-style: normal;
+  font-weight: normal;
+  color: black;
+  text-align: center;
+  white-space: nowrap;
 }

@@ -147,7 +147,7 @@ img {
 }
 
 pre, code {
-  white-space: pre-line;
+  white-space: pre-wrap;
 }
 
 .change_button {
@@ -167,7 +167,7 @@ pre, code {
 }
 /* Default css for the reset functions---------------- */
 
-.sample_Content {
+/* .sample_Content {
   margin: 0 auto 10PX;
   padding: 4px;
   font-size: 1.5em;
@@ -175,7 +175,7 @@ pre, code {
   font-weight: normal;
   color: black;
   text-align: center;
-}
+} */
 
 /* Back to the top of the page button.-------------- */
 
