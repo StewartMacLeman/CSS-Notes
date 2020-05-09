@@ -184,3 +184,103 @@
   text-align: center;
   white-space: nowrap;
 }
+/* Code for the sample content element resizing,, examples for 17 and above.----- */
+
+.sample_Content_2 {
+  border: 2px solid darkgreen;
+  width: 60%;
+  height: 80px;
+  margin: 5px auto 10PX;
+  padding: 4px;
+  font-size: 1.5em;
+  font-style: normal;
+  font-weight: normal;
+  color: black;
+  text-align: center;
+  overflow: hidden;
+}
+
+/* Text Example 17: overflow */
+.textChange_17 {
+  border: 2px solid darkgreen;
+  width: 60%;
+  height: 80px;
+  margin: 5px auto 10PX;
+  padding: 4px;
+  font-size: 1.5em;
+  font-style: normal;
+  font-weight: normal;
+  color: black;
+  text-align: center;
+  overflow: visible;
+}
+/* Text Example 18: overflow-x */
+.textChange_18 {
+  border: 2px solid darkgreen;
+  width: 60%;
+  height: 80px;
+  margin: 5px auto 10PX;
+  padding: 4px;
+  font-size: 1.5em;
+  font-style: normal;
+  font-weight: normal;
+  color: black;
+  text-align: center;
+  overflow-x: scroll;
+}
+/* Text Example 19: text-justify */
+.textChange_19 {
+  border: 2px solid darkgreen;
+  width: 60%;
+  height: 80px;
+  margin: 5px auto 10PX;
+  padding: 4px;
+  font-size: 1.5em;
+  font-style: normal;
+  font-weight: normal;
+  color: black;
+  text-align: justify;
+  text-justify: inter-word;
+}
+/* Text Example 20: word-wrap */
+.textChange_20 {
+  border: 2px solid darkgreen;
+  width: 60%;
+  height: 80px;
+  margin: 5px auto 10PX;
+  padding: 4px;
+  font-size: 1.5em;
+  font-style: normal;
+  font-weight: normal;
+  color: black;
+  text-align: center;
+  word-wrap: break-word;
+}
+/* Text Example 21: writing-mode */
+.textChange_21 {
+  border: 2px solid darkgreen;
+  width: 60%;
+  height: 200px;
+  margin: 5px auto 10PX;
+  padding: 4px;
+  font-size: 1.5em;
+  font-style: normal;
+  font-weight: normal;
+  color: black;
+  text-align: center;
+  writing-mode: vertical-rl;
+}
+/* Text Example 22: writing-mode */
+.textChange_22 {
+  border: 2px solid darkgreen;
+  width: 60%;
+  height: 200px;
+  margin: 5px auto 10PX;
+  padding: 4px;
+  font-size: 1.5em;
+  font-style: normal;
+  font-weight: normal;
+  color: black;
+  text-align: center;
+  writing-mode: vertical-lr;
+}

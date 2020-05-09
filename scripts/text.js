@@ -1,4 +1,5 @@
 "use strict";
+// Function for text examples 1 to 16.------------------------------------------
 
 function textUpdateNumber(n) {
 
@@ -16,6 +17,25 @@ function textUpdateNumber(n) {
     changeSample.setAttribute(`class`, `sample_Content`);
   }
 }
+// Function for the text examples 17 and above.---------------------------------
+
+function textUpdateNumber_2(n) {
+
+  document.querySelector(`#text_btn_${n}`).addEventListener( `click`, textExample);
+
+  function textExample(){
+    let changeSample = document.querySelector(`#textSample_${n}`);
+    changeSample.setAttribute(`class`, `textChange_${n}`);
+  }
+
+  document.querySelector(`#reset_btn_${n}`).addEventListener( `click`, resetExample);
+
+  function resetExample(){
+    let changeSample = document.querySelector(`#textSample_${n}`);
+    changeSample.setAttribute(`class`, `sample_Content_2`);
+  }
+}
+// -----------------------------------------------------------------------------
 
 // Text Example 1: font-size
 textUpdateNumber("1");
@@ -65,13 +85,26 @@ textUpdateNumber("15");
 // Text Example 16: white-space
 textUpdateNumber("16");
 
+// Text Example 17: overflow
+textUpdateNumber_2("17");
+
+// Text Example 18: overflow-x
+textUpdateNumber_2("18");
+
+// Text Example 19: text-justify
+textUpdateNumber_2("19");
+
+// Text Example 20: word-wrap
+textUpdateNumber_2("20");
+
+// Text Example 21: writing-mode
+textUpdateNumber_2("21");
+
+// Text Example 22: writing-mode
+textUpdateNumber_2("22");
 
 
-
-
-
-
-// Original repetitive code!-----------------------------------------------------------
+// Original repetitive code!----------------------------------------------------
 
 // Text Example 1: font-size
 
@@ -88,7 +121,7 @@ textUpdateNumber("16");
 //   let changeSample = document.querySelector("#textSample_1");
 //   changeSample.setAttribute("class", "sample_Content");
 // }
-// // -------------------------------------------------------------------------------
+// // --------------------------------------------------------------------------
 //
 // // Text Example 2: font-weight
 //
@@ -105,7 +138,7 @@ textUpdateNumber("16");
 //   let changeSample = document.querySelector("#textSample_2");
 //   changeSample.setAttribute("class", "sample_Content");
 // }
-// // -------------------------------------------------------------------------------
+// // --------------------------------------------------------------------------
 //
 // // Text Example 3: color
 //
@@ -122,7 +155,7 @@ textUpdateNumber("16");
 //   let changeSample = document.querySelector("#textSample_3");
 //   changeSample.setAttribute("class", "sample_Content");
 // }
-// // -------------------------------------------------------------------------------
+// // --------------------------------------------------------------------------
 //
 // // Text Example 4: text-align
 //
@@ -139,7 +172,7 @@ textUpdateNumber("16");
 //   let changeSample = document.querySelector("#textSample_4");
 //   changeSample.setAttribute("class", "sample_Content");
 // }
-// // -------------------------------------------------------------------------------
+// // --------------------------------------------------------------------------
 //
 // // Text Example 5: text-indent
 //
@@ -156,7 +189,7 @@ textUpdateNumber("16");
 //   let changeSample = document.querySelector("#textSample_5");
 //   changeSample.setAttribute("class", "sample_Content");
 // }
-// // -------------------------------------------------------------------------------
+// // --------------------------------------------------------------------------
 //
 // // Text Example 6: font-family
 //
@@ -173,7 +206,7 @@ textUpdateNumber("16");
 //   let changeSample = document.querySelector("#textSample_6");
 //   changeSample.setAttribute("class", "sample_Content");
 // }
-// // -------------------------------------------------------------------------------
+// // --------------------------------------------------------------------------
 //
 // // Text Example 7: font-style
 //
@@ -190,7 +223,7 @@ textUpdateNumber("16");
 //   let changeSample = document.querySelector("#textSample_7");
 //   changeSample.setAttribute("class", "sample_Content");
 // }
-// // -------------------------------------------------------------------------------
+// // --------------------------------------------------------------------------
 //
 // // Text Example 8: text-transform
 //
@@ -207,7 +240,7 @@ textUpdateNumber("16");
 //   let changeSample = document.querySelector("#textSample_8");
 //   changeSample.setAttribute("class", "sample_Content");
 // }
-// // -------------------------------------------------------------------------------
+// // --------------------------------------------------------------------------
 //
 // // Text Example 9: text-decoration
 //
@@ -224,7 +257,7 @@ textUpdateNumber("16");
 //   let changeSample = document.querySelector("#textSample_9");
 //   changeSample.setAttribute("class", "sample_Content");
 // }
-// // -------------------------------------------------------------------------------
+// // --------------------------------------------------------------------------
 //
 // // Text Example 10: text-shadow
 //
@@ -241,7 +274,7 @@ textUpdateNumber("16");
 //   let changeSample = document.querySelector("#textSample_10");
 //   changeSample.setAttribute("class", "sample_Content");
 // }
-// // -------------------------------------------------------------------------------
+// // --------------------------------------------------------------------------
 //
 // // Text Example 11: text-shadow
 //
@@ -258,7 +291,7 @@ textUpdateNumber("16");
 //   let changeSample = document.querySelector("#textSample_11");
 //   changeSample.setAttribute("class", "sample_Content");
 // }
-// -------------------------------------------------------------------------------
+// -----------------------------------------------------------------------------
 
 // Text Example 12: text-shadow
 
@@ -275,8 +308,4 @@ textUpdateNumber("16");
 //   let changeSample = document.querySelector("#textSample_12");
 //   changeSample.setAttribute("class", "sample_Content");
 // }
-// -------------------------------------------------------------------------------
-
-
-
-// -------------------------------------------------------------------------------
+// ------------------------------------------------------------------------------
