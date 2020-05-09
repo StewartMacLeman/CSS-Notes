@@ -1,0 +1,41 @@
+/* Original css for the reset function.---------------- */
+
+.sample_Content_Selc {
+  margin: 10px auto 10px;
+  border: 2px solid darkgreen;
+  width: 60%;
+  height: 115px;
+}
+.sample_Content_Selc p {
+  margin: 0 auto 5px;
+  padding: 2px;
+  font-size: 1.5em;
+  font-style: normal;
+  font-weight: normal;
+  color: black;
+  text-align: center;
+}
+/* CSS to maintain the above properties that should not to be changed,
+without repeating the properties within the individual example classes. ------*/
+
+.selectorChangeDiv {
+  margin: 10px auto 10px;
+  border: 2px solid darkgreen;
+  width: 60%;
+  height: 115px;
+}
+.selectorChangeDiv p {
+  margin: 0 auto 5px;
+  padding: 2px;
+  font-size: 1.5em;
+  font-style: normal;
+  font-weight: normal;
+  color: black;
+  text-align: center;
+}
+/* Selectors Example 1: Combinators - Descendant (space)*/
+.selectorChange_1 p {
+  color: tomato;
+  font-weight: bold;
+  font-style: italic;
+ }
