@@ -68,7 +68,7 @@
         </div>
         <hr>
         <h2>Sample Content:</h2>
-        <div class="sample_Content_Selc">
+        <div class="selector_Original">
           <p>I am a paragraph, in a div!</p>
           <p>I am a paragraph, in a div!</p>
           <p>I am a paragraph, in a div!</p>
@@ -91,7 +91,7 @@
         </div>
         <hr>
         <h2>Sample Content:</h2>
-        <div class="sample_Content_Selc" id="selectorSample_1">
+        <div class="selector_Original" id="selectorID_1">
           <p>I am a paragraph, in a div!</p>
           <p>I am a paragraph, in a div!</p>
           <p>I am a paragraph, in a div!</p>
@@ -99,6 +99,32 @@
         <button type="button" class="change_button" id="change_btn_1">Click Me!</button>
         <br>
         <button type="button" class="change_button" id="reset_btn_1">Reset</button>
+      </section>
+
+      <section class="content_container">
+        <h2>Selectors Example 2: Combinators - Descendant (space)</h2>
+        <p>Check the code below and click the button to see the change to the sample content.</p>
+        <hr>
+        <h2>CSS Code:</h2>
+        <div class="pre_block">
+        <pre><code>
+          div p span {
+            color: tomato;
+            font-weight: bold;
+            font-style: italic;
+           }
+        </code></pre>
+        </div>
+        <hr>
+        <h2>Sample Content:</h2>
+        <div class="selector_Original" id="selectorID_2">
+          <p>I am a paragraph, in a div!</p>
+          <p>I am a paragraph, in a div!</p>
+          <p>I am a <span>span</span>, in a paragraph!</p>
+        </div>
+        <button type="button" class="change_button" id="change_btn_2">Click Me!</button>
+        <br>
+        <button type="button" class="change_button" id="reset_btn_2">Reset</button>
       </section>
 
 

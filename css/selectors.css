@@ -1,12 +1,12 @@
 /* Original css for the reset function.---------------- */
 
-.sample_Content_Selc {
+.selector_Original {
   margin: 10px auto 10px;
   border: 2px solid darkgreen;
   width: 60%;
   height: 115px;
 }
-.sample_Content_Selc p {
+.selector_Original p {
   margin: 0 auto 5px;
   padding: 2px;
   font-size: 1.5em;
@@ -18,13 +18,13 @@
 /* CSS to maintain the above properties that should not to be changed,
 without repeating the properties within the individual example classes. ------*/
 
-.selectorChangeDiv {
+.selectorChangeHelper {
   margin: 10px auto 10px;
   border: 2px solid darkgreen;
   width: 60%;
   height: 115px;
 }
-.selectorChangeDiv p {
+.selectorChangeHelper p {
   margin: 0 auto 5px;
   padding: 2px;
   font-size: 1.5em;
@@ -35,6 +35,12 @@ without repeating the properties within the individual example classes. ------*/
 }
 /* Selectors Example 1: Combinators - Descendant (space)*/
 .selectorChange_1 p {
+  color: tomato;
+  font-weight: bold;
+  font-style: italic;
+ }
+/* Selectors Example 2: Combinators - Descendant (space)*/
+.selectorChange_2 p span {
   color: tomato;
   font-weight: bold;
   font-style: italic;
