@@ -1,4 +1,4 @@
-/* Original css for the reset function.---------------- */
+/* Original css for the reset function.-------------------------------------- */
 
 .selector_Original {
   margin: 10px auto 10px;
@@ -15,8 +15,8 @@
   color: black;
   text-align: center;
 }
-/* CSS to maintain the above properties that should not to be changed,
-without repeating the properties within the individual example classes. ------*/
+/* CSS Helper Class - This is to maintain the above properties that should not to be changed.
+This avoids repeating the properties within the individual change classes. ------*/
 
 .selectorChangeHelper {
   margin: 10px auto 10px;
@@ -33,6 +33,8 @@ without repeating the properties within the individual example classes. ------*/
   color: black;
   text-align: center;
 }
+/* CSS Change Classes. -------------------------------------------------------*/
+
 /* Selectors Example 1: Combinators - Descendant (space)*/
 .selectorChange_1 p {
   color: tomato;

@@ -1,6 +1,6 @@
-/* Default css for the reset functions---------------- */
+/* Original css for the reset function.-------------------------------------- */
 
-.sample_Content {
+.text_Original {
   margin: 0 auto 10PX;
   padding: 4px;
   font-size: 1.5em;
@@ -9,184 +9,90 @@
   color: black;
   text-align: center;
 }
-/* -------------------------------------------------- */
 
-/* Text Example 1: font-size */
-.textChange_1 {
+/* CSS Helper Class - This is to maintain the above properties that should not to be changed.
+This avoids repeating the properties within the individual change classes. ------*/
+
+.textChangeHelper {
   margin: 0 auto 10PX;
   padding: 4px;
+  font-size: 1.5em;
   font-style: normal;
   font-weight: normal;
   color: black;
   text-align: center;
+}
+/* CSS Change Classes. --------------------------------------------------------*/
+
+/* Text Example 1: font-size */
+.textChange_1 {
   font-size: 4em;
  }
 /* Text Example 2: font-weight */
 .textChange_2 {
-  margin: 0 auto 10PX;
-  padding: 4px;
-  font-size: 1.5em;
-  font-style: normal;
-  color: black;
-  text-align: center;
   font-weight: bold;
 }
 /* Text Example 3: color */
 .textChange_3 {
-  margin: 0 auto 10PX;
-  padding: 4px;
-  font-size: 1.5em;
-  font-style: normal;
-  font-weight: normal;
-  text-align: center;
   color: tomato;
 }
 /* Text Example 4: text-align */
 .textChange_4 {
-  margin: 0 auto 10PX;
-  padding: 4px;
-  font-size: 1.5em;
-  font-style: normal;
-  font-weight: normal;
-  color: black;
   text-align: left;
 }
 /* Text Example 5: text-indent */
 .textChange_5 {
-  margin: 0 auto 10PX;
-  padding: 4px;
-  font-size: 1.5em;
-  font-style: normal;
-  font-weight: normal;
-  color: black;
-  text-align: center;
   text-indent: 60px;
 }
 /* Text Example 6: font-family */
 .textChange_6 {
-  margin: 0 auto 10PX;
-  padding: 4px;
-  font-size: 1.5em;
-  font-style: normal;
-  font-weight: normal;
-  color: black;
-  text-align: center;
   /* font-family: "Lucida Grande", Tahoma; */
   font-family: monospace;
 }
 /* Text Example 7: font-style */
 .textChange_7 {
-  margin: 0 auto 10PX;
-  padding: 4px;
-  font-size: 1.5em;
-  font-style: normal;
-  font-weight: normal;
-  color: black;
-  text-align: center;
   font-style: italic;
 }
 /* Text Example 8: text-transform */
 .textChange_8 {
-  margin: 0 auto 10PX;
-  padding: 4px;
-  font-size: 1.5em;
-  font-style: normal;
-  font-weight: normal;
-  color: black;
-  text-align: center;
   text-transform: uppercase;
 }
 /* Text Example 9: text-decoration */
 .textChange_9 {
-  margin: 0 auto 10PX;
-  padding: 4px;
-  font-size: 1.5em;
-  font-style: normal;
-  font-weight: normal;
-  color: black;
-  text-align: center;
   text-decoration: line-through;
 }
 /* Text Example 10: text-shadow */
 .textChange_10 {
-  margin: 0 auto 10PX;
-  padding: 4px;
-  font-size: 1.5em;
-  font-style: normal;
-  font-weight: normal;
-  color: black;
-  text-align: center;
   text-shadow: 3px 5px;
 }
 /* Text Example 11: text-shadow */
 .textChange_11 {
-  margin: 0 auto 10PX;
-  padding: 4px;
-  font-size: 1.5em;
-  font-style: normal;
-  font-weight: normal;
-  color: black;
-  text-align: center;
   text-shadow: 3px 5px tomato;
 }
 /* Text Example 12: text-shadow */
 .textChange_12 {
-  margin: 0 auto 10PX;
-  padding: 4px;
-  font-size: 1.5em;
-  font-style: normal;
-  font-weight: normal;
-  color: black;
-  text-align: center;
   text-shadow: 3px 5px 5px tomato;
 }
 /* Text Example 13: letter-spacing */
 .textChange_13 {
-  margin: 0 auto 10PX;
-  padding: 4px;
-  font-size: 1.5em;
-  font-style: normal;
-  font-weight: normal;
-  color: black;
-  text-align: center;
   letter-spacing: 4px;
 }
 /* Text Example 14: word-spacing */
 .textChange_14 {
-  margin: 0 auto 10PX;
-  padding: 4px;
-  font-size: 1.5em;
-  font-style: normal;
-  font-weight: normal;
-  color: black;
-  text-align: center;
   word-spacing: 10px;
 }
 /* Text Example 15: word-spacing */
 .textChange_15 {
-  margin: 0 auto 10PX;
-  padding: 4px;
-  font-size: 1.5em;
-  font-style: normal;
-  font-weight: normal;
-  color: black;
-  text-align: center;
   word-spacing: -10px;
 }
 /* Text Example 16: white-space */
 .textChange_16 {
-  margin: 0 auto 10PX;
-  padding: 4px;
-  font-size: 1.5em;
-  font-style: normal;
-  font-weight: normal;
-  color: black;
-  text-align: center;
   white-space: nowrap;
 }
-/* Code for the sample content element resizing,, examples for 17 and above.----- */
 
-.sample_Content_2 {
+/* Code for the resized content element; applicable to examples 17 and above.----- */
+
+.text_Original_2 {
   border: 2px solid darkgreen;
   width: 60%;
   height: 80px;
@@ -199,9 +105,10 @@
   text-align: center;
   overflow: hidden;
 }
+/* CSS Helper Class - This is to maintain the above properties that should not to be changed.
+This avoids repeating the properties within the individual change classes. ------*/
 
-/* Text Example 17: overflow */
-.textChange_17 {
+.textChangeHelper_2 {
   border: 2px solid darkgreen;
   width: 60%;
   height: 80px;
@@ -212,75 +119,35 @@
   font-weight: normal;
   color: black;
   text-align: center;
+  overflow: hidden;
+}
+/* CSS Change Classes. ------------------------------------------------------*/
+
+/* Text Example 17: overflow */
+.textChange_17 {
   overflow: visible;
 }
 /* Text Example 18: overflow-x */
 .textChange_18 {
-  border: 2px solid darkgreen;
-  width: 60%;
-  height: 80px;
-  margin: 5px auto 10PX;
-  padding: 4px;
-  font-size: 1.5em;
-  font-style: normal;
-  font-weight: normal;
-  color: black;
-  text-align: center;
+  overflow: auto;
   overflow-x: scroll;
 }
 /* Text Example 19: text-justify */
 .textChange_19 {
-  border: 2px solid darkgreen;
-  width: 60%;
-  height: 80px;
-  margin: 5px auto 10PX;
-  padding: 4px;
-  font-size: 1.5em;
-  font-style: normal;
-  font-weight: normal;
-  color: black;
   text-align: justify;
   text-justify: inter-word;
 }
 /* Text Example 20: word-wrap */
 .textChange_20 {
-  border: 2px solid darkgreen;
-  width: 60%;
-  height: 80px;
-  margin: 5px auto 10PX;
-  padding: 4px;
-  font-size: 1.5em;
-  font-style: normal;
-  font-weight: normal;
-  color: black;
-  text-align: center;
   word-wrap: break-word;
 }
 /* Text Example 21: writing-mode */
 .textChange_21 {
-  border: 2px solid darkgreen;
-  width: 60%;
   height: 200px;
-  margin: 5px auto 10PX;
-  padding: 4px;
-  font-size: 1.5em;
-  font-style: normal;
-  font-weight: normal;
-  color: black;
-  text-align: center;
   writing-mode: vertical-rl;
 }
 /* Text Example 22: writing-mode */
 .textChange_22 {
-  border: 2px solid darkgreen;
-  width: 60%;
   height: 200px;
-  margin: 5px auto 10PX;
-  padding: 4px;
-  font-size: 1.5em;
-  font-style: normal;
-  font-weight: normal;
-  color: black;
-  text-align: center;
   writing-mode: vertical-lr;
 }
