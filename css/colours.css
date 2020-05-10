@@ -1,0 +1,41 @@
+/* Original css for the reset function.-------------------------------------- */
+
+.colour_Original {
+  margin: 10px auto;
+  border: 2px solid darkgreen;
+  width: 60%;
+  height: 100px;
+}
+.colour_Original div {
+  position: relative;
+  top: 8%;
+  margin: 0px auto;
+  width: 40%;
+  height: 80%;
+  border: 2px solid darkgreen;
+  border-radius: 5px;
+}
+/* CSS Helper Class - This is to maintain the above properties that should not to be changed.
+This avoids repeating the properties within the individual change classes. ------*/
+
+.colourChangeHelper {
+  margin: 10px auto;
+  border: 2px solid darkgreen;
+  width: 60%;
+  height: 100px;
+}
+.colourChangeHelper div {
+  position: relative;
+  top: 8%;
+  margin: 0px auto;
+  width: 40%;
+  height: 80%;
+  border: 2px solid darkgreen;
+  border-radius: 5px;
+}
+/* CSS Change Classes. -------------------------------------------------------*/
+
+/* Colours Example 1: Named*/
+.colourChange_1 div {
+  background-color: palegreen;
+ }
