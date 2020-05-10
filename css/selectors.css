@@ -47,3 +47,101 @@ This avoids repeating the properties within the individual change classes. -----
   font-weight: bold;
   font-style: italic;
  }
+/* Selectors Example 3: Combinators - Child (>)*/
+.selectorChange_3 > p {
+  color: tomato;
+  font-weight: bold;
+  font-style: italic;
+ }
+/* Selectors Example 4: Combinators - Adjacent Sibling (+)*/
+.selectorChange_4 + p {
+  color: tomato;
+  font-weight: bold;
+  font-style: italic;
+ }
+/* Selectors Example 5: Combinators - General Sibling (~)*/
+.selectorChange_5 ~ p {
+  color: tomato;
+  font-weight: bold;
+  font-style: italic;
+ }
+/* Selectors Example 6: Pseudo-classes (:first-child)*/
+.selectorChange_6 p:first-child {
+  color: tomato;
+  font-weight: bold;
+  font-style: italic;
+ }
+/* Selectors Example 7: Pseudo-classes (:last-child)*/
+.selectorChange_7 p:last-child {
+  color: tomato;
+  font-weight: bold;
+  font-style: italic;
+ }
+/* Selectors Example 8: Pseudo-classes (:nth-child(n))*/
+.selectorChange_8 p:nth-child(3) {
+  color: tomato;
+  font-weight: bold;
+  font-style: italic;
+ }
+/* Selectors Example 9: Pseudo-elements (::first-letter)*/
+.selectorChange_9 p::first-letter {
+  color: tomato;
+  font-weight: bold;
+  font-style: italic;
+ }
+/* Selectors Example 10: Pseudo-elements (::first-line)*/
+.selectorChange_10 p::first-line {
+  color: tomato;
+  font-weight: bold;
+  font-style: italic;
+ }
+/* Selectors Example 11: Pseudo-elements (::before)*/
+.selectorChange_11 p::before {
+  content: "Hello there! ";
+  color: tomato;
+  font-weight: bold;
+  font-style: italic;
+ }
+/* Selectors Example 12: Pseudo-elements (::after)*/
+.selectorChange_12 p::after {
+  content: " Bye bye!";
+  color: tomato;
+  font-weight: bold;
+  font-style: italic;
+ }
+/* Selectors Example 13: Attributes [attribute]*/
+.selectorChange_13 p[title] {
+  color: tomato;
+  font-weight: bold;
+  font-style: italic;
+ }
+/* Selectors Example 14: Attributes [attribute=]*/
+.selectorChange_14 p[title="TipTop"] {
+  color: tomato;
+  font-weight: bold;
+  font-style: italic;
+ }
+/* Selectors Example 15: Attributes [attribute~="value"]*/
+.selectorChange_15 p[title~="Top"] {
+  color: tomato;
+  font-weight: bold;
+  font-style: italic;
+ }
+/* Selectors Example 16: Attributes [attribute^="value"]*/
+.selectorChange_16 p[title^="Top"] {
+  color: tomato;
+  font-weight: bold;
+  font-style: italic;
+ }
+/* Selectors Example 17: Attributes [attribute$="value"]*/
+.selectorChange_17 p[title$="Top"] {
+  color: tomato;
+  font-weight: bold;
+  font-style: italic;
+ }
+/* Selectors Example 18: Attributes [attribute*="value"]*/
+.selectorChange_18 p[title*="Top"] {
+  color: tomato;
+  font-weight: bold;
+  font-style: italic;
+ }

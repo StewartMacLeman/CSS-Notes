@@ -47,8 +47,6 @@ section pre {
 }
 code { font-size: 1.5em }
 
-
-
 /* Navigation------------------------------------ */
 
 nav {
@@ -77,6 +75,14 @@ nav {
   text-align: center;
   text-decoration: none;
   padding: 3px 0px;
+  border-left: 2px solid black;
+  border-right: 2px solid black;
+}
+.dropdown_Content a:first-child {
+  border-top: 2px solid black;
+}
+.dropdown_Content a:last-child {
+  border-bottom: 2px solid black;
 }
 nav:hover .dropdown_Content {
   display: block;
@@ -86,7 +92,6 @@ nav:hover .dropdown_Content {
   color: white;
   border: 2px solid black;
 }
-
 
 /* Home Page------------------------------------- */
 
@@ -165,17 +170,6 @@ pre, code {
   color: white;
   cursor: pointer;
 }
-/* Default css for the reset functions---------------- */
-
-/* .sample_Content {
-  margin: 0 auto 10PX;
-  padding: 4px;
-  font-size: 1.5em;
-  font-style: normal;
-  font-weight: normal;
-  color: black;
-  text-align: center;
-} */
 
 /* Back to the top of the page button.-------------- */
 

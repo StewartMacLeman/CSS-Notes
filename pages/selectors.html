@@ -120,11 +120,498 @@
         <div class="selector_Original" id="selectorID_2">
           <p>I am a paragraph, in a div!</p>
           <p>I am a paragraph, in a div!</p>
-          <p>I am a <span>span</span>, in a paragraph!</p>
+          <p>I am a <span><b>span</b></span>, in a paragraph!</p>
         </div>
         <button type="button" class="change_button" id="change_btn_2">Click Me!</button>
         <br>
         <button type="button" class="change_button" id="reset_btn_2">Reset</button>
+      </section>
+
+      <section class="content_container">
+        <h2>Selectors Example 3: Combinators - Child (>)</h2>
+        <p>Check the code below and click the button to see the change to the sample content.</p>
+        <hr>
+        <h2>CSS Code:</h2>
+        <div class="pre_block">
+        <pre><code>
+          div > p {
+            color: tomato;
+            font-weight: bold;
+            font-style: italic;
+           }
+        </code></pre>
+        </div>
+        <hr>
+        <h2>Sample Content:</h2>
+        <div class="selector_Original" id="selectorID_3">
+          <h2>I am a header, in a div!</h2>
+          <p>I am a paragraph, in a div!</p>
+          <p>I am a paragraph, in a div!</p>
+        </div>
+        <button type="button" class="change_button" id="change_btn_3">Click Me!</button>
+        <br>
+        <button type="button" class="change_button" id="reset_btn_3">Reset</button>
+      </section>
+
+      <section class="content_container">
+        <h2>Selectors Example 4: Combinators - Adjacent Sibling (+)</h2>
+        <p>Check the code below and click the button to see the change to the sample content.</p>
+        <hr>
+        <h2>CSS Code:</h2>
+        <div class="pre_block">
+        <pre><code>
+          div + p {
+            color: tomato;
+            font-weight: bold;
+            font-style: italic;
+           }
+        </code></pre>
+        </div>
+        <hr>
+        <h2>Sample Content:</h2>
+        <div class="selector_Original" id="selectorID_4">
+          <p>I am a paragraph, in a div!</p>
+          <p>I am a paragraph, in a div!</p>
+          <p>I am a paragraph, in a div!</p>
+        </div>
+          <p>I am a paragraph, <b>not</b> in a div!</p>
+        <button type="button" class="change_button" id="change_btn_4">Click Me!</button>
+        <br>
+        <button type="button" class="change_button" id="reset_btn_4">Reset</button>
+      </section>
+
+      <section class="content_container">
+        <h2>Selectors Example 5: Combinators - General Sibling (~)</h2>
+        <p>Check the code below and click the button to see the change to the sample content.</p>
+        <hr>
+        <h2>CSS Code:</h2>
+        <div class="pre_block">
+        <pre><code>
+          div ~ p {
+            color: tomato;
+            font-weight: bold;
+            font-style: italic;
+           }
+        </code></pre>
+        </div>
+        <hr>
+        <h2>Sample Content:</h2>
+        <p>I am a paragraph, <b>not</b> in a div!</p>
+        <div class="selector_Original" id="selectorID_5">
+          <p>I am a paragraph, in a div!</p>
+          <p>I am a paragraph, in a div!</p>
+          <p>I am a paragraph, in a div!</p>
+        </div>
+          <p>I am a paragraph, <b>not</b> in a div!</p>
+          <h2>I am a header, not in a div!</h2>
+          <p>I am a paragraph, <b>not</b> in a div!</p>
+        <button type="button" class="change_button" id="change_btn_5">Click Me!</button>
+        <br>
+        <button type="button" class="change_button" id="reset_btn_5">Reset</button>
+      </section>
+
+      <section class="content_container">
+        <h2>Selectors Example 6: Pseudo-classes (:first-child)</h2>
+        <p>Check the code below and click the button to see the change to the sample content.</p>
+        <hr>
+        <h2>CSS Code:</h2>
+        <div class="pre_block">
+        <pre><code>
+          div p:first-child {
+            color: tomato;
+            font-weight: bold;
+            font-style: italic;
+           }
+        </code></pre>
+        </div>
+        <hr>
+        <h2>Sample Content:</h2>
+        <div class="selector_Original" id="selectorID_6">
+          <p>I am a paragraph, in a div!</p>
+          <p>I am a paragraph, in a div!</p>
+          <p>I am a paragraph, in a div!</p>
+        </div>
+        <button type="button" class="change_button" id="change_btn_6">Click Me!</button>
+        <br>
+        <button type="button" class="change_button" id="reset_btn_6">Reset</button>
+      </section>
+
+      <section class="content_container">
+        <h2>Selectors Example 7: Pseudo-classes (:last-child)</h2>
+        <p>Check the code below and click the button to see the change to the sample content.</p>
+        <hr>
+        <h2>CSS Code:</h2>
+        <div class="pre_block">
+        <pre><code>
+          div p:last-child {
+            color: tomato;
+            font-weight: bold;
+            font-style: italic;
+           }
+        </code></pre>
+        </div>
+        <hr>
+        <h2>Sample Content:</h2>
+        <div class="selector_Original" id="selectorID_7">
+          <p>I am a paragraph, in a div!</p>
+          <p>I am a paragraph, in a div!</p>
+          <p>I am a paragraph, in a div!</p>
+        </div>
+        <button type="button" class="change_button" id="change_btn_7">Click Me!</button>
+        <br>
+        <button type="button" class="change_button" id="reset_btn_7">Reset</button>
+      </section>
+
+      <section class="content_container">
+        <h2>Selectors Example 8: Pseudo-classes (:nth-child(n))</h2>
+        <p>Check the code below and click the button to see the change to the sample content.</p>
+        <hr>
+        <h2>CSS Code:</h2>
+        <div class="pre_block">
+        <pre><code>
+          div p:nth-child(3) {
+            color: tomato;
+            font-weight: bold;
+            font-style: italic;
+           }
+        </code></pre>
+        </div>
+        <hr>
+        <h2>Sample Content:</h2>
+        <div class="selector_Original" id="selectorID_8">
+          <p>I am a paragraph, in a div!</p>
+          <p>I am a paragraph, in a div!</p>
+          <p>I am a paragraph, in a div!</p>
+        </div>
+        <button type="button" class="change_button" id="change_btn_8">Click Me!</button>
+        <br>
+        <button type="button" class="change_button" id="reset_btn_8">Reset</button>
+      </section>
+
+      <section class="content_container">
+        <h2>Selectors Example 9: Pseudo-elements (::first-letter)</h2>
+        <p>Check the code below and click the button to see the change to the sample content.</p>
+        <hr>
+        <h2>CSS Code:</h2>
+        <div class="pre_block">
+        <pre><code>
+          div p::first-letter {
+            color: tomato;
+            font-weight: bold;
+            font-style: italic;
+           }
+        </code></pre>
+        </div>
+        <hr>
+        <h2>Sample Content:</h2>
+        <div class="selector_Original" id="selectorID_9">
+          <p>I am a paragraph, in a div!</p>
+          <p>I am a paragraph, in a div!</p>
+          <p>I am a paragraph, in a div!</p>
+        </div>
+        <button type="button" class="change_button" id="change_btn_9">Click Me!</button>
+        <br>
+        <button type="button" class="change_button" id="reset_btn_9">Reset</button>
+      </section>
+
+      <section class="content_container">
+        <h2>Selectors Example 10: Pseudo-elements (::first-line)</h2>
+        <p>Check the code below and click the button to see the change to the sample content.</p>
+        <hr>
+        <h2>CSS Code:</h2>
+        <div class="pre_block">
+        <pre><code>
+          div p::first-line {
+            color: tomato;
+            font-weight: bold;
+            font-style: italic;
+           }
+        </code></pre>
+        </div>
+        <hr>
+        <h2>Sample Content:</h2>
+        <div class="selector_Original" id="selectorID_10">
+          <p>I am a paragraph, in a div! Some text, more text, more text, more text, more text, more text, more text, more text, more text,  more text, more text and more text!</p>
+        </div>
+        <button type="button" class="change_button" id="change_btn_10">Click Me!</button>
+        <br>
+        <button type="button" class="change_button" id="reset_btn_10">Reset</button>
+      </section>
+
+      <section class="content_container">
+        <h2>Selectors Example 11: Pseudo-elements (::before)</h2>
+        <p>Check the code below and click the button to see the change to the sample content.</p>
+        <hr>
+        <h2>CSS Code:</h2>
+        <div class="pre_block">
+        <pre><code>
+          div p::before {
+            content: "Hello there! ";
+            color: tomato;
+            font-weight: bold;
+            font-style: italic;
+           }
+        </code></pre>
+        </div>
+        <hr>
+        <h2>Sample Content:</h2>
+        <div class="selector_Original" id="selectorID_11">
+          <p>I am a paragraph, in a div!</p>
+          <p>I am a paragraph, in a div!</p>
+          <p>I am a paragraph, in a div!</p>
+        </div>
+        <button type="button" class="change_button" id="change_btn_11">Click Me!</button>
+        <br>
+        <button type="button" class="change_button" id="reset_btn_11">Reset</button>
+      </section>
+
+      <section class="content_container">
+        <h2>Selectors Example 12: Pseudo-elements (::after)</h2>
+        <p>Check the code below and click the button to see the change to the sample content.</p>
+        <hr>
+        <h2>CSS Code:</h2>
+        <div class="pre_block">
+        <pre><code>
+          div p::after {
+            content: " Bye bye!";
+            color: tomato;
+            font-weight: bold;
+            font-style: italic;
+           }
+        </code></pre>
+        </div>
+        <hr>
+        <h2>Sample Content:</h2>
+        <div class="selector_Original" id="selectorID_12">
+          <p>I am a paragraph, in a div!</p>
+          <p>I am a paragraph, in a div!</p>
+          <p>I am a paragraph, in a div!</p>
+        </div>
+        <button type="button" class="change_button" id="change_btn_12">Click Me!</button>
+        <br>
+        <button type="button" class="change_button" id="reset_btn_12">Reset</button>
+      </section>
+
+      <section class="content_container">
+        <h2>Selectors Example 13: Attributes [attribute]</h2>
+        <p>Check the code below and click the button to see the change to the sample content.</p>
+        <hr>
+        <h2>HTML Code:</h2>
+        <div class="pre_block">
+        <pre><code>
+        &lt;div&gt;
+          &lt;p title="TopTip"&gt;I am the paragraph, in a div!&lt;/p&gt;
+          &lt;p title="TipTop"&gt;I am the paragraph, in a div!&lt;/p&gt;
+          &lt;p&gt;I am the paragraph, in a div!&lt;/p&gt;
+        &lt;/div&gt;
+        </code></pre>
+        </div>
+        <hr>
+        <h2>CSS Code:</h2>
+        <div class="pre_block">
+        <pre><code>
+          div p[title] {
+            color: tomato;
+            font-weight: bold;
+            font-style: italic;
+           }
+        </code></pre>
+        </div>
+        <hr>
+        <h2>Sample Content:</h2>
+        <div class="selector_Original" id="selectorID_13">
+          <p title="TopTip">I am a paragraph, in a div!</p>
+          <p title="TipTop">I am a paragraph, in a div!</p>
+          <p>I am a paragraph, in a div!</p>
+        </div>
+        <button type="button" class="change_button" id="change_btn_13">Click Me!</button>
+        <br>
+        <button type="button" class="change_button" id="reset_btn_13">Reset</button>
+      </section>
+
+      <section class="content_container">
+        <h2>Selectors Example 14: Attributes [attribute="value"]</h2>
+        <p>Check the code below and click the button to see the change to the sample content.</p>
+        <hr>
+        <h2>HTML Code:</h2>
+        <div class="pre_block">
+        <pre><code>
+        &lt;div&gt;
+          &lt;p title="TopTip"&gt;I am the paragraph, in a div!&lt;/p&gt;
+          &lt;p title="TipTop"&gt;I am the paragraph, in a div!&lt;/p&gt;
+          &lt;p title="A Top Man!"&gt;I am the paragraph, in a div!&lt;/p&gt;
+        &lt;/div&gt;
+        </code></pre>
+        </div>
+        <hr>
+        <h2>CSS Code:</h2>
+        <div class="pre_block">
+        <pre><code>
+          div p[title="TipTop"] {
+            color: tomato;
+            font-weight: bold;
+            font-style: italic;
+           }
+        </code></pre>
+        </div>
+        <hr>
+        <h2>Sample Content:</h2>
+        <div class="selector_Original" id="selectorID_14">
+          <p title="TopTip">I am a paragraph, in a div!</p>
+          <p title="TipTop">I am a paragraph, in a div!</p>
+          <p title="A Top Man!">I am a paragraph, in a div!</p>
+        </div>
+        <button type="button" class="change_button" id="change_btn_14">Click Me!</button>
+        <br>
+        <button type="button" class="change_button" id="reset_btn_14">Reset</button>
+      </section>
+
+      <section class="content_container">
+        <h2>Selectors Example 15: Attributes [attribute~="value"]</h2>
+        <p>Check the code below and click the button to see the change to the sample content.</p>
+        <hr>
+        <h2>HTML Code:</h2>
+        <div class="pre_block">
+        <pre><code>
+        &lt;div&gt;
+          &lt;p title="TopTip"&gt;I am the paragraph, in a div!&lt;/p&gt;
+          &lt;p title="TipTop"&gt;I am the paragraph, in a div!&lt;/p&gt;
+          &lt;p title="A Top Man!"&gt;I am the paragraph, in a div!&lt;/p&gt;
+        &lt;/div&gt;
+        </code></pre>
+        </div>
+        <hr>
+        <h2>CSS Code:</h2>
+        <div class="pre_block">
+        <pre><code>
+          div p[title~="Top"] {
+            color: tomato;
+            font-weight: bold;
+            font-style: italic;
+           }
+        </code></pre>
+        </div>
+        <hr>
+        <h2>Sample Content:</h2>
+        <div class="selector_Original" id="selectorID_15">
+          <p title="TopTip">I am a paragraph, in a div!</p>
+          <p title="TipTop">I am a paragraph, in a div!</p>
+          <p title="A Top Man!">I am a paragraph, in a div!</p>
+        </div>
+        <button type="button" class="change_button" id="change_btn_15">Click Me!</button>
+        <br>
+        <button type="button" class="change_button" id="reset_btn_15">Reset</button>
+      </section>
+
+      <section class="content_container">
+        <h2>Selectors Example 16: Attributes [attribute^="value"]</h2>
+        <p>Check the code below and click the button to see the change to the sample content.</p>
+        <hr>
+        <h2>HTML Code:</h2>
+        <div class="pre_block">
+        <pre><code>
+        &lt;div&gt;
+          &lt;p title="TopTip"&gt;I am the paragraph, in a div!&lt;/p&gt;
+          &lt;p title="TipTop"&gt;I am the paragraph, in a div!&lt;/p&gt;
+          &lt;p title="A Top Man!"&gt;I am the paragraph, in a div!&lt;/p&gt;
+        &lt;/div&gt;
+        </code></pre>
+        </div>
+        <hr>
+        <h2>CSS Code:</h2>
+        <div class="pre_block">
+        <pre><code>
+          div p[title^="Top"] {
+            color: tomato;
+            font-weight: bold;
+            font-style: italic;
+           }
+        </code></pre>
+        </div>
+        <hr>
+        <h2>Sample Content:</h2>
+        <div class="selector_Original" id="selectorID_16">
+          <p title="TopTip">I am a paragraph, in a div!</p>
+          <p title="TipTop">I am a paragraph, in a div!</p>
+          <p title="A Top Man!">I am a paragraph, in a div!</p>
+        </div>
+        <button type="button" class="change_button" id="change_btn_16">Click Me!</button>
+        <br>
+        <button type="button" class="change_button" id="reset_btn_16">Reset</button>
+      </section>
+
+      <section class="content_container">
+        <h2>Selectors Example 17: Attributes [attribute$="value"]</h2>
+        <p>Check the code below and click the button to see the change to the sample content.</p>
+        <hr>
+        <h2>HTML Code:</h2>
+        <div class="pre_block">
+        <pre><code>
+        &lt;div&gt;
+          &lt;p title="TopTip"&gt;I am the paragraph, in a div!&lt;/p&gt;
+          &lt;p title="TipTop"&gt;I am the paragraph, in a div!&lt;/p&gt;
+          &lt;p title="A Top Man!"&gt;I am the paragraph, in a div!&lt;/p&gt;
+        &lt;/div&gt;
+        </code></pre>
+        </div>
+        <hr>
+        <h2>CSS Code:</h2>
+        <div class="pre_block">
+        <pre><code>
+          div p[title$="Top"] {
+            color: tomato;
+            font-weight: bold;
+            font-style: italic;
+           }
+        </code></pre>
+        </div>
+        <hr>
+        <h2>Sample Content:</h2>
+        <div class="selector_Original" id="selectorID_17">
+          <p title="TopTip">I am a paragraph, in a div!</p>
+          <p title="TipTop">I am a paragraph, in a div!</p>
+          <p title="A Top Man!">I am a paragraph, in a div!</p>
+        </div>
+        <button type="button" class="change_button" id="change_btn_17">Click Me!</button>
+        <br>
+        <button type="button" class="change_button" id="reset_btn_17">Reset</button>
+      </section>
+
+      <section class="content_container">
+        <h2>Selectors Example 18: Attributes [attribute*="value"]</h2>
+        <p>Check the code below and click the button to see the change to the sample content.</p>
+        <hr>
+        <h2>HTML Code:</h2>
+        <div class="pre_block">
+        <pre><code>
+        &lt;div&gt;
+          &lt;p title="TopTip"&gt;I am the paragraph, in a div!&lt;/p&gt;
+          &lt;p title="TipTop"&gt;I am the paragraph, in a div!&lt;/p&gt;
+          &lt;p title="A Top Man!"&gt;I am the paragraph, in a div!&lt;/p&gt;
+        &lt;/div&gt;
+        </code></pre>
+        </div>
+        <hr>
+        <h2>CSS Code:</h2>
+        <div class="pre_block">
+        <pre><code>
+          div p[title*="Top"] {
+            color: tomato;
+            font-weight: bold;
+            font-style: italic;
+           }
+        </code></pre>
+        </div>
+        <hr>
+        <h2>Sample Content:</h2>
+        <div class="selector_Original" id="selectorID_18">
+          <p title="TopTip">I am a paragraph, in a div!</p>
+          <p title="TipTop">I am a paragraph, in a div!</p>
+          <p title="A Top Man!">I am a paragraph, in a div!</p>
+        </div>
+        <button type="button" class="change_button" id="change_btn_18">Click Me!</button>
+        <br>
+        <button type="button" class="change_button" id="reset_btn_18">Reset</button>
       </section>
 
 
