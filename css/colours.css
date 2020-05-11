@@ -14,6 +14,7 @@
   height: 80%;
   border: 2px solid darkgreen;
   border-radius: 5px;
+  background-color: darkgreen;
 }
 /* CSS Helper Class - This is to maintain the above properties that should not to be changed.
 This avoids repeating the properties within the individual change classes. ------*/
@@ -32,6 +33,7 @@ This avoids repeating the properties within the individual change classes. -----
   height: 80%;
   border: 2px solid darkgreen;
   border-radius: 5px;
+  background-color: darkgreen;
 }
 /* CSS Change Classes. -------------------------------------------------------*/
 
@@ -39,3 +41,154 @@ This avoids repeating the properties within the individual change classes. -----
 .colourChange_1 div {
   background-color: palegreen;
  }
+
+/* Colours Example 2: Opacity*/
+.colourChange_2 div {
+  opacity: 0.8;
+ }
+
+/* Colours Example 3: Opacity*/
+.colourChange_3 div {
+  opacity: 0.2;
+ }
+
+/* Colours Example 4: Red - rgb(red, green, blue)*/
+.colourChange_4 div {
+  background-color: rgb(255, 0, 0);
+ }
+
+/* Colours Example 5: Red - rgba(red, green, blue, alpha)*/
+.colourChange_5 div {
+  background-color: rgba(255, 0, 0, 0.75);
+ }
+
+/* Colours Example 6: Red - rgba(red, green, blue, alpha)*/
+.colourChange_6 div {
+  background-color: rgba(255, 0, 0, 0.25);
+ }
+
+/* Colours Example 7: Red - hsl(hue, saturation, lightness)*/
+.colourChange_7 div {
+  background-color: hsl(0, 100%, 50%);
+ }
+
+/* Colours Example 8: Red - hsl(hue, saturation, lightness)*/
+.colourChange_8 div {
+  background-color: hsl(0, 75%, 50%);
+ }
+
+/* Colours Example 9: Red - hsl(hue, saturation, lightness)*/
+.colourChange_9 div {
+  background-color: hsl(0, 25%, 50%);
+ }
+
+/* Colours Example 10: Red - hsl(hue, saturation, lightness)*/
+.colourChange_10 div {
+  background-color: hsl(0, 100%, 75%);
+ }
+
+/* Colours Example 11: Red - hsl(hue, saturation, lightness)*/
+.colourChange_11 div {
+  background-color: hsl(0, 100%, 25%);
+ }
+
+/* Colours Example 12: Red - hsla(hue, saturation, lightness, alpha)*/
+.colourChange_12 div {
+  background-color: hsla(0, 100%, 50%, 0.75);
+ }
+
+/* Colours Example 13: Red - hsla(hue, saturation, lightness, alpha)*/
+.colourChange_13 div {
+  background-color: hsla(0, 100%, 50%, 0.25);
+ }
+
+/* Colours Example 14: Red - Hexadecimal (#rrggbb)*/
+.colourChange_14 div {
+  background-color: #ff0000;
+ }
+
+/* Colours Example 15: Red - Hexadecimal (#rgb)*/
+.colourChange_15 div {
+  background-color: #f00;
+ }
+
+ /* Colour Overview div -------------------------------------------------------*/
+.colour_Overview{
+  margin: 10px auto;
+  border: 2px solid darkgreen;
+  width: 80%;
+  height: 45px;
+  border-radius: 5px;
+}
+ /* Colour Overview: Red -------------------------------------------------------*/
+.red_1 {background-color: red;}
+.red_2 {background-color: rgb(255, 0, 0);}
+.red_3 {background-color: rgba(255, 0, 0, 0.75);}
+.red_4 {background-color: rgba(255, 0, 0, 0.25);}
+.red_5 {background-color: hsl(0, 100%, 50%);}
+.red_6 {background-color: hsl(0, 75%, 50%);}
+.red_7 {background-color: hsl(0, 25%, 50%);}
+.red_8 {background-color: hsl(0, 100%, 75%);}
+.red_9 {background-color: hsl(0, 100%, 25%);}
+.red_10 {background-color: hsla(0, 100%, 50%, 0.75);}
+.red_11 {background-color: hsla(0, 100%, 50%, 0.25);}
+.red_12 {background-color: #ff0000;}
+.red_13 {background-color: #f00;}
+
+ /* Colour Overview: Green -------------------------------------------------------*/
+.green_1 {background-color: green;}
+.green_2 {background-color: rgb(0, 128, 0);}
+.green_3 {background-color: rgba(0, 128, 0, 0.75);}
+.green_4 {background-color: rgba(0, 128, 0, 0.25);}
+.green_5 {background-color: hsl(120, 100%, 50%);}
+.green_6 {background-color: hsl(120, 75%, 50%);}
+.green_7 {background-color: hsl(120, 25%, 50%);}
+.green_8 {background-color: hsl(120, 100%, 75%);}
+.green_9 {background-color: hsl(120, 100%, 25%);}
+.green_10 {background-color: hsla(120, 100%, 50%, 0.75);}
+.green_11 {background-color: hsla(120, 100%, 50%, 0.25);}
+.green_12 {background-color: #008000;}
+.green_13 {background-color: #080;}
+
+ /* Colour Overview: Blue -------------------------------------------------------*/
+.blue_1 {background-color: blue;}
+.blue_2 {background-color: rgb(0, 0, 255);}
+.blue_3 {background-color: rgba(0, 0, 255, 0.75);}
+.blue_4 {background-color: rgba(0, 0, 255, 0.25);}
+.blue_5 {background-color: hsl(240, 100%, 50%);}
+.blue_6 {background-color: hsl(240, 75%, 50%);}
+.blue_7 {background-color: hsl(240, 25%, 50%);}
+.blue_8 {background-color: hsl(240, 100%, 75%);}
+.blue_9 {background-color: hsl(240, 100%, 25%);}
+.blue_10 {background-color: hsla(240, 100%, 50%, 0.75);}
+.blue_11 {background-color: hsla(240, 100%, 50%, 0.25);}
+.blue_12 {background-color: #0000ff;}
+.blue_13 {background-color: #00f;}
+
+ /* Colour Overview: Black, Grey & White -------------------------------------------------------*/
+.black_1 {background-color: black;}
+.grey_1 {background-color: grey;}
+.white_1 {background-color: white;}
+/* --------------------------------------------- */
+.black_2 {background-color: rgb(0, 0, 0);}
+.grey_2 {background-color: rgb(128, 128, 128);}
+.white_2 {background-color: rgb(255, 255, 255);}
+/* --------------------------------------------- */
+.black_3 {background-color: hsl(0, 100%, 0%);}
+.black_4 {background-color: hsl(0, 0%, 0%);}
+.black_5 {background-color: hsl(120, 100%, 0%);}
+.black_6 {background-color: hsl(120, 0%, 0%);}
+.black_7 {background-color: hsl(240, 100%, 0%);}
+.black_8 {background-color: hsl(240, 0%, 0%);}
+.grey_3 {background-color: hsl(0, 0%, 35%);}
+.grey_4 {background-color: hsl(0, 0%, 50%);}
+.grey_5 {background-color: hsl(0, 0%, 75%);}
+.grey_6 {background-color: hsl(0, 0%, 90%);}
+.white_3 {background-color: hsl(0, 0%, 100%);}
+/* --------------------------------------------- */
+.black_9 {background-color: #000000;}
+.black_10 {background-color: #000;}
+.grey_7 {background-color: #808080;}
+.grey_8 {background-color: #888;}
+.white_4 {background-color: #ffffff;}
+.white_5 {background-color: #fff;}
