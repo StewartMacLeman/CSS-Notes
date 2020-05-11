@@ -1,0 +1,101 @@
+/* Original css for the reset function.-------------------------------------- */
+
+.borders_Original {
+  margin: 10px auto;
+  border: 2px solid darkgreen;
+  width: 60%;
+  height: 100px;
+}
+.borders_Original div {
+  position: relative;
+  top: 8%;
+  margin: 0px auto;
+  width: 40%;
+  height: 80%;
+  border: 2px solid darkgreen;
+  background-color: palegreen;
+}
+/* CSS Helper Class - This is to maintain the above properties that should not to be changed.
+This avoids repeating the properties within the individual change classes. ------*/
+
+.bordersChangeHelper {
+  margin: 10px auto;
+  border: 2px solid darkgreen;
+  width: 60%;
+  height: 100px;
+}
+.bordersChangeHelper div {
+  position: relative;
+  top: 8%;
+  margin: 0px auto;
+  width: 40%;
+  height: 80%;
+  border: 2px solid darkgreen;
+  background-color: palegreen;
+}
+/* CSS Change Classes. -------------------------------------------------------*/
+
+/* Borders & Shadows Example 1: border-width*/
+.bordersChange_1 div {
+  border-width: 4px;
+ }
+/* Borders & Shadows Example 2: border-style*/
+.bordersChange_2 div {
+  border-style: dotted;
+ }
+/* Borders & Shadows Example 3: border-color*/
+.bordersChange_3 div {
+  border-color: tomato;
+ }
+/* Borders & Shadows Example 4: border shorthand*/
+.bordersChange_4 div {
+  border: 4px dotted tomato;
+ }
+/* Borders & Shadows Example 5: border-top*/
+.bordersChange_5 div {
+  border-top: 4px dotted tomato;
+ }
+/* Borders & Shadows Example 6: border-radius*/
+.bordersChange_6 div {
+  border-radius: 10px;
+ }
+/* Borders & Shadows Example 7: border-radius*/
+.bordersChange_7 div {
+  border-radius: 10px 30px;
+ }
+/* Borders & Shadows Example 8: border-radius*/
+.bordersChange_8 div {
+  border-radius: 10px 40px 20px;
+ }
+/* Borders & Shadows Example 9: border-radius*/
+.bordersChange_9 div {
+  border-radius: 10px 20px 30px 40px;
+ }
+/* Borders & Shadows Example 10: border-top-left-radius*/
+.bordersChange_10 div {
+  border-top-left-radius: 10px;
+ }
+/* Borders & Shadows Example 11: border-top-left-radius*/
+.bordersChange_11 div {
+  border-top-left-radius: 10px 40px;
+ }
+/* Borders & Shadows Example 12: border-top-right-radius*/
+.bordersChange_12 div {
+  border-top-right-radius: 10px 40px;
+ }
+/* Borders & Shadows Example 13: box-shadow*/
+.bordersChange_13 div {
+  box-shadow: 15px 5px;
+ }
+/* Borders & Shadows Example 14: box-shadow*/
+.bordersChange_14 div {
+  box-shadow: 15px 5px grey;
+ }
+/* Borders & Shadows Example 15: box-shadow*/
+.bordersChange_15 div {
+  box-shadow: 15px 5px 5px grey;
+ }
+/* Borders & Shadows Example 16: box-shadow*/
+.bordersChange_16 div {
+  box-shadow: 8px 3px 3px darkgrey, 20px 7px 7px lightgrey;
+ }

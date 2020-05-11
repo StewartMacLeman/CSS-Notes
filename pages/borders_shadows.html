@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="This website contains examples of CSS topics. It is for the purpose of revision.">
+
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/borders_shadows.css">
+    <script src="../scripts/borders_shadows.js" defer></script>
+    <script src="../scripts/upToTop.js" defer></script>
+    <title>CSS Notes: Borders & Shadows</title>
+  </head>
+
+  <body>
+    <header>
+      <h1>CCS Notes: Borders & Shadows</h1>
+    </header>
+
+    <nav>
+      <p class="dropdownP">Menu</p>
+      <div class="dropdown_Content">
+        <a href="../index.html">Home Page</a>
+        <a href="text.html">Text</a>
+        <a href="selectors.html">Selectors</a>
+        <a href="colours.html">Colours</a>
+        <a href="#">Borders & Shadows</a>
+      </div>
+    </nav>
+
+    <main>
+      <p>The examples below relate to various CSS bordering and shadowing techniques.</p>
+      <p>Review the code per section, then click the buttons to see the outcomes.</p>
+
+      <section class="content_container">
+        <h2>Starting HTML and CCS</h2>
+        <p>Below is the original HTML and CSS for the sample content.</p>
+        <hr>
+        <h2>HTML Code:</h2>
+        <div class="pre_block">
+        <pre><code>
+          &lt;div&gt; &lt;--------Parent div.
+            &lt;div&gt;&lt;/div&gt; &lt;-child div.
+          &lt;/div&gt;
+        </code></pre>
+        </div>
+        <hr>
+        <h2>CSS Code:</h2>
+        <div class="pre_block">
+        <pre><code>
+          div { &lt;----------Parent div.
+            margin: 10px auto;
+            border: 2px solid darkgreen;
+            width: 60%;
+            height: 100px;
+          }
+
+          div div { &lt;-------child div.
+            position: relative;
+            top: 8%;
+            margin: 0px auto;
+            width: 40%;
+            height: 80%;
+            border: 2px solid darkgreen;
+            background-color: palegreen;
+          }
+        </code></pre>
+        </div>
+        <hr>
+        <h2>Sample Content:</h2>
+        <div class="borders_Original">
+          <div></div>
+        </div>
+      </section>
+
+      <section class="content_container">
+        <h2>Borders & Shadows Example 1: border-width</h2>
+        <p>Check the code below and click the button to see the change to the sample content.</p>
+        <hr>
+        <h2>CSS Code:</h2>
+        <div class="pre_block">
+        <pre><code>
+          div div {
+            border-width: 4px;
+           }
+        </code></pre>
+        </div>
+        <hr>
+        <h2>Sample Content:</h2>
+        <div class="borders_Original" id="bordersID_1">
+          <div></div>
+        </div>
+        <button type="button" class="change_button" id="change_btn_1">Click Me!</button>
+        <br>
+        <button type="button" class="change_button" id="reset_btn_1">Reset</button>
+      </section>
+
+      <section class="content_container">
+        <h2>Borders & Shadows Example 2: border-style</h2>
+        <p>Check the code below and click the button to see the change to the sample content.</p>
+        <hr>
+        <h2>CSS Code:</h2>
+        <div class="pre_block">
+        <pre><code>
+          div div {
+            border-style: dotted;
+           }
+        </code></pre>
+        </div>
+        <hr>
+        <h2>Sample Content:</h2>
+        <div class="borders_Original" id="bordersID_2">
+          <div></div>
+        </div>
+        <button type="button" class="change_button" id="change_btn_2">Click Me!</button>
+        <br>
+        <button type="button" class="change_button" id="reset_btn_2">Reset</button>
+      </section>
+
+      <section class="content_container">
+        <h2>Borders & Shadows Example 3: border-color</h2>
+        <p>Check the code below and click the button to see the change to the sample content.</p>
+        <hr>
+        <h2>CSS Code:</h2>
+        <div class="pre_block">
+        <pre><code>
+          div div {
+            border-color: tomato;
+           }
+        </code></pre>
+        </div>
+        <hr>
+        <h2>Sample Content:</h2>
+        <div class="borders_Original" id="bordersID_3">
+          <div></div>
+        </div>
+        <button type="button" class="change_button" id="change_btn_3">Click Me!</button>
+        <br>
+        <button type="button" class="change_button" id="reset_btn_3">Reset</button>
+      </section>
+
+      <section class="content_container">
+        <h2>Borders & Shadows Example 4: border shorthand</h2>
+        <p>Check the code below and click the button to see the change to the sample content.</p>
+        <hr>
+        <h2>CSS Code:</h2>
+        <div class="pre_block">
+        <pre><code>
+          div div {
+            border: 4px dotted tomato;
+           }
+        </code></pre>
+        </div>
+        <hr>
+        <h2>Sample Content:</h2>
+        <div class="borders_Original" id="bordersID_4">
+          <div></div>
+        </div>
+        <button type="button" class="change_button" id="change_btn_4">Click Me!</button>
+        <br>
+        <button type="button" class="change_button" id="reset_btn_4">Reset</button>
+      </section>
+
+      <section class="content_container">
+        <h2>Borders & Shadows Example 5: border-top</h2>
+        <p>Check the code below and click the button to see the change to the sample content.</p>
+        <hr>
+        <h2>CSS Code:</h2>
+        <div class="pre_block">
+        <pre><code>
+          div div {
+            border-top: 4px dotted tomato;
+           }
+        </code></pre>
+        </div>
+        <hr>
+        <h2>Sample Content:</h2>
+        <div class="borders_Original" id="bordersID_5">
+          <div></div>
+        </div>
+        <button type="button" class="change_button" id="change_btn_5">Click Me!</button>
+        <br>
+        <button type="button" class="change_button" id="reset_btn_5">Reset</button>
+      </section>
+
+      <section class="content_container">
+        <h2>Borders & Shadows Example 6: border-radius</h2>
+        <p>Check the code below and click the button to see the change to the sample content.</p>
+        <hr>
+        <h2>CSS Code:</h2>
+        <div class="pre_block">
+        <pre><code>
+          div div {
+            border-radius: 10px;
+           }
+        </code></pre>
+        </div>
+        <hr>
+        <h2>Sample Content:</h2>
+        <div class="borders_Original" id="bordersID_6">
+          <div></div>
+        </div>
+        <button type="button" class="change_button" id="change_btn_6">Click Me!</button>
+        <br>
+        <button type="button" class="change_button" id="reset_btn_6">Reset</button>
+      </section>
+
+      <section class="content_container">
+        <h2>Borders & Shadows Example 7: border-radius</h2>
+        <p>Check the code below and click the button to see the change to the sample content.</p>
+        <hr>
+        <h2>CSS Code:</h2>
+        <div class="pre_block">
+        <pre><code>
+          div div {
+            border-radius: 10px 30px;
+           }
+        </code></pre>
+        </div>
+        <hr>
+        <h2>Sample Content:</h2>
+        <div class="borders_Original" id="bordersID_7">
+          <div></div>
+        </div>
+        <button type="button" class="change_button" id="change_btn_7">Click Me!</button>
+        <br>
+        <button type="button" class="change_button" id="reset_btn_7">Reset</button>
+      </section>
+
+      <section class="content_container">
+        <h2>Borders & Shadows Example 8: border-radius</h2>
+        <p>Check the code below and click the button to see the change to the sample content.</p>
+        <hr>
+        <h2>CSS Code:</h2>
+        <div class="pre_block">
+        <pre><code>
+          div div {
+            border-radius: 10px 40px 20px;
+           }
+        </code></pre>
+        </div>
+        <hr>
+        <h2>Sample Content:</h2>
+        <div class="borders_Original" id="bordersID_8">
+          <div></div>
+        </div>
+        <button type="button" class="change_button" id="change_btn_8">Click Me!</button>
+        <br>
+        <button type="button" class="change_button" id="reset_btn_8">Reset</button>
+      </section>
+
+      <section class="content_container">
+        <h2>Borders & Shadows Example 9: border-radius</h2>
+        <p>Check the code below and click the button to see the change to the sample content.</p>
+        <hr>
+        <h2>CSS Code:</h2>
+        <div class="pre_block">
+        <pre><code>
+          div div {
+            border-radius: 10px 20px 30px 40px;
+           }
+        </code></pre>
+        </div>
+        <hr>
+        <h2>Sample Content:</h2>
+        <div class="borders_Original" id="bordersID_9">
+          <div></div>
+        </div>
+        <button type="button" class="change_button" id="change_btn_9">Click Me!</button>
+        <br>
+        <button type="button" class="change_button" id="reset_btn_9">Reset</button>
+      </section>
+
+      <section class="content_container">
+        <h2>Borders & Shadows Example 10: border-top-left-radius</h2>
+        <p>Check the code below and click the button to see the change to the sample content.</p>
+        <hr>
+        <h2>CSS Code:</h2>
+        <div class="pre_block">
+        <pre><code>
+          div div {
+            border-top-left-radius: 10px;
+           }
+        </code></pre>
+        </div>
+        <hr>
+        <h2>Sample Content:</h2>
+        <div class="borders_Original" id="bordersID_10">
+          <div></div>
+        </div>
+        <button type="button" class="change_button" id="change_btn_10">Click Me!</button>
+        <br>
+        <button type="button" class="change_button" id="reset_btn_10">Reset</button>
+      </section>
+
+      <section class="content_container">
+        <h2>Borders & Shadows Example 11: border-top-left-radius</h2>
+        <p>Check the code below and click the button to see the change to the sample content.</p>
+        <hr>
+        <h2>CSS Code:</h2>
+        <div class="pre_block">
+        <pre><code>
+          div div {
+            border-top-left-radius: 10px 40px;
+           }
+        </code></pre>
+        </div>
+        <hr>
+        <h2>Sample Content:</h2>
+        <div class="borders_Original" id="bordersID_11">
+          <div></div>
+        </div>
+        <button type="button" class="change_button" id="change_btn_11">Click Me!</button>
+        <br>
+        <button type="button" class="change_button" id="reset_btn_11">Reset</button>
+      </section>
+
+      <section class="content_container">
+        <h2>Borders & Shadows Example 12: border-top-right-radius</h2>
+        <p>Check the code below and click the button to see the change to the sample content.</p>
+        <hr>
+        <h2>CSS Code:</h2>
+        <div class="pre_block">
+        <pre><code>
+          div div {
+            border-top-right-radius: 10px 40px;
+           }
+        </code></pre>
+        </div>
+        <hr>
+        <h2>Sample Content:</h2>
+        <div class="borders_Original" id="bordersID_12">
+          <div></div>
+        </div>
+        <button type="button" class="change_button" id="change_btn_12">Click Me!</button>
+        <br>
+        <button type="button" class="change_button" id="reset_btn_12">Reset</button>
+      </section>
+
+      <section class="content_container">
+        <h2>Borders & Shadows Example 13: box-shadow</h2>
+        <p>Check the code below and click the button to see the change to the sample content.</p>
+        <hr>
+        <h2>CSS Code:</h2>
+        <div class="pre_block">
+        <pre><code>
+          div div {
+            box-shadow: 15px 5px;
+           }
+        </code></pre>
+        </div>
+        <hr>
+        <h2>Sample Content:</h2>
+        <div class="borders_Original" id="bordersID_13">
+          <div></div>
+        </div>
+        <button type="button" class="change_button" id="change_btn_13">Click Me!</button>
+        <br>
+        <button type="button" class="change_button" id="reset_btn_13">Reset</button>
+      </section>
+
+      <section class="content_container">
+        <h2>Borders & Shadows Example 14: box-shadow</h2>
+        <p>Check the code below and click the button to see the change to the sample content.</p>
+        <hr>
+        <h2>CSS Code:</h2>
+        <div class="pre_block">
+        <pre><code>
+          div div {
+            box-shadow: 15px 5px grey;
+           }
+        </code></pre>
+        </div>
+        <hr>
+        <h2>Sample Content:</h2>
+        <div class="borders_Original" id="bordersID_14">
+          <div></div>
+        </div>
+        <button type="button" class="change_button" id="change_btn_14">Click Me!</button>
+        <br>
+        <button type="button" class="change_button" id="reset_btn_14">Reset</button>
+      </section>
+
+      <section class="content_container">
+        <h2>Borders & Shadows Example 15: box-shadow</h2>
+        <p>Check the code below and click the button to see the change to the sample content.</p>
+        <hr>
+        <h2>CSS Code:</h2>
+        <div class="pre_block">
+        <pre><code>
+          div div {
+            box-shadow: 15px 5px 5px grey;
+           }
+        </code></pre>
+        </div>
+        <hr>
+        <h2>Sample Content:</h2>
+        <div class="borders_Original" id="bordersID_15">
+          <div></div>
+        </div>
+        <button type="button" class="change_button" id="change_btn_15">Click Me!</button>
+        <br>
+        <button type="button" class="change_button" id="reset_btn_15">Reset</button>
+      </section>
+
+      <section class="content_container">
+        <h2>Borders & Shadows Example 16: box-shadow</h2>
+        <p>Check the code below and click the button to see the change to the sample content.</p>
+        <hr>
+        <h2>CSS Code:</h2>
+        <div class="pre_block">
+        <pre><code>
+          div div {
+            box-shadow: 8px 3px 3px darkgrey, 20px 7px 7px lightgrey;
+           }
+        </code></pre>
+        </div>
+        <hr>
+        <h2>Sample Content:</h2>
+        <div class="borders_Original" id="bordersID_16">
+          <div></div>
+        </div>
+        <button type="button" class="change_button" id="change_btn_16">Click Me!</button>
+        <br>
+        <button type="button" class="change_button" id="reset_btn_16">Reset</button>
+      </section>
+
+
+      <!-- Back to the top of the page button. -->
+      <button type="button" class="pageTop" title="Click the button to go back to the top of the page.">Up</button>
+
+    </main>
+  </body>
+</html>
