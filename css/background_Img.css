@@ -1,0 +1,102 @@
+/* Original css for the reset function.-------------------------------------- */
+
+.background_Original {
+  margin: 10px auto;
+  border: 2px solid darkgreen;
+  width: 60%;
+  height: 300px;
+}
+.background_Original div {
+  position: relative;
+  top: 9%;
+  margin: 0px auto;
+  width: 60%;
+  height: 80%;
+  border: 3px solid darkgreen;
+}
+/* CSS Helper Class - This is to maintain the above properties that should not to be changed.
+This avoids repeating the properties within the individual change classes. ------*/
+
+.backgroundChangeHelper {
+  margin: 10px auto;
+  border: 2px solid darkgreen;
+  width: 60%;
+  height: 300px;
+}
+.backgroundChangeHelper div {
+  position: relative;
+  top: 9%;
+  margin: 0px auto;
+  width: 60%;
+  height: 80%;
+  border: 3px solid darkgreen;
+}
+
+/* CSS Change Classes. -------------------------------------------------------*/
+
+/* Background Images Example 1: url(file-path)*/
+.backgroundChange_1 div {
+  background-image: url(../images/Travels_NZ.JPG);
+ }
+/* Background Images Example 2: background-size*/
+.backgroundChange_2 div {
+  background-image: url(../images/Travels_NZ.JPG);
+  background-size: 80px 54px;
+ }
+/* Background Images Example 3: background-size*/
+.backgroundChange_3 div {
+  background-image: url(../images/Travels_NZ.JPG);
+  background-size: contain;
+ }
+/* Background Images Example 4: background-size*/
+.backgroundChange_4 div {
+  background-image: url(../images/Travels_NZ.JPG);
+  background-size: cover;
+ }
+ /* Background Images Example 5: background-repeat*/
+ .backgroundChange_5 div {
+   background-image: url(../images/Travels_NZ.JPG);
+   background-size: 80px 54px;
+   background-repeat: no-repeat;
+ }
+ /* Background Images Example 6: background-repeat*/
+ .backgroundChange_6 div {
+   background-image: url(../images/Travels_NZ.JPG);
+   background-size: 80px 54px;
+   background-repeat: repeat-x;
+ }
+ /* Background Images Example 7: background-repeat*/
+ .backgroundChange_7 div {
+   background-image: url(../images/Travels_NZ.JPG);
+   background-size: 80px 54px;
+   background-repeat: repeat-y;
+ }
+ /* Background Images Example 8: background-position*/
+ .backgroundChange_8 div {
+   background-image: url(../images/Travels_NZ.JPG);
+   background-size: 160px 108px;
+   background-repeat: no-repeat;
+   background-position: top left;
+ }
+ /* Background Images Example 9: background-position*/
+ .backgroundChange_9 div {
+   background-image: url(../images/Travels_NZ.JPG);
+   background-size: 160px 108px;
+   background-repeat: no-repeat;
+   background-position: bottom right;
+ }
+ /* Background Images Example 10: multiple images*/
+ .backgroundChange_10 div {
+   background-image: url(../images/Travels_NZ.JPG), url(../images/Travels_NZ_2.JPG);
+   background-size: 160px 108px, 160px 108px;
+   background-repeat: no-repeat, no-repeat;
+   background-position: top left, bottom right;
+ }
+ /* Background Images Example 11: multiple images*/
+ .backgroundChange_11 div {
+   background: palegreen;
+   background-image: url(../images/Travels_NZ.JPG), url(../images/Travels_NZ_2.JPG);
+   background-size: 160px 108px, 80px 54px;
+   background-repeat: no-repeat, repeat-y;
+   background-position: top left, bottom right;
+ }
