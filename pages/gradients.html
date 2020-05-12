@@ -6,15 +6,15 @@
     <meta name="author" content="This website contains examples of CSS topics. It is for the purpose of revision.">
 
     <link rel="stylesheet" href="../css/main.css">
-    <link rel="stylesheet" href="../css/selectors.css">
-    <script src="../scripts/selectors.js" defer></script>
+    <link rel="stylesheet" href="../css/gradients.css">
+    <script src="../scripts/gradients.js" defer></script>
     <script src="../scripts/upToTop.js" defer></script>
-    <title>CSS Notes: Selectors</title>
+    <title>CSS Notes: Gradients</title>
   </head>
 
   <body>
     <header>
-      <h1>CCS Notes: Selectors</h1>
+      <h1>CCS Notes: Gradients</h1>
     </header>
 
     <nav>
@@ -22,15 +22,15 @@
       <div class="dropdown_Content">
         <a href="../index.html">Home Page</a>
         <a href="text.html">Text</a>
-        <a href="#">Selectors</a>
+        <a href="selectors.html">Selectors</a>
         <a href="colours.html">Colours</a>
         <a href="borders_shadows.html">Borders & Shadows</a>
-        <a href="gradients.html">Gradients</a>
+        <a href="#">Gradients</a>
       </div>
     </nav>
 
     <main>
-      <p>The examples below relate to various CSS selector techniques.</p>
+      <p>The examples below relate to various CSS gradient techniques.</p>
       <p>Review the code per section, then click the buttons to see the outcomes.</p>
 
       <section class="content_container">
@@ -40,64 +40,56 @@
         <h2>HTML Code:</h2>
         <div class="pre_block">
         <pre><code>
-        &lt;div&gt;
-          &lt;p&gt;I am the paragraph, in a div!&lt;/p&gt;
-          &lt;p&gt;I am the paragraph, in a div!&lt;/p&gt;
-          &lt;p&gt;I am the paragraph, in a div!&lt;/p&gt;
-        &lt;/div&gt;
+          &lt;div&gt; &lt;--------Parent div.
+            &lt;div&gt;&lt;/div&gt; &lt;-child div.
+          &lt;/div&gt;
         </code></pre>
         </div>
         <hr>
         <h2>CSS Code:</h2>
         <div class="pre_block">
         <pre><code>
-          div {
-            margin: 10px auto 10px;
+          div { &lt;----------Parent div.
+            margin: 10px auto;
             border: 2px solid darkgreen;
             width: 60%;
-            height: 115px;
+            height: 100px;
           }
 
-          div p {
-            margin: 0 auto 5px;
-            padding: 2px;
-            font-size: 1.5em;
-            font-style: normal;
-            font-weight: normal;
-            color: black;
-            text-align: center;
+          div div { &lt;-------child div.
+            position: relative;
+            top: 8%;
+            margin: 0px auto;
+            width: 80%;
+            height: 80%;
+            border: 2px solid darkgreen;
+            background-color: palegreen;
           }
         </code></pre>
         </div>
         <hr>
         <h2>Sample Content:</h2>
-        <div class="selector_Original">
-          <p>I am a paragraph, in a div!</p>
-          <p>I am a paragraph, in a div!</p>
-          <p>I am a paragraph, in a div!</p>
+        <div class="gradients_Original">
+          <div></div>
         </div>
       </section>
 
       <section class="content_container">
-        <h2>Selectors Example 1: Combinators - Descendant (space)</h2>
+        <h2>Gradients Example 1: linear-gradient() - default</h2>
         <p>Check the code below and click the button to see the change to the sample content.</p>
         <hr>
         <h2>CSS Code:</h2>
         <div class="pre_block">
         <pre><code>
-          div p {
-            color: tomato;
-            font-weight: bold;
-            font-style: italic;
+          div div {
+            background-image: linear-gradient(darkgreen, palegreen);
            }
         </code></pre>
         </div>
         <hr>
         <h2>Sample Content:</h2>
-        <div class="selector_Original" id="selectorID_1">
-          <p>I am a paragraph, in a div!</p>
-          <p>I am a paragraph, in a div!</p>
-          <p>I am a paragraph, in a div!</p>
+        <div class="gradients_Original" id="gradientsID_1">
+          <div></div>
         </div>
         <button type="button" class="change_button" id="change_btn_1">Click Me!</button>
         <br>
@@ -105,25 +97,21 @@
       </section>
 
       <section class="content_container">
-        <h2>Selectors Example 2: Combinators - Descendant (space)</h2>
+        <h2>Gradients Example 2: linear-gradient() - default</h2>
         <p>Check the code below and click the button to see the change to the sample content.</p>
         <hr>
         <h2>CSS Code:</h2>
         <div class="pre_block">
         <pre><code>
-          div p span {
-            color: tomato;
-            font-weight: bold;
-            font-style: italic;
+          div div {
+            background-image: linear-gradient(darkgreen, green, linen);
            }
         </code></pre>
         </div>
         <hr>
         <h2>Sample Content:</h2>
-        <div class="selector_Original" id="selectorID_2">
-          <p>I am a paragraph, in a div!</p>
-          <p>I am a paragraph, in a div!</p>
-          <p>I am a <span><b>span</b></span>, in a paragraph!</p>
+        <div class="gradients_Original" id="gradientsID_2">
+          <div></div>
         </div>
         <button type="button" class="change_button" id="change_btn_2">Click Me!</button>
         <br>
@@ -131,25 +119,21 @@
       </section>
 
       <section class="content_container">
-        <h2>Selectors Example 3: Combinators - Child (>)</h2>
+        <h2>Gradients Example 3: linear-gradient(direction, colour-1, colour-2)</h2>
         <p>Check the code below and click the button to see the change to the sample content.</p>
         <hr>
         <h2>CSS Code:</h2>
         <div class="pre_block">
         <pre><code>
-          div > p {
-            color: tomato;
-            font-weight: bold;
-            font-style: italic;
+          div div {
+            background-image: linear-gradient(to right, darkgreen, palegreen);
            }
         </code></pre>
         </div>
         <hr>
         <h2>Sample Content:</h2>
-        <div class="selector_Original" id="selectorID_3">
-          <h2>I am a header, in a div!</h2>
-          <p>I am a paragraph, in a div!</p>
-          <p>I am a paragraph, in a div!</p>
+        <div class="gradients_Original" id="gradientsID_3">
+          <div></div>
         </div>
         <button type="button" class="change_button" id="change_btn_3">Click Me!</button>
         <br>
@@ -157,82 +141,65 @@
       </section>
 
       <section class="content_container">
-        <h2>Selectors Example 4: Combinators - Adjacent Sibling (+)</h2>
+        <h2>Gradients Example 4: linear-gradient(direction, colour-1, colour-2)</h2>
         <p>Check the code below and click the button to see the change to the sample content.</p>
         <hr>
         <h2>CSS Code:</h2>
         <div class="pre_block">
         <pre><code>
-          div + p {
-            color: tomato;
-            font-weight: bold;
-            font-style: italic;
+          div div {
+            background-image: linear-gradient(to left, darkgreen, palegreen);
            }
         </code></pre>
         </div>
         <hr>
         <h2>Sample Content:</h2>
-        <div class="selector_Original" id="selectorID_4">
-          <p>I am a paragraph, in a div!</p>
-          <p>I am a paragraph, in a div!</p>
-          <p>I am a paragraph, in a div!</p>
+        <div class="gradients_Original" id="gradientsID_4">
+          <div></div>
         </div>
-          <p>I am a paragraph, <b>not</b> in a div!</p>
         <button type="button" class="change_button" id="change_btn_4">Click Me!</button>
         <br>
         <button type="button" class="change_button" id="reset_btn_4">Reset</button>
       </section>
 
       <section class="content_container">
-        <h2>Selectors Example 5: Combinators - General Sibling (~)</h2>
+        <h2>Gradients Example 5: linear-gradient(direction, colour-1, colour-2)</h2>
         <p>Check the code below and click the button to see the change to the sample content.</p>
         <hr>
         <h2>CSS Code:</h2>
         <div class="pre_block">
         <pre><code>
-          div ~ p {
-            color: tomato;
-            font-weight: bold;
-            font-style: italic;
+          div div {
+            background-image: linear-gradient(to bottom right, darkgreen, palegreen);
            }
         </code></pre>
         </div>
         <hr>
         <h2>Sample Content:</h2>
-        <p>I am a paragraph, <b>not</b> in a div!</p>
-        <div class="selector_Original" id="selectorID_5">
-          <p>I am a paragraph, in a div!</p>
-          <p>I am a paragraph, in a div!</p>
-          <p>I am a paragraph, in a div!</p>
+        <div class="gradients_Original" id="gradientsID_5">
+          <div></div>
         </div>
-          <p>I am a paragraph, <b>not</b> in a div!</p>
-          <h2>I am a header, not in a div!</h2>
-          <p>I am a paragraph, <b>not</b> in a div!</p>
         <button type="button" class="change_button" id="change_btn_5">Click Me!</button>
         <br>
         <button type="button" class="change_button" id="reset_btn_5">Reset</button>
       </section>
 
       <section class="content_container">
-        <h2>Selectors Example 6: Pseudo-classes (:first-child)</h2>
+        <h2>Gradients Example 6: linear-gradient(direction, colour-1, colour-2)</h2>
         <p>Check the code below and click the button to see the change to the sample content.</p>
         <hr>
         <h2>CSS Code:</h2>
         <div class="pre_block">
         <pre><code>
-          div p:first-child {
-            color: tomato;
-            font-weight: bold;
-            font-style: italic;
+          div div {
+            background-image: linear-gradient(to bottom left, darkgreen, palegreen);
            }
         </code></pre>
         </div>
         <hr>
         <h2>Sample Content:</h2>
-        <div class="selector_Original" id="selectorID_6">
-          <p>I am a paragraph, in a div!</p>
-          <p>I am a paragraph, in a div!</p>
-          <p>I am a paragraph, in a div!</p>
+        <div class="gradients_Original" id="gradientsID_6">
+          <div></div>
         </div>
         <button type="button" class="change_button" id="change_btn_6">Click Me!</button>
         <br>
@@ -240,25 +207,21 @@
       </section>
 
       <section class="content_container">
-        <h2>Selectors Example 7: Pseudo-classes (:last-child)</h2>
+        <h2>Gradients Example 7: linear-gradient(angle, colour-1, colour-2)</h2>
         <p>Check the code below and click the button to see the change to the sample content.</p>
         <hr>
         <h2>CSS Code:</h2>
         <div class="pre_block">
         <pre><code>
-          div p:last-child {
-            color: tomato;
-            font-weight: bold;
-            font-style: italic;
+          div div {
+            background-image: linear-gradient(0deg, darkgreen, palegreen);
            }
         </code></pre>
         </div>
         <hr>
         <h2>Sample Content:</h2>
-        <div class="selector_Original" id="selectorID_7">
-          <p>I am a paragraph, in a div!</p>
-          <p>I am a paragraph, in a div!</p>
-          <p>I am a paragraph, in a div!</p>
+        <div class="gradients_Original" id="gradientsID_7">
+          <div></div>
         </div>
         <button type="button" class="change_button" id="change_btn_7">Click Me!</button>
         <br>
@@ -266,25 +229,21 @@
       </section>
 
       <section class="content_container">
-        <h2>Selectors Example 8: Pseudo-classes (:nth-child(n))</h2>
+        <h2>Gradients Example 8: linear-gradient(angle, colour-1, colour-2)</h2>
         <p>Check the code below and click the button to see the change to the sample content.</p>
         <hr>
         <h2>CSS Code:</h2>
         <div class="pre_block">
         <pre><code>
-          div p:nth-child(3) {
-            color: tomato;
-            font-weight: bold;
-            font-style: italic;
+          div div {
+            background-image: linear-gradient(45deg, darkgreen, palegreen);
            }
         </code></pre>
         </div>
         <hr>
         <h2>Sample Content:</h2>
-        <div class="selector_Original" id="selectorID_8">
-          <p>I am a paragraph, in a div!</p>
-          <p>I am a paragraph, in a div!</p>
-          <p>I am a paragraph, in a div!</p>
+        <div class="gradients_Original" id="gradientsID_8">
+          <div></div>
         </div>
         <button type="button" class="change_button" id="change_btn_8">Click Me!</button>
         <br>
@@ -292,25 +251,21 @@
       </section>
 
       <section class="content_container">
-        <h2>Selectors Example 9: Pseudo-elements (::first-letter)</h2>
+        <h2>Gradients Example 9: linear-gradient(angle, colour-1, colour-2)</h2>
         <p>Check the code below and click the button to see the change to the sample content.</p>
         <hr>
         <h2>CSS Code:</h2>
         <div class="pre_block">
         <pre><code>
-          div p::first-letter {
-            color: tomato;
-            font-weight: bold;
-            font-style: italic;
+          div div {
+            background-image: linear-gradient(90deg, darkgreen, palegreen);
            }
         </code></pre>
         </div>
         <hr>
         <h2>Sample Content:</h2>
-        <div class="selector_Original" id="selectorID_9">
-          <p>I am a paragraph, in a div!</p>
-          <p>I am a paragraph, in a div!</p>
-          <p>I am a paragraph, in a div!</p>
+        <div class="gradients_Original" id="gradientsID_9">
+          <div></div>
         </div>
         <button type="button" class="change_button" id="change_btn_9">Click Me!</button>
         <br>
@@ -318,23 +273,21 @@
       </section>
 
       <section class="content_container">
-        <h2>Selectors Example 10: Pseudo-elements (::first-line)</h2>
+        <h2>Gradients Example 10: linear-gradient(angle, colour-1, colour-2)</h2>
         <p>Check the code below and click the button to see the change to the sample content.</p>
         <hr>
         <h2>CSS Code:</h2>
         <div class="pre_block">
         <pre><code>
-          div p::first-line {
-            color: tomato;
-            font-weight: bold;
-            font-style: italic;
+          div div {
+            background-image: linear-gradient(-90deg, darkgreen, palegreen);
            }
         </code></pre>
         </div>
         <hr>
         <h2>Sample Content:</h2>
-        <div class="selector_Original" id="selectorID_10">
-          <p>I am a paragraph, in a div! Some text, more text, more text, more text, more text, more text, more text, more text, more text,  more text, more text and more text!</p>
+        <div class="gradients_Original" id="gradientsID_10">
+          <div></div>
         </div>
         <button type="button" class="change_button" id="change_btn_10">Click Me!</button>
         <br>
@@ -342,26 +295,21 @@
       </section>
 
       <section class="content_container">
-        <h2>Selectors Example 11: Pseudo-elements (::before)</h2>
+        <h2>Gradients Example 11: linear-gradient(direction, colour-1, colour-2...)</h2>
         <p>Check the code below and click the button to see the change to the sample content.</p>
         <hr>
         <h2>CSS Code:</h2>
         <div class="pre_block">
         <pre><code>
-          div p::before {
-            content: "Hello there! ";
-            color: tomato;
-            font-weight: bold;
-            font-style: italic;
+          div div {
+            background-image: linear-gradient(to right, darkgreen, palegreen 10%, linen);
            }
         </code></pre>
         </div>
         <hr>
         <h2>Sample Content:</h2>
-        <div class="selector_Original" id="selectorID_11">
-          <p>I am a paragraph, in a div!</p>
-          <p>I am a paragraph, in a div!</p>
-          <p>I am a paragraph, in a div!</p>
+        <div class="gradients_Original" id="gradientsID_11">
+          <div></div>
         </div>
         <button type="button" class="change_button" id="change_btn_11">Click Me!</button>
         <br>
@@ -369,26 +317,22 @@
       </section>
 
       <section class="content_container">
-        <h2>Selectors Example 12: Pseudo-elements (::after)</h2>
+        <h2>Gradients Example 12: linear-gradient(direction, colour-1, colour-2...)</h2>
         <p>Check the code below and click the button to see the change to the sample content.</p>
         <hr>
         <h2>CSS Code:</h2>
         <div class="pre_block">
         <pre><code>
-          div p::after {
-            content: " Bye bye!";
-            color: tomato;
-            font-weight: bold;
-            font-style: italic;
+          div div {
+            background-image: linear-gradient(to right,
+            darkgreen, palegreen 10%, linen 40%);
            }
         </code></pre>
         </div>
         <hr>
         <h2>Sample Content:</h2>
-        <div class="selector_Original" id="selectorID_12">
-          <p>I am a paragraph, in a div!</p>
-          <p>I am a paragraph, in a div!</p>
-          <p>I am a paragraph, in a div!</p>
+        <div class="gradients_Original" id="gradientsID_12">
+          <div></div>
         </div>
         <button type="button" class="change_button" id="change_btn_12">Click Me!</button>
         <br>
@@ -396,36 +340,22 @@
       </section>
 
       <section class="content_container">
-        <h2>Selectors Example 13: Attributes [attribute]</h2>
+        <h2>Gradients Example 13: linear-gradient(direction, colour-1, colour-2...)</h2>
         <p>Check the code below and click the button to see the change to the sample content.</p>
-        <hr>
-        <h2>HTML Code:</h2>
-        <div class="pre_block">
-        <pre><code>
-        &lt;div&gt;
-          &lt;p title="TopTip"&gt;I am the paragraph, in a div!&lt;/p&gt;
-          &lt;p title="TipTop"&gt;I am the paragraph, in a div!&lt;/p&gt;
-          &lt;p&gt;I am the paragraph, in a div!&lt;/p&gt;
-        &lt;/div&gt;
-        </code></pre>
-        </div>
         <hr>
         <h2>CSS Code:</h2>
         <div class="pre_block">
         <pre><code>
-          div p[title] {
-            color: tomato;
-            font-weight: bold;
-            font-style: italic;
+          div div {
+            background-image: linear-gradient(to right,
+            darkgreen 25%, palegreen 25% 50%, linen 50% 75%, darkgreen 75%);
            }
         </code></pre>
         </div>
         <hr>
         <h2>Sample Content:</h2>
-        <div class="selector_Original" id="selectorID_13">
-          <p title="TopTip">I am a paragraph, in a div!</p>
-          <p title="TipTop">I am a paragraph, in a div!</p>
-          <p>I am a paragraph, in a div!</p>
+        <div class="gradients_Original" id="gradientsID_13">
+          <div></div>
         </div>
         <button type="button" class="change_button" id="change_btn_13">Click Me!</button>
         <br>
@@ -433,36 +363,22 @@
       </section>
 
       <section class="content_container">
-        <h2>Selectors Example 14: Attributes [attribute="value"]</h2>
+        <h2>Gradients Example 14: repeating-linear-gradient(direction, colours...)</h2>
         <p>Check the code below and click the button to see the change to the sample content.</p>
-        <hr>
-        <h2>HTML Code:</h2>
-        <div class="pre_block">
-        <pre><code>
-        &lt;div&gt;
-          &lt;p title="TopTip"&gt;I am the paragraph, in a div!&lt;/p&gt;
-          &lt;p title="TipTop"&gt;I am the paragraph, in a div!&lt;/p&gt;
-          &lt;p title="A Top Man!"&gt;I am the paragraph, in a div!&lt;/p&gt;
-        &lt;/div&gt;
-        </code></pre>
-        </div>
         <hr>
         <h2>CSS Code:</h2>
         <div class="pre_block">
         <pre><code>
-          div p[title="TipTop"] {
-            color: tomato;
-            font-weight: bold;
-            font-style: italic;
+          div div {
+            background-image: repeating-linear-gradient(to right,
+            darkgreen, palegreen 10%, linen 20%);
            }
         </code></pre>
         </div>
         <hr>
         <h2>Sample Content:</h2>
-        <div class="selector_Original" id="selectorID_14">
-          <p title="TopTip">I am a paragraph, in a div!</p>
-          <p title="TipTop">I am a paragraph, in a div!</p>
-          <p title="A Top Man!">I am a paragraph, in a div!</p>
+        <div class="gradients_Original" id="gradientsID_14">
+          <div></div>
         </div>
         <button type="button" class="change_button" id="change_btn_14">Click Me!</button>
         <br>
@@ -470,36 +386,21 @@
       </section>
 
       <section class="content_container">
-        <h2>Selectors Example 15: Attributes [attribute~="value"]</h2>
+        <h2>Gradients Example 15: radial-gradient() - default</h2>
         <p>Check the code below and click the button to see the change to the sample content.</p>
-        <hr>
-        <h2>HTML Code:</h2>
-        <div class="pre_block">
-        <pre><code>
-        &lt;div&gt;
-          &lt;p title="TopTip"&gt;I am the paragraph, in a div!&lt;/p&gt;
-          &lt;p title="TipTop"&gt;I am the paragraph, in a div!&lt;/p&gt;
-          &lt;p title="A Top Man!"&gt;I am the paragraph, in a div!&lt;/p&gt;
-        &lt;/div&gt;
-        </code></pre>
-        </div>
         <hr>
         <h2>CSS Code:</h2>
         <div class="pre_block">
         <pre><code>
-          div p[title~="Top"] {
-            color: tomato;
-            font-weight: bold;
-            font-style: italic;
+          div div {
+            background-image: radial-gradient(darkgreen, palegreen);
            }
         </code></pre>
         </div>
         <hr>
         <h2>Sample Content:</h2>
-        <div class="selector_Original" id="selectorID_15">
-          <p title="TopTip">I am a paragraph, in a div!</p>
-          <p title="TipTop">I am a paragraph, in a div!</p>
-          <p title="A Top Man!">I am a paragraph, in a div!</p>
+        <div class="gradients_Original" id="gradientsID_15">
+          <div></div>
         </div>
         <button type="button" class="change_button" id="change_btn_15">Click Me!</button>
         <br>
@@ -507,36 +408,21 @@
       </section>
 
       <section class="content_container">
-        <h2>Selectors Example 16: Attributes [attribute^="value"]</h2>
+        <h2>Gradients Example 16: radial-gradient() - default</h2>
         <p>Check the code below and click the button to see the change to the sample content.</p>
-        <hr>
-        <h2>HTML Code:</h2>
-        <div class="pre_block">
-        <pre><code>
-        &lt;div&gt;
-          &lt;p title="TopTip"&gt;I am the paragraph, in a div!&lt;/p&gt;
-          &lt;p title="TipTop"&gt;I am the paragraph, in a div!&lt;/p&gt;
-          &lt;p title="A Top Man!"&gt;I am the paragraph, in a div!&lt;/p&gt;
-        &lt;/div&gt;
-        </code></pre>
-        </div>
         <hr>
         <h2>CSS Code:</h2>
         <div class="pre_block">
         <pre><code>
-          div p[title^="Top"] {
-            color: tomato;
-            font-weight: bold;
-            font-style: italic;
+          div div {
+            background-image: radial-gradient(darkgreen, palegreen, linen);
            }
         </code></pre>
         </div>
         <hr>
         <h2>Sample Content:</h2>
-        <div class="selector_Original" id="selectorID_16">
-          <p title="TopTip">I am a paragraph, in a div!</p>
-          <p title="TipTop">I am a paragraph, in a div!</p>
-          <p title="A Top Man!">I am a paragraph, in a div!</p>
+        <div class="gradients_Original" id="gradientsID_16">
+          <div></div>
         </div>
         <button type="button" class="change_button" id="change_btn_16">Click Me!</button>
         <br>
@@ -544,36 +430,21 @@
       </section>
 
       <section class="content_container">
-        <h2>Selectors Example 17: Attributes [attribute$="value"]</h2>
+        <h2>Gradients Example 17: radial-gradient(shape, colour-1, colour-2...)</h2>
         <p>Check the code below and click the button to see the change to the sample content.</p>
-        <hr>
-        <h2>HTML Code:</h2>
-        <div class="pre_block">
-        <pre><code>
-        &lt;div&gt;
-          &lt;p title="TopTip"&gt;I am the paragraph, in a div!&lt;/p&gt;
-          &lt;p title="TipTop"&gt;I am the paragraph, in a div!&lt;/p&gt;
-          &lt;p title="A Top Man!"&gt;I am the paragraph, in a div!&lt;/p&gt;
-        &lt;/div&gt;
-        </code></pre>
-        </div>
         <hr>
         <h2>CSS Code:</h2>
         <div class="pre_block">
         <pre><code>
-          div p[title$="Top"] {
-            color: tomato;
-            font-weight: bold;
-            font-style: italic;
+          div div {
+            background-image: radial-gradient(circle, darkgreen, palegreen, linen);
            }
         </code></pre>
         </div>
         <hr>
         <h2>Sample Content:</h2>
-        <div class="selector_Original" id="selectorID_17">
-          <p title="TopTip">I am a paragraph, in a div!</p>
-          <p title="TipTop">I am a paragraph, in a div!</p>
-          <p title="A Top Man!">I am a paragraph, in a div!</p>
+        <div class="gradients_Original" id="gradientsID_17">
+          <div></div>
         </div>
         <button type="button" class="change_button" id="change_btn_17">Click Me!</button>
         <br>
@@ -581,40 +452,70 @@
       </section>
 
       <section class="content_container">
-        <h2>Selectors Example 18: Attributes [attribute*="value"]</h2>
+        <h2>Gradients Example 18: radial-gradient() - default</h2>
         <p>Check the code below and click the button to see the change to the sample content.</p>
-        <hr>
-        <h2>HTML Code:</h2>
-        <div class="pre_block">
-        <pre><code>
-        &lt;div&gt;
-          &lt;p title="TopTip"&gt;I am the paragraph, in a div!&lt;/p&gt;
-          &lt;p title="TipTop"&gt;I am the paragraph, in a div!&lt;/p&gt;
-          &lt;p title="A Top Man!"&gt;I am the paragraph, in a div!&lt;/p&gt;
-        &lt;/div&gt;
-        </code></pre>
-        </div>
         <hr>
         <h2>CSS Code:</h2>
         <div class="pre_block">
         <pre><code>
-          div p[title*="Top"] {
-            color: tomato;
-            font-weight: bold;
-            font-style: italic;
+          div div {
+            background-image: radial-gradient(darkgreen 5%, palegreen 20%, linen 60%);
            }
         </code></pre>
         </div>
         <hr>
         <h2>Sample Content:</h2>
-        <div class="selector_Original" id="selectorID_18">
-          <p title="TopTip">I am a paragraph, in a div!</p>
-          <p title="TipTop">I am a paragraph, in a div!</p>
-          <p title="A Top Man!">I am a paragraph, in a div!</p>
+        <div class="gradients_Original" id="gradientsID_18">
+          <div></div>
         </div>
         <button type="button" class="change_button" id="change_btn_18">Click Me!</button>
         <br>
         <button type="button" class="change_button" id="reset_btn_18">Reset</button>
+      </section>
+
+      <section class="content_container">
+        <h2>Gradients Example 19: radial-gradient() - default</h2>
+        <p>Check the code below and click the button to see the change to the sample content.</p>
+        <hr>
+        <h2>CSS Code:</h2>
+        <div class="pre_block">
+        <pre><code>
+          div div {
+            background-image: radial-gradient(darkgreen 25%, palegreen 40%, linen 80%);
+           }
+        </code></pre>
+        </div>
+        <hr>
+        <h2>Sample Content:</h2>
+        <div class="gradients_Original" id="gradientsID_19">
+          <div></div>
+        </div>
+        <button type="button" class="change_button" id="change_btn_19">Click Me!</button>
+        <br>
+        <button type="button" class="change_button" id="reset_btn_19">Reset</button>
+      </section>
+
+      <section class="content_container">
+        <h2>Gradients Example 20: repeating-radial-gradient()</h2>
+        <p>Check the code below and click the button to see the change to the sample content.</p>
+        <hr>
+        <h2>CSS Code:</h2>
+        <div class="pre_block">
+        <pre><code>
+          div div {
+            background-image: repeating-radial-gradient
+                              (darkgreen, palegreen 10%, linen 20%);
+           }
+        </code></pre>
+        </div>
+        <hr>
+        <h2>Sample Content:</h2>
+        <div class="gradients_Original" id="gradientsID_20">
+          <div></div>
+        </div>
+        <button type="button" class="change_button" id="change_btn_20">Click Me!</button>
+        <br>
+        <button type="button" class="change_button" id="reset_btn_20">Reset</button>
       </section>
 
 
