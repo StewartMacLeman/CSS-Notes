@@ -6,15 +6,15 @@
     <meta name="author" content="This website contains examples of CSS topics. It is for the purpose of revision.">
 
     <link rel="stylesheet" href="../css/main.css">
-    <link rel="stylesheet" href="../css/background_Img.css">
-    <script src="../scripts/background_Img.js" defer></script>
+    <link rel="stylesheet" href="../css/position.css">
+    <script src="../scripts/position.js" defer></script>
     <script src="../scripts/upToTop.js" defer></script>
-    <title>CSS Notes: Background Images</title>
+    <title>CSS Notes: The Position Property</title>
   </head>
 
   <body>
     <header>
-      <h1>CCS Notes: Background Images</h1>
+      <h1>CCS Notes: The Position Property</h1>
     </header>
 
     <nav>
@@ -26,14 +26,14 @@
         <a href="colours.html">Colours</a>
         <a href="borders_shadows.html">Borders & Shadows</a>
         <a href="gradients.html">Gradients</a>
-        <a href="#">Background Images</a>
+        <a href="background_Img.html">Background Images</a>
         <a href="display.html">The Display Property</a>
-        <a href="position.html">The Position Property</a>
+        <a href="#">The Position Property</a>
       </div>
     </nav>
 
     <main>
-      <p>The examples below relate to various CSS background image techniques.</p>
+      <p>The examples below relate to various CSS position property techniques.</p>
       <p>Review the code per section, then click the buttons to see the outcomes.</p>
 
       <section class="content_container">
@@ -57,40 +57,43 @@
             border: 2px solid darkgreen;
             width: 60%;
             height: 300px;
+            overflow-x: scroll;
           }
 
           div div { &lt;-------child div.
-            position: relative;
-            top: 9%;
-            margin: 0px auto;
-            width: 60%;
-            height: 80%;
-            border: 3px solid darkgreen;
+            margin: 0px;
+            width: 33.33%;
+            height: 96px;
+            background-color: palegreen;
+            border: 2px solid darkgreen;
+            border-radius: 5px;
           }
         </code></pre>
         </div>
         <hr>
         <h2>Sample Content:</h2>
-        <div class="background_Original">
+        <div class="position_Original">
           <div></div>
         </div>
       </section>
 
       <section class="content_container">
-        <h2>Background Images Example 1: url(file-path)</h2>
+        <h2>The Position Property Example 1: static (default)</h2>
         <p>Check the code below and click the button to see the change to the sample content.</p>
         <hr>
         <h2>CSS Code:</h2>
         <div class="pre_block">
-        <pre><code>
-          div div {
-            background-image: url(../images/Travels_NZ.JPG);
-           }
-        </code></pre>
+          <pre><code>
+            div div {
+              position: static;
+              top: 50px;
+              left: 100px;
+            }
+          </code></pre>
         </div>
         <hr>
         <h2>Sample Content:</h2>
-        <div class="background_Original" id="backgroundID_1">
+        <div class="position_Original" id="positionID_1">
           <div></div>
         </div>
         <button type="button" class="change_button" id="change_btn_1">Click Me!</button>
@@ -99,21 +102,22 @@
       </section>
 
       <section class="content_container">
-        <h2>Background Images Example 2: background-size</h2>
+        <h2>The Position Property Example 2: relative</h2>
         <p>Check the code below and click the button to see the change to the sample content.</p>
         <hr>
         <h2>CSS Code:</h2>
         <div class="pre_block">
         <pre><code>
           div div {
-            background-image: url(../images/Travels_NZ.JPG);
-            background-size: 80px 54px;
+            position: relative;
+            top: 50px;
+            left: 100px;
            }
         </code></pre>
         </div>
         <hr>
         <h2>Sample Content:</h2>
-        <div class="background_Original" id="backgroundID_2">
+        <div class="position_Original" id="positionID_2">
           <div></div>
         </div>
         <button type="button" class="change_button" id="change_btn_2">Click Me!</button>
@@ -122,21 +126,22 @@
       </section>
 
       <section class="content_container">
-        <h2>Background Images Example 3: background-size</h2>
+        <h2>The Position Property Example 3: relative</h2>
         <p>Check the code below and click the button to see the change to the sample content.</p>
         <hr>
         <h2>CSS Code:</h2>
         <div class="pre_block">
         <pre><code>
           div div {
-            background-image: url(../images/Travels_NZ.JPG);
-            background-size: contain;
+            position: relative;
+            top: 50%;
+            left: 50%;
            }
         </code></pre>
         </div>
         <hr>
         <h2>Sample Content:</h2>
-        <div class="background_Original" id="backgroundID_3">
+        <div class="position_Original" id="positionID_3">
           <div></div>
         </div>
         <button type="button" class="change_button" id="change_btn_3">Click Me!</button>
@@ -145,21 +150,22 @@
       </section>
 
       <section class="content_container">
-        <h2>Background Images Example 4: background-size</h2>
+        <h2>The Position Property Example 4: relative</h2>
         <p>Check the code below and click the button to see the change to the sample content.</p>
         <hr>
         <h2>CSS Code:</h2>
         <div class="pre_block">
         <pre><code>
           div div {
-            background-image: url(../images/Travels_NZ.JPG);
-            background-size: cover;
+            position: relative;
+            top: -20px;
+            left: -50px;
            }
         </code></pre>
         </div>
         <hr>
         <h2>Sample Content:</h2>
-        <div class="background_Original" id="backgroundID_4">
+        <div class="position_Original" id="positionID_4">
           <div></div>
         </div>
         <button type="button" class="change_button" id="change_btn_4">Click Me!</button>
@@ -168,22 +174,22 @@
       </section>
 
       <section class="content_container">
-        <h2>Background Images Example 5: background-repeat</h2>
+        <h2>The Position Property Example 5: fixed</h2>
         <p>Check the code below and click the button to see the change to the sample content.</p>
         <hr>
         <h2>CSS Code:</h2>
         <div class="pre_block">
         <pre><code>
           div div {
-            background-image: url(../images/Travels_NZ.JPG);
-            background-size: 80px 54px;
-            background-repeat: no-repeat;
+            position: fixed;
+            top: 0px;
+            left: 20%;
            }
         </code></pre>
         </div>
         <hr>
         <h2>Sample Content:</h2>
-        <div class="background_Original" id="backgroundID_5">
+        <div class="position_Original" id="positionID_5">
           <div></div>
         </div>
         <button type="button" class="change_button" id="change_btn_5">Click Me!</button>
@@ -192,23 +198,35 @@
       </section>
 
       <section class="content_container">
-        <h2>Background Images Example 6: background-repeat</h2>
+        <h2>The Position Property Example 6: absolute</h2>
         <p>Check the code below and click the button to see the change to the sample content.</p>
         <hr>
         <h2>CSS Code:</h2>
         <div class="pre_block">
         <pre><code>
           div div {
-            background-image: url(../images/Travels_NZ.JPG);
-            background-size: 80px 54px;
-            background-repeat: repeat-x;
+            position: absolute;
+            top: 0px;
+            left: 20%;
            }
         </code></pre>
         </div>
         <hr>
         <h2>Sample Content:</h2>
-        <div class="background_Original" id="backgroundID_6">
+        <div class="position_Original_2" id="positionID_6">
           <div></div>
+          <p>Please scroll down!</p>
+          <p>Please scroll down!</p>
+          <p>Please scroll down!</p>
+          <p>Please scroll down!</p>
+          <p>Please scroll down!</p>
+          <p>Please scroll down!</p>
+          <p>Please scroll down!</p>
+          <p>Please scroll down!</p>
+          <p>Please scroll down!</p>
+          <p>Please scroll down!</p>
+          <p>Please scroll down!</p>
+          <p>Please scroll down!</p>
         </div>
         <button type="button" class="change_button" id="change_btn_6">Click Me!</button>
         <br>
@@ -216,23 +234,35 @@
       </section>
 
       <section class="content_container">
-        <h2>Background Images Example 7: background-repeat</h2>
+        <h2>The Position Property Example 7: sticky</h2>
         <p>Check the code below and click the button to see the change to the sample content.</p>
         <hr>
         <h2>CSS Code:</h2>
         <div class="pre_block">
         <pre><code>
           div div {
-            background-image: url(../images/Travels_NZ.JPG);
-            background-size: 80px 54px;
-            background-repeat: repeat-y;
+            position: sticky;
+            top: 0px;
+            left: 20%;
            }
         </code></pre>
         </div>
         <hr>
         <h2>Sample Content:</h2>
-        <div class="background_Original" id="backgroundID_7">
+        <div class="position_Original_2" id="positionID_7">
           <div></div>
+          <p>Please scroll down!</p>
+          <p>Please scroll down!</p>
+          <p>Please scroll down!</p>
+          <p>Please scroll down!</p>
+          <p>Please scroll down!</p>
+          <p>Please scroll down!</p>
+          <p>Please scroll down!</p>
+          <p>Please scroll down!</p>
+          <p>Please scroll down!</p>
+          <p>Please scroll down!</p>
+          <p>Please scroll down!</p>
+          <p>Please scroll down!</p>
         </div>
         <button type="button" class="change_button" id="change_btn_7">Click Me!</button>
         <br>
@@ -240,111 +270,42 @@
       </section>
 
       <section class="content_container">
-        <h2>Background Images Example 8: background-position</h2>
+        <h2>The Position Property Example 8: sticky</h2>
         <p>Check the code below and click the button to see the change to the sample content.</p>
         <hr>
         <h2>CSS Code:</h2>
         <div class="pre_block">
         <pre><code>
           div div {
-            background-image: url(../images/Travels_NZ.JPG);
-            background-size: 160px 108px;
-            background-repeat: no-repeat;
-            background-position: top left;
+            position: sticky;
+            top: 0px;
+            left: 20%;
            }
         </code></pre>
         </div>
         <hr>
         <h2>Sample Content:</h2>
-        <div class="background_Original" id="backgroundID_8">
+        <div class="position_Original_2" id="positionID_8">
+          <p>Please scroll down!</p>
+          <p>Please scroll down!</p>
+          <p>Please scroll down!</p>
           <div></div>
+          <p>Please scroll down!</p>
+          <p>Please scroll down!</p>
+          <p>Please scroll down!</p>
+          <p>Please scroll down!</p>
+          <p>Please scroll down!</p>
+          <p>Please scroll down!</p>
+          <p>Please scroll down!</p>
+          <p>Please scroll down!</p>
+          <p>Please scroll down!</p>
         </div>
         <button type="button" class="change_button" id="change_btn_8">Click Me!</button>
         <br>
         <button type="button" class="change_button" id="reset_btn_8">Reset</button>
       </section>
 
-      <section class="content_container">
-        <h2>Background Images Example 9: background-position</h2>
-        <p>Check the code below and click the button to see the change to the sample content.</p>
-        <hr>
-        <h2>CSS Code:</h2>
-        <div class="pre_block">
-        <pre><code>
-          div div {
-            background-image: url(../images/Travels_NZ.JPG);
-            background-size: 160px 108px;
-            background-repeat: no-repeat;
-            background-position: bottom right;
-           }
-        </code></pre>
-        </div>
-        <hr>
-        <h2>Sample Content:</h2>
-        <div class="background_Original" id="backgroundID_9">
-          <div></div>
-        </div>
-        <button type="button" class="change_button" id="change_btn_9">Click Me!</button>
-        <br>
-        <button type="button" class="change_button" id="reset_btn_9">Reset</button>
-      </section>
-
-      <section class="content_container">
-        <h2>Background Images Example 10: multiple images</h2>
-        <p>Check the code below and click the button to see the change to the sample content.</p>
-        <hr>
-        <h2>CSS Code:</h2>
-        <div class="pre_block">
-        <pre><code>
-          div div {
-            background-image: url(../images/Travels_NZ.JPG),
-            url(../images/Travels_NZ_2.JPG);
-            background-size: 160px 108px, 160px 108px;
-            background-repeat: no-repeat, no-repeat;
-            background-position: top left, bottom right;
-           }
-        </code></pre>
-        </div>
-        <hr>
-        <h2>Sample Content:</h2>
-        <div class="background_Original" id="backgroundID_10">
-          <div></div>
-        </div>
-        <button type="button" class="change_button" id="change_btn_10">Click Me!</button>
-        <br>
-        <button type="button" class="change_button" id="reset_btn_10">Reset</button>
-      </section>
-
-      <section class="content_container">
-        <h2>Background Images Example 11: multiple images</h2>
-        <p>Check the code below and click the button to see the change to the sample content.</p>
-        <hr>
-        <h2>CSS Code:</h2>
-        <div class="pre_block">
-        <pre><code>
-          div div {
-            background: palegreen;
-            background-image: url(../images/Travels_NZ.JPG),
-            url(../images/Travels_NZ_2.JPG);
-            background-size: 160px 108px, 80px 54px;
-            background-repeat: no-repeat, repeat-y;
-            background-position: top left, bottom right;
-           }
-        </code></pre>
-        </div>
-        <hr>
-        <h2>Sample Content:</h2>
-        <div class="background_Original" id="backgroundID_11">
-          <div></div>
-        </div>
-        <button type="button" class="change_button" id="change_btn_11">Click Me!</button>
-        <br>
-        <button type="button" class="change_button" id="reset_btn_11">Reset</button>
-      </section>
-
-
-
-      <!-- Back to the top of the page button. -->
+            <!-- Back to the top of the page button. -->
       <button type="button" class="pageTop" title="Click the button to go back to the top of the page.">Up</button>
 
     </main>
