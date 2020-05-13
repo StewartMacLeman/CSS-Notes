@@ -1,0 +1,100 @@
+/* Original css for the reset function.-------------------------------------- */
+
+.float_Original {
+  margin: 10px auto;
+  border: 2px solid darkgreen;
+  width: 60%;
+  height: 300px;
+  overflow: scroll;
+}
+.float_Original div {
+  margin: 0px;
+  width: 33.33%;
+  height: 200px;
+  background-color: palegreen;
+  border: 2px solid darkgreen;
+  border-radius: 5px;
+}
+/* CSS Helper Class - This is to maintain the above properties that should not to be changed.
+This avoids repeating the properties within the individual change classes. ------*/
+
+.floatChangeHelper {
+  margin: 10px auto;
+  border: 2px solid darkgreen;
+  width: 60%;
+  height: 300px;
+  overflow: scroll;
+}
+.floatChangeHelper div {
+  margin: 0px;
+  width: 33.33%;
+  height: 200px;
+  background-color: palegreen;
+  border: 2px solid darkgreen;
+  border-radius: 5px;
+}
+
+/* CSS Change Classes. -------------------------------------------------------*/
+
+/* The Float Property Example 1: float: left----*/
+.floatChange_1 div {
+  float: left;
+ }
+/* The Float Property Example 2: float: left----*/
+.floatChange_2 div {
+  float: left;
+ }
+/* The Float Property Example 3: float: right----*/
+.floatChange_3 div {
+  float: right;
+ }
+/* The Float Property Example 4: float: right----*/
+.floatChange_4 div {
+  float: right;
+ }
+/* The Float Property Example 5: float: none (default)----*/
+.floatChange_5 div {
+  float: none;
+ }
+ /* Adjusted css for the reset function, applicable for the following example.--------------- */
+
+ .float_Original_2 {
+   margin: 10px auto;
+   border: 2px solid darkgreen;
+   width: 60%;
+   height: 300px;
+   overflow: scroll;
+ }
+ .float_Original_2 div {
+   margin: 0px;
+   width: 33.33%;
+   height: 200px;
+   background-color: palegreen;
+   border: 2px solid darkgreen;
+   border-radius: 5px;
+   float: left;
+ }
+ /* CSS Helper Class - This is to maintain the above properties that should not to be changed.
+ This avoids repeating the properties within the individual change classes. ------*/
+
+ .floatChangeHelper_2 {
+   margin: 10px auto;
+   border: 2px solid darkgreen;
+   width: 60%;
+   height: 300px;
+   overflow: scroll;
+ }
+ .floatChangeHelper_2 div {
+   margin: 0px;
+   width: 33.33%;
+   height: 200px;
+   background-color: palegreen;
+   border: 2px solid darkgreen;
+   border-radius: 5px;
+ }
+ /* CSS Change Class. -------------------------------------------------------*/
+
+ /* The Float Property Example 6: clear----*/
+ .floatChange_6 div {
+   clear: left;
+  }

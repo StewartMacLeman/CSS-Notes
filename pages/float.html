@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="This website contains examples of CSS topics. It is for the purpose of revision.">
+
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/float.css">
+    <script src="../scripts/float.js" defer></script>
+    <script src="../scripts/upToTop.js" defer></script>
+    <title>CSS Notes: Floats</title>
+  </head>
+
+  <body>
+    <header>
+      <h1>CCS Notes: Floats</h1>
+    </header>
+
+    <nav>
+      <p class="dropdownP">Menu</p>
+      <div class="dropdown_Content">
+        <a href="../index.html">Home Page</a>
+        <a href="text.html">Text</a>
+        <a href="selectors.html">Selectors</a>
+        <a href="colours.html">Colours</a>
+        <a href="borders_shadows.html">Borders & Shadows</a>
+        <a href="gradients.html">Gradients</a>
+        <a href="background_Img.html">Background Images</a>
+        <a href="display.html">The Display Property</a>
+        <a href="position.html">The Position Property</a>
+        <a href="#">Floats</a>
+      </div>
+    </nav>
+
+    <main>
+      <p>The examples below relate to various CSS float property techniques.</p>
+      <p>Review the code per section, then click the buttons to see the outcomes.</p>
+
+      <section class="content_container">
+        <h2>Starting HTML and CCS</h2>
+        <p>Below is the original HTML and CSS for the sample content.</p>
+        <hr>
+        <h2>HTML Code:</h2>
+        <div class="pre_block">
+        <pre><code>
+          &lt;div&gt; &lt;----------Parent div.
+            &lt;div&gt;&lt;/div&gt; &lt;---child div.
+            &lt;p&gt;&lt;/p&gt;
+            &lt;p&gt;&lt;/p&gt;
+          &lt;/div&gt;
+        </code></pre>
+        </div>
+        <hr>
+        <h2>CSS Code:</h2>
+        <div class="pre_block">
+        <pre><code>
+          div { &lt;----------Parent div.
+            margin: 10px auto;
+            border: 2px solid darkgreen;
+            width: 60%;
+            height: 300px;
+            overflow: scroll;
+          }
+
+          div div { &lt;-------child div.
+            margin: 0px;
+            width: 33.33%;
+            height: 200px;
+            background-color: palegreen;
+            border: 2px solid darkgreen;
+            border-radius: 5px;
+          }
+        </code></pre>
+        </div>
+        <hr>
+        <h2>Sample Content:</h2>
+        <div class="float_Original">
+          <div></div>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        </div>
+      </section>
+
+      <section class="content_container">
+        <h2>The Float Property Example 1: float: left</h2>
+        <p>Check the code below and click the button to see the change to the sample content.</p>
+        <hr>
+        <h2>CSS Code:</h2>
+        <div class="pre_block">
+          <pre><code>
+            div div {
+              float: left;
+            }
+          </code></pre>
+        </div>
+        <hr>
+        <h2>Sample Content:</h2>
+        <div class="float_Original" id="floatID_1">
+          <div></div>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        </div>
+        <button type="button" class="change_button" id="change_btn_1">Click Me!</button>
+        <br>
+        <button type="button" class="change_button" id="reset_btn_1">Reset</button>
+      </section>
+
+      <section class="content_container">
+        <h2>The Float Property Example 2: float: left</h2>
+        <p>Check the code below and click the button to see the change to the sample content.</p>
+        <hr>
+        <h2>CSS Code:</h2>
+        <div class="pre_block">
+          <pre><code>
+            div div {
+              float: left;
+            }
+          </code></pre>
+        </div>
+        <hr>
+        <h2>Sample Content:</h2>
+        <div class="float_Original" id="floatID_2">
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+          <div></div>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        </div>
+        <button type="button" class="change_button" id="change_btn_2">Click Me!</button>
+        <br>
+        <button type="button" class="change_button" id="reset_btn_2">Reset</button>
+      </section>
+
+      <section class="content_container">
+        <h2>The Float Property Example 3: float: right</h2>
+        <p>Check the code below and click the button to see the change to the sample content.</p>
+        <hr>
+        <h2>CSS Code:</h2>
+        <div class="pre_block">
+          <pre><code>
+            div div {
+              float: right;
+            }
+          </code></pre>
+        </div>
+        <hr>
+        <h2>Sample Content:</h2>
+        <div class="float_Original" id="floatID_3">
+          <div></div>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        </div>
+        <button type="button" class="change_button" id="change_btn_3">Click Me!</button>
+        <br>
+        <button type="button" class="change_button" id="reset_btn_3">Reset</button>
+      </section>
+
+      <section class="content_container">
+        <h2>The Float Property Example 4: float: right</h2>
+        <p>Check the code below and click the button to see the change to the sample content.</p>
+        <hr>
+        <h2>CSS Code:</h2>
+        <div class="pre_block">
+          <pre><code>
+            div div {
+              float: right;
+            }
+          </code></pre>
+        </div>
+        <hr>
+        <h2>Sample Content:</h2>
+        <div class="float_Original" id="floatID_4">
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+          <div></div>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        </div>
+        <button type="button" class="change_button" id="change_btn_4">Click Me!</button>
+        <br>
+        <button type="button" class="change_button" id="reset_btn_4">Reset</button>
+      </section>
+
+      <section class="content_container">
+        <h2>The Float Property Example 5: float: none (default)</h2>
+        <p>Check the code below and click the button to see the change to the sample content.</p>
+        <hr>
+        <h2>CSS Code:</h2>
+        <div class="pre_block">
+          <pre><code>
+            div div {
+              float: none;
+            }
+          </code></pre>
+        </div>
+        <hr>
+        <h2>Sample Content:</h2>
+        <div class="float_Original" id="floatID_5">
+          <div></div>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        </div>
+        <button type="button" class="change_button" id="change_btn_5">Click Me!</button>
+        <br>
+        <button type="button" class="change_button" id="reset_btn_5">Reset</button>
+      </section>
+
+      <section class="content_container">
+        <h2>The Float Property Example 6: clear</h2>
+        <p>Check the code below and click the button to see the change to the sample content.</p>
+        <hr>
+        <h2>CSS Code:</h2>
+        <div class="pre_block">
+          <pre><code>
+            div div {
+              clear: left;
+            }
+          </code></pre>
+        </div>
+        <hr>
+        <h2>Sample Content:</h2>
+        <div class="float_Original_2" id="floatID_6">
+          <div></div>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        </div>
+        <button type="button" class="change_button" id="change_btn_6">Click Me!</button>
+        <br>
+        <button type="button" class="change_button" id="reset_btn_6">Reset</button>
+      </section>
+
+
+            <!-- Back to the top of the page button. -->
+      <button type="button" class="pageTop" title="Click the button to go back to the top of the page.">Up</button>
+
+    </main>
+  </body>
+</html>
