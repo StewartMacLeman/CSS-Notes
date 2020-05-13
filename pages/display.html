@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="This website contains examples of CSS topics. It is for the purpose of revision.">
+
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/display.css">
+    <script src="../scripts/display.js" defer></script>
+    <script src="../scripts/upToTop.js" defer></script>
+    <title>CSS Notes: The Display Property</title>
+  </head>
+
+  <body>
+    <header>
+      <h1>CCS Notes: The Display Property</h1>
+    </header>
+
+    <nav>
+      <p class="dropdownP">Menu</p>
+      <div class="dropdown_Content">
+        <a href="../index.html">Home Page</a>
+        <a href="text.html">Text</a>
+        <a href="selectors.html">Selectors</a>
+        <a href="colours.html">Colours</a>
+        <a href="borders_shadows.html">Borders & Shadows</a>
+        <a href="gradients.html">Gradients</a>
+        <a href="background_Img.html">Background Images</a>
+        <a href="#">The Display Property</a>
+      </div>
+    </nav>
+
+    <main>
+      <p>The examples below relate to various CSS display property techniques.</p>
+      <p>Review the code per section, then click the buttons to see the outcomes.</p>
+
+      <section class="content_container">
+        <h2>Starting HTML and CCS</h2>
+        <p>Below is the original HTML and CSS for the sample content.</p>
+        <hr>
+        <h2>HTML Code:</h2>
+        <div class="pre_block">
+        <pre><code>
+          &lt;div&gt; &lt;-------------------------Parent div.
+            &lt;div&gt;I am a div!&lt;/div&gt; &lt;-------child div.
+            &lt;div&gt;I am a div!&lt;/div&gt;
+            &lt;span&gt;I am a span!&lt;/span&gt; &lt;---child span.
+            &lt;span&gt;I am a span!&lt;/span&gt;
+            &lt;span&gt;I am a span!&lt;/span&gt;
+            &lt;div&gt;I am a div!&lt;/div&gt;
+            &lt;div&gt;I am a div!&lt;/div&gt;
+          &lt;/div&gt;
+        </code></pre>
+        </div>
+        <hr>
+        <h2>CSS Code:</h2>
+        <div class="pre_block">
+        <pre><code>
+          div { &lt;------------Parent div.
+            margin: 10px auto;
+            border: 2px solid darkgreen;
+            width: 60%;
+            height: 300px;
+          }
+          div div {   &lt;-------child div.
+            margin: 5px auto;
+            width: 30%;
+            height: 10%;
+            background-color: palegreen;
+            border: 2px solid darkgreen;
+            font-size: 1.5em;
+            text-align: center;
+          }
+          div span {   &lt;------child span.
+            font-size: 1.5em;
+          }
+        </code></pre>
+        </div>
+        <hr>
+        <h2>Sample Content:</h2>
+        <div class="display_Original">
+          <div>I am a div!</div>
+          <div>I am a div!</div>
+          <span>I am a span!</span>
+          <span>I am a span!</span>
+          <span>I am a span!</span>
+          <div>I am a div!</div>
+          <div>I am a div!</div>
+        </div>
+      </section>
+
+      <section class="content_container">
+        <h2>The Display Property Example 1: inline</h2>
+        <p>Check the code below and click the button to see the change to the sample content.</p>
+        <hr>
+        <h2>CSS Code:</h2>
+        <div class="pre_block">
+        <pre><code>
+          div div {
+            display: inline;
+           }
+        </code></pre>
+        </div>
+        <hr>
+        <h2>Sample Content:</h2>
+        <div class="display_Original" id="displayID_1">
+          <div>I am a div!</div>
+          <div>I am a div!</div>
+          <span>I am a span!</span>
+          <span>I am a span!</span>
+          <span>I am a span!</span>
+          <div>I am a div!</div>
+          <div>I am a div!</div>
+        </div>
+        <button type="button" class="change_button" id="change_btn_1">Click Me!</button>
+        <br>
+        <button type="button" class="change_button" id="reset_btn_1">Reset</button>
+      </section>
+
+      <section class="content_container">
+        <h2>The Display Property Example 2: block</h2>
+        <p>Check the code below and click the button to see the change to the sample content.</p>
+        <hr>
+        <h2>CSS Code:</h2>
+        <div class="pre_block">
+        <pre><code>
+          div span {
+            display: block;
+           }
+        </code></pre>
+        </div>
+        <hr>
+        <h2>Sample Content:</h2>
+        <div class="display_Original" id="displayID_2">
+          <div>I am a div!</div>
+          <div>I am a div!</div>
+          <span>I am a span!</span>
+          <span>I am a span!</span>
+          <span>I am a span!</span>
+          <div>I am a div!</div>
+          <div>I am a div!</div>
+        </div>
+        <button type="button" class="change_button" id="change_btn_2">Click Me!</button>
+        <br>
+        <button type="button" class="change_button" id="reset_btn_2">Reset</button>
+      </section>
+
+      <section class="content_container">
+        <h2>The Display Property Example 3: none</h2>
+        <p>Check the code below and click the button to see the change to the sample content.</p>
+        <hr>
+        <h2>CSS Code:</h2>
+        <div class="pre_block">
+        <pre><code>
+          div div {
+            display: none;
+           }
+        </code></pre>
+        </div>
+        <hr>
+        <h2>Sample Content:</h2>
+        <div class="display_Original" id="displayID_3">
+          <div>I am a div!</div>
+          <div>I am a div!</div>
+          <span>I am a span!</span>
+          <span>I am a span!</span>
+          <span>I am a span!</span>
+          <div>I am a div!</div>
+          <div>I am a div!</div>
+        </div>
+        <button type="button" class="change_button" id="change_btn_3">Click Me!</button>
+        <br>
+        <button type="button" class="change_button" id="reset_btn_3">Reset</button>
+      </section>
+
+      <section class="content_container">
+        <h2>The Display Property Example 4: none</h2>
+        <p>Check the code below and click the button to see the change to the sample content.</p>
+        <hr>
+        <h2>CSS Code:</h2>
+        <div class="pre_block">
+        <pre><code>
+          div span {
+            display: none;
+           }
+        </code></pre>
+        </div>
+        <hr>
+        <h2>Sample Content:</h2>
+        <div class="display_Original" id="displayID_4">
+          <div>I am a div!</div>
+          <div>I am a div!</div>
+          <span>I am a span!</span>
+          <span>I am a span!</span>
+          <span>I am a span!</span>
+          <div>I am a div!</div>
+          <div>I am a div!</div>
+        </div>
+        <button type="button" class="change_button" id="change_btn_4">Click Me!</button>
+        <br>
+        <button type="button" class="change_button" id="reset_btn_4">Reset</button>
+      </section>
+
+      <section class="content_container">
+        <h2>The Display Property Example 5: visibility: hidden</h2>
+        <p>Check the code below and click the button to see the change to the sample content.</p>
+        <hr>
+        <h2>CSS Code:</h2>
+        <div class="pre_block">
+        <pre><code>
+          div div {
+            visibility: hidden;
+           }
+        </code></pre>
+        </div>
+        <hr>
+        <h2>Sample Content:</h2>
+        <div class="display_Original" id="displayID_5">
+          <div>I am a div!</div>
+          <div>I am a div!</div>
+          <span>I am a span!</span>
+          <span>I am a span!</span>
+          <span>I am a span!</span>
+          <div>I am a div!</div>
+          <div>I am a div!</div>
+        </div>
+        <button type="button" class="change_button" id="change_btn_5">Click Me!</button>
+        <br>
+        <button type="button" class="change_button" id="reset_btn_5">Reset</button>
+      </section>
+
+      <section class="content_container">
+        <h2>The Display Property Example 6: visibility: hidden</h2>
+        <p>Check the code below and click the button to see the change to the sample content.</p>
+        <hr>
+        <h2>CSS Code:</h2>
+        <div class="pre_block">
+        <pre><code>
+          div span {
+            visibility: hidden;
+           }
+        </code></pre>
+        </div>
+        <hr>
+        <h2>Sample Content:</h2>
+        <div class="display_Original" id="displayID_6">
+          <div>I am a div!</div>
+          <div>I am a div!</div>
+          <span>I am a span!</span>
+          <span>I am a span!</span>
+          <span>I am a span!</span>
+          <div>I am a div!</div>
+          <div>I am a div!</div>
+        </div>
+        <button type="button" class="change_button" id="change_btn_6">Click Me!</button>
+        <br>
+        <button type="button" class="change_button" id="reset_btn_6">Reset</button>
+      </section>
+
+      <!-- Back to the top of the page button. -->
+      <button type="button" class="pageTop" title="Click the button to go back to the top of the page.">Up</button>
+
+    </main>
+  </body>
+</html>
