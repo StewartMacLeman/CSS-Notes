@@ -6,15 +6,15 @@
     <meta name="author" content="This website contains examples of CSS topics. It is for the purpose of revision.">
 
     <link rel="stylesheet" href="../css/main.css">
-    <link rel="stylesheet" href="../css/grid.css">
-    <script src="../scripts/grid.js" defer></script>
+    <link rel="stylesheet" href="../css/transforms.css">
+    <script src="../scripts/transforms.js" defer></script>
     <script src="../scripts/upToTop.js" defer></script>
-    <title>CSS Notes: Grid</title>
+    <title>CSS Notes: Transforms</title>
   </head>
 
   <body>
     <header>
-      <h1>CCS Notes: Grid</h1>
+      <h1>CCS Notes: Transforms</h1>
     </header>
 
     <nav>
@@ -31,13 +31,13 @@
         <a href="position.html">The Position Property</a>
         <a href="float.html">Floats</a>
         <a href="flexbox.html">Flexbox</a>
-        <a href="#">Grid</a>
+        <a href="grid.html">Grid</a>
         <a href="#">Transforms</a>
       </div>
     </nav>
 
     <main>
-      <p>The examples below relate to various CSS grid techniques.</p>
+      <p>The examples below relate to various CSS transform techniques.</p>
       <p>Review the code per section, then click the buttons to see the outcomes.</p>
 
       <section class="content_container">
@@ -48,12 +48,7 @@
         <div class="pre_block">
         <pre><code>
           &lt;div&gt; &lt;----------Parent div.
-            &lt;div&gt;1&lt;/div&gt; &lt;---child div.
-            &lt;div&gt;2&lt;/div&gt;
-            &lt;div&gt;3&lt;/div&gt;
-            &lt;div&gt;4&lt;/div&gt;
-            &lt;div&gt;5&lt;/div&gt;
-            &lt;div&gt;6&lt;/div&gt;
+            &lt;div&gt;div&lt;/div&gt; &lt;---child div.
           &lt;/div&gt;
         </code></pre>
         </div>
@@ -65,12 +60,17 @@
             margin: 10px auto;
             border: 2px solid darkgreen;
             width: 60%;
-            height: 300px;
+            height: 150px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
           }
 
           div div { &lt;-------child div.
             background-color: palegreen;
             border: 2px solid darkgreen;
+            width: 100px;
+            height: 50px;
             border-radius: 5px;
             font-size: 1.5em;
             text-align: center;
@@ -79,38 +79,27 @@
         </div>
         <hr>
         <h2>Sample Content:</h2>
-        <div class="grid_Original">
-          <div>1</div>
-          <div>2</div>
-          <div>3</div>
-          <div>4</div>
-          <div>5</div>
-          <div>6</div>
+        <div class="transform_Original">
+          <div>div</div>
         </div>
       </section>
 
       <section class="content_container">
-        <h2>Grid Example 1: grid-template-columns</h2>
+        <h2>Transform Example 1: translate(x,y)</h2>
         <p>Check the code below and click the button to see the change to the sample content.</p>
         <hr>
         <h2>CSS Code:</h2>
         <div class="pre_block">
           <pre><code>
             div {
-              display: grid;
-              grid-template-columns: auto auto;
+              transform: translate(100px, 40px);
             }
           </code></pre>
         </div>
         <hr>
         <h2>Sample Content:</h2>
-        <div class="grid_Original" id="gridID_1">
-          <div>1</div>
-          <div>2</div>
-          <div>3</div>
-          <div>4</div>
-          <div>5</div>
-          <div>6</div>
+        <div class="transform_Original" id="transformID_1">
+          <div>div</div>
         </div>
         <button type="button" class="change_button" id="change_btn_1">Click Me!</button>
         <br>
@@ -118,27 +107,21 @@
       </section>
 
       <section class="content_container">
-        <h2>Grid Example 2: grid-template-columns</h2>
+        <h2>Transform Example 2: translate(x,y)</h2>
         <p>Check the code below and click the button to see the change to the sample content.</p>
         <hr>
         <h2>CSS Code:</h2>
         <div class="pre_block">
           <pre><code>
             div {
-              display: grid;
-              grid-template-columns: auto auto auto;
+              transform: translate(-100px, -40px);
             }
           </code></pre>
         </div>
         <hr>
         <h2>Sample Content:</h2>
-        <div class="grid_Original" id="gridID_2">
-          <div>1</div>
-          <div>2</div>
-          <div>3</div>
-          <div>4</div>
-          <div>5</div>
-          <div>6</div>
+        <div class="transform_Original" id="transformID_2">
+          <div>div</div>
         </div>
         <button type="button" class="change_button" id="change_btn_2">Click Me!</button>
         <br>
@@ -146,27 +129,21 @@
       </section>
 
       <section class="content_container">
-        <h2>Grid Example 3: grid-template-columns</h2>
+        <h2>Transform Example 3: translate(x,y)</h2>
         <p>Check the code below and click the button to see the change to the sample content.</p>
         <hr>
         <h2>CSS Code:</h2>
         <div class="pre_block">
           <pre><code>
             div {
-              display: grid;
-              grid-template-columns: 150px 150px;
+              transform: translate(100px, 0px);
             }
           </code></pre>
         </div>
         <hr>
         <h2>Sample Content:</h2>
-        <div class="grid_Original" id="gridID_3">
-          <div>1</div>
-          <div>2</div>
-          <div>3</div>
-          <div>4</div>
-          <div>5</div>
-          <div>6</div>
+        <div class="transform_Original" id="transformID_3">
+          <div>div</div>
         </div>
         <button type="button" class="change_button" id="change_btn_3">Click Me!</button>
         <br>
@@ -174,27 +151,21 @@
       </section>
 
       <section class="content_container">
-        <h2>Grid Example 4: grid-template-columns</h2>
+        <h2>Transform Example 4: rotate(deg)</h2>
         <p>Check the code below and click the button to see the change to the sample content.</p>
         <hr>
         <h2>CSS Code:</h2>
         <div class="pre_block">
           <pre><code>
             div {
-              display: grid;
-              grid-template-columns: 150px 150px auto;
+              transform: rotate(45deg);
             }
           </code></pre>
         </div>
         <hr>
         <h2>Sample Content:</h2>
-        <div class="grid_Original" id="gridID_4">
-          <div>1</div>
-          <div>2</div>
-          <div>3</div>
-          <div>4</div>
-          <div>5</div>
-          <div>6</div>
+        <div class="transform_Original" id="transformID_4">
+          <div>div</div>
         </div>
         <button type="button" class="change_button" id="change_btn_4">Click Me!</button>
         <br>
@@ -202,28 +173,21 @@
       </section>
 
       <section class="content_container">
-        <h2>Grid Example 5: grid-template-rows</h2>
+        <h2>Transform Example 5: rotate(deg)</h2>
         <p>Check the code below and click the button to see the change to the sample content.</p>
         <hr>
         <h2>CSS Code:</h2>
         <div class="pre_block">
           <pre><code>
             div {
-              display: grid;
-              grid-template-columns: auto auto;
-              grid-template-rows: 60px auto;
+              transform: rotate(-45deg);
             }
           </code></pre>
         </div>
         <hr>
         <h2>Sample Content:</h2>
-        <div class="grid_Original" id="gridID_5">
-          <div>1</div>
-          <div>2</div>
-          <div>3</div>
-          <div>4</div>
-          <div>5</div>
-          <div>6</div>
+        <div class="transform_Original" id="transformID_5">
+          <div>div</div>
         </div>
         <button type="button" class="change_button" id="change_btn_5">Click Me!</button>
         <br>
@@ -231,28 +195,21 @@
       </section>
 
       <section class="content_container">
-        <h2>Grid Example 6: grid-template-rows</h2>
+        <h2>Transform Example 6: rotateX(deg)</h2>
         <p>Check the code below and click the button to see the change to the sample content.</p>
         <hr>
         <h2>CSS Code:</h2>
         <div class="pre_block">
           <pre><code>
             div {
-              display: grid;
-              grid-template-columns: auto auto;
-              grid-template-rows: 60px 180px auto;
+              transform: rotateX(45deg);
             }
           </code></pre>
         </div>
         <hr>
         <h2>Sample Content:</h2>
-        <div class="grid_Original" id="gridID_6">
-          <div>1</div>
-          <div>2</div>
-          <div>3</div>
-          <div>4</div>
-          <div>5</div>
-          <div>6</div>
+        <div class="transform_Original" id="transformID_6">
+          <div>div</div>
         </div>
         <button type="button" class="change_button" id="change_btn_6">Click Me!</button>
         <br>
@@ -260,28 +217,21 @@
       </section>
 
       <section class="content_container">
-        <h2>Grid Example 7: grid-column-gap</h2>
+        <h2>Transform Example 7: rotateX(deg)</h2>
         <p>Check the code below and click the button to see the change to the sample content.</p>
         <hr>
         <h2>CSS Code:</h2>
         <div class="pre_block">
           <pre><code>
             div {
-              display: grid;
-              grid-template-columns: auto auto;
-              grid-column-gap: 50px;
+              transform: rotateX(180deg);
             }
           </code></pre>
         </div>
         <hr>
         <h2>Sample Content:</h2>
-        <div class="grid_Original" id="gridID_7">
-          <div>1</div>
-          <div>2</div>
-          <div>3</div>
-          <div>4</div>
-          <div>5</div>
-          <div>6</div>
+        <div class="transform_Original" id="transformID_7">
+          <div>div</div>
         </div>
         <button type="button" class="change_button" id="change_btn_7">Click Me!</button>
         <br>
@@ -289,28 +239,21 @@
       </section>
 
       <section class="content_container">
-        <h2>Grid Example 8: grid-row-gap</h2>
+        <h2>Transform Example 8: rotateY(deg)</h2>
         <p>Check the code below and click the button to see the change to the sample content.</p>
         <hr>
         <h2>CSS Code:</h2>
         <div class="pre_block">
           <pre><code>
             div {
-              display: grid;
-              grid-template-columns: auto auto;
-              grid-row-gap: 50px;
+              transform: rotateY(45deg);
             }
           </code></pre>
         </div>
         <hr>
         <h2>Sample Content:</h2>
-        <div class="grid_Original" id="gridID_8">
-          <div>1</div>
-          <div>2</div>
-          <div>3</div>
-          <div>4</div>
-          <div>5</div>
-          <div>6</div>
+        <div class="transform_Original" id="transformID_8">
+          <div>div</div>
         </div>
         <button type="button" class="change_button" id="change_btn_8">Click Me!</button>
         <br>
@@ -318,28 +261,21 @@
       </section>
 
       <section class="content_container">
-        <h2>Grid Example 9: grid-gap</h2>
+        <h2>Transform Example 9: rotateY(deg)</h2>
         <p>Check the code below and click the button to see the change to the sample content.</p>
         <hr>
         <h2>CSS Code:</h2>
         <div class="pre_block">
           <pre><code>
             div {
-              display: grid;
-              grid-template-columns: auto auto;
-              grid-gap: 50px;
+              transform: rotateY(80deg);
             }
           </code></pre>
         </div>
         <hr>
         <h2>Sample Content:</h2>
-        <div class="grid_Original" id="gridID_9">
-          <div>1</div>
-          <div>2</div>
-          <div>3</div>
-          <div>4</div>
-          <div>5</div>
-          <div>6</div>
+        <div class="transform_Original" id="transformID_9">
+          <div>div</div>
         </div>
         <button type="button" class="change_button" id="change_btn_9">Click Me!</button>
         <br>
@@ -347,28 +283,21 @@
       </section>
 
       <section class="content_container">
-        <h2>Grid Example 10: grid-gap</h2>
+        <h2>Transform Example 10: rotateY(deg)</h2>
         <p>Check the code below and click the button to see the change to the sample content.</p>
         <hr>
         <h2>CSS Code:</h2>
         <div class="pre_block">
           <pre><code>
             div {
-              display: grid;
-              grid-template-columns: auto auto;
-              grid-gap: 25px 100px;
+              transform: rotateY(180deg);
             }
           </code></pre>
         </div>
         <hr>
         <h2>Sample Content:</h2>
-        <div class="grid_Original" id="gridID_10">
-          <div>1</div>
-          <div>2</div>
-          <div>3</div>
-          <div>4</div>
-          <div>5</div>
-          <div>6</div>
+        <div class="transform_Original" id="transformID_10">
+          <div>div</div>
         </div>
         <button type="button" class="change_button" id="change_btn_10">Click Me!</button>
         <br>
@@ -376,28 +305,21 @@
       </section>
 
       <section class="content_container">
-        <h2>Grid Example 11: justify-content</h2>
+        <h2>Transform Example 11: rotateZ(deg)</h2>
         <p>Check the code below and click the button to see the change to the sample content.</p>
         <hr>
         <h2>CSS Code:</h2>
         <div class="pre_block">
           <pre><code>
             div {
-              display: grid;
-              grid-template-columns: 100px 100px 100px;
-              justify-content: space-evenly;
+              transform: rotateZ(45deg);
             }
           </code></pre>
         </div>
         <hr>
         <h2>Sample Content:</h2>
-        <div class="grid_Original" id="gridID_11">
-          <div>1</div>
-          <div>2</div>
-          <div>3</div>
-          <div>4</div>
-          <div>5</div>
-          <div>6</div>
+        <div class="transform_Original" id="transformID_11">
+          <div>div</div>
         </div>
         <button type="button" class="change_button" id="change_btn_11">Click Me!</button>
         <br>
@@ -405,28 +327,21 @@
       </section>
 
       <section class="content_container">
-        <h2>Grid Example 12: justify-content</h2>
+        <h2>Transform Example 12: rotateZ(deg)</h2>
         <p>Check the code below and click the button to see the change to the sample content.</p>
         <hr>
         <h2>CSS Code:</h2>
         <div class="pre_block">
           <pre><code>
             div {
-              display: grid;
-              grid-template-columns: 100px 100px 100px;
-              justify-content: space-around;
+              transform: rotateZ(180deg);
             }
           </code></pre>
         </div>
         <hr>
         <h2>Sample Content:</h2>
-        <div class="grid_Original" id="gridID_12">
-          <div>1</div>
-          <div>2</div>
-          <div>3</div>
-          <div>4</div>
-          <div>5</div>
-          <div>6</div>
+        <div class="transform_Original" id="transformID_12">
+          <div>div</div>
         </div>
         <button type="button" class="change_button" id="change_btn_12">Click Me!</button>
         <br>
@@ -434,28 +349,21 @@
       </section>
 
       <section class="content_container">
-        <h2>Grid Example 13: justify-content</h2>
+        <h2>Transform Example 13: scaleX(n)</h2>
         <p>Check the code below and click the button to see the change to the sample content.</p>
         <hr>
         <h2>CSS Code:</h2>
         <div class="pre_block">
           <pre><code>
             div {
-              display: grid;
-              grid-template-columns: 100px 100px 100px;
-              justify-content: space-between;
+              transform: scaleX(2);
             }
           </code></pre>
         </div>
         <hr>
         <h2>Sample Content:</h2>
-        <div class="grid_Original" id="gridID_13">
-          <div>1</div>
-          <div>2</div>
-          <div>3</div>
-          <div>4</div>
-          <div>5</div>
-          <div>6</div>
+        <div class="transform_Original" id="transformID_13">
+          <div>div</div>
         </div>
         <button type="button" class="change_button" id="change_btn_13">Click Me!</button>
         <br>
@@ -463,28 +371,21 @@
       </section>
 
       <section class="content_container">
-        <h2>Grid Example 14: justify-content</h2>
+        <h2>Transform Example 14: scaleX(n)</h2>
         <p>Check the code below and click the button to see the change to the sample content.</p>
         <hr>
         <h2>CSS Code:</h2>
         <div class="pre_block">
           <pre><code>
             div {
-              display: grid;
-              grid-template-columns: 100px 100px 100px;
-              justify-content: center;
+              transform: scaleX(0.5);
             }
           </code></pre>
         </div>
         <hr>
         <h2>Sample Content:</h2>
-        <div class="grid_Original" id="gridID_14">
-          <div>1</div>
-          <div>2</div>
-          <div>3</div>
-          <div>4</div>
-          <div>5</div>
-          <div>6</div>
+        <div class="transform_Original" id="transformID_14">
+          <div>div</div>
         </div>
         <button type="button" class="change_button" id="change_btn_14">Click Me!</button>
         <br>
@@ -492,28 +393,21 @@
       </section>
 
       <section class="content_container">
-        <h2>Grid Example 15: justify-content</h2>
+        <h2>Transform Example 15: scaleY(n)</h2>
         <p>Check the code below and click the button to see the change to the sample content.</p>
         <hr>
         <h2>CSS Code:</h2>
         <div class="pre_block">
           <pre><code>
             div {
-              display: grid;
-              grid-template-columns: 100px 100px 100px;
-              justify-content: start;
+              transform: scaleY(2);
             }
           </code></pre>
         </div>
         <hr>
         <h2>Sample Content:</h2>
-        <div class="grid_Original" id="gridID_15">
-          <div>1</div>
-          <div>2</div>
-          <div>3</div>
-          <div>4</div>
-          <div>5</div>
-          <div>6</div>
+        <div class="transform_Original" id="transformID_15">
+          <div>div</div>
         </div>
         <button type="button" class="change_button" id="change_btn_15">Click Me!</button>
         <br>
@@ -521,28 +415,21 @@
       </section>
 
       <section class="content_container">
-        <h2>Grid Example 16: justify-content</h2>
+        <h2>Transform Example 16: scaleY(n)</h2>
         <p>Check the code below and click the button to see the change to the sample content.</p>
         <hr>
         <h2>CSS Code:</h2>
         <div class="pre_block">
           <pre><code>
             div {
-              display: grid;
-              grid-template-columns: 100px 100px 100px;
-              justify-content: end;
+              transform: scaleY(0.5);
             }
           </code></pre>
         </div>
         <hr>
         <h2>Sample Content:</h2>
-        <div class="grid_Original" id="gridID_16">
-          <div>1</div>
-          <div>2</div>
-          <div>3</div>
-          <div>4</div>
-          <div>5</div>
-          <div>6</div>
+        <div class="transform_Original" id="transformID_16">
+          <div>div</div>
         </div>
         <button type="button" class="change_button" id="change_btn_16">Click Me!</button>
         <br>
@@ -550,28 +437,21 @@
       </section>
 
       <section class="content_container">
-        <h2>Grid Example 17: align-content</h2>
+        <h2>Transform Example 17: scale(x,y)</h2>
         <p>Check the code below and click the button to see the change to the sample content.</p>
         <hr>
         <h2>CSS Code:</h2>
         <div class="pre_block">
           <pre><code>
             div {
-              display: grid;
-              grid-template-columns: 100px 100px 100px;
-              align-content: space-evenly;
+              transform: scale(3,2);
             }
           </code></pre>
         </div>
         <hr>
         <h2>Sample Content:</h2>
-        <div class="grid_Original" id="gridID_17">
-          <div>1</div>
-          <div>2</div>
-          <div>3</div>
-          <div>4</div>
-          <div>5</div>
-          <div>6</div>
+        <div class="transform_Original" id="transformID_17">
+          <div>div</div>
         </div>
         <button type="button" class="change_button" id="change_btn_17">Click Me!</button>
         <br>
@@ -579,28 +459,21 @@
       </section>
 
       <section class="content_container">
-        <h2>Grid Example 18: align-content</h2>
+        <h2>Transform Example 18: scale(x,y)</h2>
         <p>Check the code below and click the button to see the change to the sample content.</p>
         <hr>
         <h2>CSS Code:</h2>
         <div class="pre_block">
           <pre><code>
             div {
-              display: grid;
-              grid-template-columns: 100px 100px 100px;
-              align-content: space-around;
+              transform: scale(0.5,0.75);
             }
           </code></pre>
         </div>
         <hr>
         <h2>Sample Content:</h2>
-        <div class="grid_Original" id="gridID_18">
-          <div>1</div>
-          <div>2</div>
-          <div>3</div>
-          <div>4</div>
-          <div>5</div>
-          <div>6</div>
+        <div class="transform_Original" id="transformID_18">
+          <div>div</div>
         </div>
         <button type="button" class="change_button" id="change_btn_18">Click Me!</button>
         <br>
@@ -608,28 +481,21 @@
       </section>
 
       <section class="content_container">
-        <h2>Grid Example 19: align-content</h2>
+        <h2>Transform Example 19: skewX(deg)</h2>
         <p>Check the code below and click the button to see the change to the sample content.</p>
         <hr>
         <h2>CSS Code:</h2>
         <div class="pre_block">
           <pre><code>
             div {
-              display: grid;
-              grid-template-columns: 100px 100px 100px;
-              align-content: space-between;
+              transform: skewX(45deg);
             }
           </code></pre>
         </div>
         <hr>
         <h2>Sample Content:</h2>
-        <div class="grid_Original" id="gridID_19">
-          <div>1</div>
-          <div>2</div>
-          <div>3</div>
-          <div>4</div>
-          <div>5</div>
-          <div>6</div>
+        <div class="transform_Original" id="transformID_19">
+          <div>div</div>
         </div>
         <button type="button" class="change_button" id="change_btn_19">Click Me!</button>
         <br>
@@ -637,28 +503,21 @@
       </section>
 
       <section class="content_container">
-        <h2>Grid Example 20: align-content</h2>
+        <h2>Transform Example 20: skewX(deg)</h2>
         <p>Check the code below and click the button to see the change to the sample content.</p>
         <hr>
         <h2>CSS Code:</h2>
         <div class="pre_block">
           <pre><code>
             div {
-              display: grid;
-              grid-template-columns: 100px 100px 100px;
-              align-content: center;
+              transform: skewX(-45deg);
             }
           </code></pre>
         </div>
         <hr>
         <h2>Sample Content:</h2>
-        <div class="grid_Original" id="gridID_20">
-          <div>1</div>
-          <div>2</div>
-          <div>3</div>
-          <div>4</div>
-          <div>5</div>
-          <div>6</div>
+        <div class="transform_Original" id="transformID_20">
+          <div>div</div>
         </div>
         <button type="button" class="change_button" id="change_btn_20">Click Me!</button>
         <br>
@@ -666,28 +525,21 @@
       </section>
 
       <section class="content_container">
-        <h2>Grid Example 21: align-content</h2>
+        <h2>Transform Example 21: skewY(deg)</h2>
         <p>Check the code below and click the button to see the change to the sample content.</p>
         <hr>
         <h2>CSS Code:</h2>
         <div class="pre_block">
           <pre><code>
             div {
-              display: grid;
-              grid-template-columns: 100px 100px 100px;
-              align-content: start;
+              transform: skewY(45deg);
             }
           </code></pre>
         </div>
         <hr>
         <h2>Sample Content:</h2>
-        <div class="grid_Original" id="gridID_21">
-          <div>1</div>
-          <div>2</div>
-          <div>3</div>
-          <div>4</div>
-          <div>5</div>
-          <div>6</div>
+        <div class="transform_Original" id="transformID_21">
+          <div>div</div>
         </div>
         <button type="button" class="change_button" id="change_btn_21">Click Me!</button>
         <br>
@@ -695,28 +547,21 @@
       </section>
 
       <section class="content_container">
-        <h2>Grid Example 22: align-content</h2>
+        <h2>Transform Example 22: skewY(deg)</h2>
         <p>Check the code below and click the button to see the change to the sample content.</p>
         <hr>
         <h2>CSS Code:</h2>
         <div class="pre_block">
           <pre><code>
             div {
-              display: grid;
-              grid-template-columns: 100px 100px 100px;
-              align-content: end;
+              transform: skewY(-45deg);
             }
           </code></pre>
         </div>
         <hr>
         <h2>Sample Content:</h2>
-        <div class="grid_Original" id="gridID_22">
-          <div>1</div>
-          <div>2</div>
-          <div>3</div>
-          <div>4</div>
-          <div>5</div>
-          <div>6</div>
+        <div class="transform_Original" id="transformID_22">
+          <div>div</div>
         </div>
         <button type="button" class="change_button" id="change_btn_22">Click Me!</button>
         <br>
@@ -724,178 +569,27 @@
       </section>
 
       <section class="content_container">
-        <h2>Grid Example 23: align-content & justify-content</h2>
+        <h2>Transform Example 23: skew(x-deg,y-deg)</h2>
         <p>Check the code below and click the button to see the change to the sample content.</p>
         <hr>
         <h2>CSS Code:</h2>
         <div class="pre_block">
           <pre><code>
             div {
-              display: grid;
-              grid-template-columns: 100px 100px 100px;
-              align-content: center;
-              justify-content: center;
+              transform: skew(20deg, 20deg);
             }
           </code></pre>
         </div>
         <hr>
         <h2>Sample Content:</h2>
-        <div class="grid_Original" id="gridID_23">
-          <div>1</div>
-          <div>2</div>
-          <div>3</div>
-          <div>4</div>
-          <div>5</div>
-          <div>6</div>
+        <div class="transform_Original" id="transformID_23">
+          <div>div</div>
         </div>
         <button type="button" class="change_button" id="change_btn_23">Click Me!</button>
         <br>
         <button type="button" class="change_button" id="reset_btn_23">Reset</button>
       </section>
 
-      <section class="content_container">
-        <h2>Grid Example 24: align-content & justify-content</h2>
-        <p>Check the code below and click the button to see the change to the sample content.</p>
-        <hr>
-        <h2>CSS Code:</h2>
-        <div class="pre_block">
-          <pre><code>
-            div {
-              display: grid;
-              grid-template-columns: 100px 100px 100px;
-              align-content: space-evenly;
-              justify-content: space-evenly;
-            }
-          </code></pre>
-        </div>
-        <hr>
-        <h2>Sample Content:</h2>
-        <div class="grid_Original" id="gridID_24">
-          <div>1</div>
-          <div>2</div>
-          <div>3</div>
-          <div>4</div>
-          <div>5</div>
-          <div>6</div>
-        </div>
-        <button type="button" class="change_button" id="change_btn_24">Click Me!</button>
-        <br>
-        <button type="button" class="change_button" id="reset_btn_24">Reset</button>
-      </section>
-
-      <section class="content_container">
-        <h2>Grid Example 25: grid-column & grid-row</h2>
-        <p>Check the code and see the resulting layout below.</p>
-        <hr>
-        <h2>HTML Code:</h2>
-        <div class="pre_block">
-        <pre><code>
-          &lt;div class="grid_container"&gt; &lt;-----Parent div.
-            &lt;div id="div_1"&gt;1&lt;/div&gt; &lt;---------child div.
-            &lt;div id="div_2"&gt;2&lt;/div&gt;
-            &lt;div&gt;3&lt;/div&gt;
-            &lt;div&gt;4&lt;/div&gt;
-            &lt;div&gt;5&lt;/div&gt;
-            &lt;div&gt;6&lt;/div&gt;
-          &lt;/div&gt;
-        </code></pre>
-        </div>
-        <hr>
-        <h2>CSS Code:</h2>
-        <div class="pre_block">
-          <pre><code>
-            .grid_container {
-              margin: 10px auto;
-              padding: 3px;
-              border: 2px solid darkgreen;
-              width: 60%;
-              height: 300px;
-              display: grid;
-              grid-template-columns: auto auto auto;
-              grid-gap: 10px;
-            }
-            .grid_container div {
-              background-color: palegreen;
-              border: 2px solid darkgreen;
-              border-radius: 5px;
-              font-size: 1.5em;
-              text-align: center;
-            }
-            #div_1 { grid-column: 1 / 4; }
-            #div_2 { grid-row: 2 / 4; }
-          </code></pre>
-        </div>
-        <hr>
-        <h2>Sample Content:</h2>
-        <div class="grid_container">
-          <div id="div_1">1</div>
-          <div id="div_2">2</div>
-          <div>3</div>
-          <div>4</div>
-          <div>5</div>
-          <div>6</div>
-        </div>
-      </section>
-
-      <section class="content_container">
-        <h2>Grid Example 26: grid-area</h2>
-        <p>Check the code and see the resulting layout below.</p>
-        <hr>
-        <h2>HTML Code:</h2>
-        <div class="pre_block">
-        <pre><code>
-          &lt;div class="grid_container_2"&gt; &lt;-----Parent div.
-            &lt;div&gt;1&lt;/div&gt;
-            &lt;div id="area"&gt;2&lt;/div&gt; &lt;------------child div.
-            &lt;div&gt;3&lt;/div&gt;
-            &lt;div&gt;4&lt;/div&gt;
-            &lt;div&gt;5&lt;/div&gt;
-            &lt;div&gt;6&lt;/div&gt;
-            &lt;div&gt;7&lt;/div&gt;
-            &lt;div&gt;8&lt;/div&gt;
-            &lt;div&gt;9&lt;/div&gt;
-          &lt;/div&gt;
-        </code></pre>
-        </div>
-        <hr>
-        <h2>CSS Code:</h2>
-        <div class="pre_block">
-          <pre><code>
-            .grid_container_2 {
-              margin: 10px auto;
-              padding: 3px;
-              border: 2px solid darkgreen;
-              width: 60%;
-              height: 300px;
-              display: grid;
-              grid-template-columns: auto auto auto auto;
-              grid-gap: 10px;
-            }
-            .grid_container_2 div {
-              background-color: palegreen;
-              border: 2px solid darkgreen;
-              border-radius: 5px;
-              font-size: 1.5em;
-              text-align: center;
-            }
-            #area { grid-area: 1 / 2 / 3 / 4; }
-            // grid-area: row-start, column-start, row-end, column-end.
-          </code></pre>
-        </div>
-        <hr>
-        <h2>Sample Content:</h2>
-        <div class="grid_container_2">
-          <div>1</div>
-          <div id="area">2</div>
-          <div>3</div>
-          <div>4</div>
-          <div>5</div>
-          <div>6</div>
-          <div>7</div>
-          <div>8</div>
-          <div>9</div>
-        </div>
-      </section>
 
             <!-- Back to the top of the page button. -->
       <button type="button" class="pageTop" title="Click the button to go back to the top of the page.">Up</button>
