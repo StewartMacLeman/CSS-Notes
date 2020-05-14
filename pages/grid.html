@@ -6,15 +6,15 @@
     <meta name="author" content="This website contains examples of CSS topics. It is for the purpose of revision.">
 
     <link rel="stylesheet" href="../css/main.css">
-    <link rel="stylesheet" href="../css/flexbox.css">
-    <script src="../scripts/flexbox.js" defer></script>
+    <link rel="stylesheet" href="../css/grid.css">
+    <script src="../scripts/grid.js" defer></script>
     <script src="../scripts/upToTop.js" defer></script>
-    <title>CSS Notes: Flexbox</title>
+    <title>CSS Notes: Grid</title>
   </head>
 
   <body>
     <header>
-      <h1>CCS Notes: Flexbox</h1>
+      <h1>CCS Notes: Grid</h1>
     </header>
 
     <nav>
@@ -30,13 +30,13 @@
         <a href="display.html">The Display Property</a>
         <a href="position.html">The Position Property</a>
         <a href="float.html">Floats</a>
-        <a href="#">Flexbox</a>
-        <a href="grid.html">Grid</a>
+        <a href="flexbox.html">Flexbox</a>
+        <a href="#">Grid</a>
       </div>
     </nav>
 
     <main>
-      <p>The examples below relate to various CSS flexbox techniques.</p>
+      <p>The examples below relate to various CSS grid techniques.</p>
       <p>Review the code per section, then click the buttons to see the outcomes.</p>
 
       <section class="content_container">
@@ -65,12 +65,9 @@
             border: 2px solid darkgreen;
             width: 60%;
             height: 300px;
-            overflow: hidden;
           }
 
           div div { &lt;-------child div.
-            width: 150px;
-            height: 80px;
             background-color: palegreen;
             border: 2px solid darkgreen;
             border-radius: 5px;
@@ -81,7 +78,7 @@
         </div>
         <hr>
         <h2>Sample Content:</h2>
-        <div class="flexbox_Original">
+        <div class="grid_Original">
           <div>1</div>
           <div>2</div>
           <div>3</div>
@@ -92,20 +89,21 @@
       </section>
 
       <section class="content_container">
-        <h2>Flexbox Example 1: display: flex;</h2>
+        <h2>Grid Example 1: grid-template-columns</h2>
         <p>Check the code below and click the button to see the change to the sample content.</p>
         <hr>
         <h2>CSS Code:</h2>
         <div class="pre_block">
           <pre><code>
             div {
-              display: flex;
+              display: grid;
+              grid-template-columns: auto auto;
             }
           </code></pre>
         </div>
         <hr>
         <h2>Sample Content:</h2>
-        <div class="flexbox_Original" id="flexboxID_1">
+        <div class="grid_Original" id="gridID_1">
           <div>1</div>
           <div>2</div>
           <div>3</div>
@@ -119,21 +117,21 @@
       </section>
 
       <section class="content_container">
-        <h2>Flexbox Example 2: flex-direction</h2>
+        <h2>Grid Example 2: grid-template-columns</h2>
         <p>Check the code below and click the button to see the change to the sample content.</p>
         <hr>
         <h2>CSS Code:</h2>
         <div class="pre_block">
           <pre><code>
             div {
-              display: flex;
-              flex-direction: column;
+              display: grid;
+              grid-template-columns: auto auto auto;
             }
           </code></pre>
         </div>
         <hr>
         <h2>Sample Content:</h2>
-        <div class="flexbox_Original" id="flexboxID_2">
+        <div class="grid_Original" id="gridID_2">
           <div>1</div>
           <div>2</div>
           <div>3</div>
@@ -147,21 +145,21 @@
       </section>
 
       <section class="content_container">
-        <h2>Flexbox Example 3: flex-direction</h2>
+        <h2>Grid Example 3: grid-template-columns</h2>
         <p>Check the code below and click the button to see the change to the sample content.</p>
         <hr>
         <h2>CSS Code:</h2>
         <div class="pre_block">
           <pre><code>
             div {
-              display: flex;
-              flex-direction: column-reverse;
+              display: grid;
+              grid-template-columns: 150px 150px;
             }
           </code></pre>
         </div>
         <hr>
         <h2>Sample Content:</h2>
-        <div class="flexbox_Original" id="flexboxID_3">
+        <div class="grid_Original" id="gridID_3">
           <div>1</div>
           <div>2</div>
           <div>3</div>
@@ -175,21 +173,21 @@
       </section>
 
       <section class="content_container">
-        <h2>Flexbox Example 4: flex-direction</h2>
+        <h2>Grid Example 4: grid-template-columns</h2>
         <p>Check the code below and click the button to see the change to the sample content.</p>
         <hr>
         <h2>CSS Code:</h2>
         <div class="pre_block">
           <pre><code>
             div {
-              display: flex;
-              flex-direction: row;
+              display: grid;
+              grid-template-columns: 150px 150px auto;
             }
           </code></pre>
         </div>
         <hr>
         <h2>Sample Content:</h2>
-        <div class="flexbox_Original" id="flexboxID_4">
+        <div class="grid_Original" id="gridID_4">
           <div>1</div>
           <div>2</div>
           <div>3</div>
@@ -203,21 +201,22 @@
       </section>
 
       <section class="content_container">
-        <h2>Flexbox Example 5: flex-direction</h2>
+        <h2>Grid Example 5: grid-template-rows</h2>
         <p>Check the code below and click the button to see the change to the sample content.</p>
         <hr>
         <h2>CSS Code:</h2>
         <div class="pre_block">
           <pre><code>
             div {
-              display: flex;
-              flex-direction: row-reverse;
+              display: grid;
+              grid-template-columns: auto auto;
+              grid-template-rows: 60px auto;
             }
           </code></pre>
         </div>
         <hr>
         <h2>Sample Content:</h2>
-        <div class="flexbox_Original" id="flexboxID_5">
+        <div class="grid_Original" id="gridID_5">
           <div>1</div>
           <div>2</div>
           <div>3</div>
@@ -231,21 +230,22 @@
       </section>
 
       <section class="content_container">
-        <h2>Flexbox Example 6: flex-wrap</h2>
+        <h2>Grid Example 6: grid-template-rows</h2>
         <p>Check the code below and click the button to see the change to the sample content.</p>
         <hr>
         <h2>CSS Code:</h2>
         <div class="pre_block">
           <pre><code>
             div {
-              display: flex;
-              flex-wrap: wrap;
+              display: grid;
+              grid-template-columns: auto auto;
+              grid-template-rows: 60px 180px auto;
             }
           </code></pre>
         </div>
         <hr>
         <h2>Sample Content:</h2>
-        <div class="flexbox_Original" id="flexboxID_6">
+        <div class="grid_Original" id="gridID_6">
           <div>1</div>
           <div>2</div>
           <div>3</div>
@@ -259,21 +259,22 @@
       </section>
 
       <section class="content_container">
-        <h2>Flexbox Example 7: flex-wrap</h2>
+        <h2>Grid Example 7: grid-column-gap</h2>
         <p>Check the code below and click the button to see the change to the sample content.</p>
         <hr>
         <h2>CSS Code:</h2>
         <div class="pre_block">
           <pre><code>
             div {
-              display: flex;
-              flex-wrap: wrap-reverse;
+              display: grid;
+              grid-template-columns: auto auto;
+              grid-column-gap: 50px;
             }
           </code></pre>
         </div>
         <hr>
         <h2>Sample Content:</h2>
-        <div class="flexbox_Original" id="flexboxID_7">
+        <div class="grid_Original" id="gridID_7">
           <div>1</div>
           <div>2</div>
           <div>3</div>
@@ -287,24 +288,28 @@
       </section>
 
       <section class="content_container">
-        <h2>Flexbox Example 8: justify-content</h2>
+        <h2>Grid Example 8: grid-row-gap</h2>
         <p>Check the code below and click the button to see the change to the sample content.</p>
         <hr>
         <h2>CSS Code:</h2>
         <div class="pre_block">
           <pre><code>
             div {
-              display: flex;
-              justify-content: center;
+              display: grid;
+              grid-template-columns: auto auto;
+              grid-row-gap: 50px;
             }
           </code></pre>
         </div>
         <hr>
         <h2>Sample Content:</h2>
-        <div class="flexbox_Original" id="flexboxID_8">
+        <div class="grid_Original" id="gridID_8">
           <div>1</div>
           <div>2</div>
           <div>3</div>
+          <div>4</div>
+          <div>5</div>
+          <div>6</div>
         </div>
         <button type="button" class="change_button" id="change_btn_8">Click Me!</button>
         <br>
@@ -312,25 +317,28 @@
       </section>
 
       <section class="content_container">
-        <h2>Flexbox Example 9: justify-content</h2>
+        <h2>Grid Example 9: grid-gap</h2>
         <p>Check the code below and click the button to see the change to the sample content.</p>
         <hr>
         <h2>CSS Code:</h2>
         <div class="pre_block">
           <pre><code>
             div {
-              display: flex;
-              flex-direction: column;
-              justify-content: center;
+              display: grid;
+              grid-template-columns: auto auto;
+              grid-gap: 50px;
             }
           </code></pre>
         </div>
         <hr>
         <h2>Sample Content:</h2>
-        <div class="flexbox_Original" id="flexboxID_9">
+        <div class="grid_Original" id="gridID_9">
           <div>1</div>
           <div>2</div>
           <div>3</div>
+          <div>4</div>
+          <div>5</div>
+          <div>6</div>
         </div>
         <button type="button" class="change_button" id="change_btn_9">Click Me!</button>
         <br>
@@ -338,24 +346,28 @@
       </section>
 
       <section class="content_container">
-        <h2>Flexbox Example 10: justify-content</h2>
+        <h2>Grid Example 10: grid-gap</h2>
         <p>Check the code below and click the button to see the change to the sample content.</p>
         <hr>
         <h2>CSS Code:</h2>
         <div class="pre_block">
           <pre><code>
             div {
-              display: flex;
-              justify-content: flex-start;
+              display: grid;
+              grid-template-columns: auto auto;
+              grid-gap: 25px 100px;
             }
           </code></pre>
         </div>
         <hr>
         <h2>Sample Content:</h2>
-        <div class="flexbox_Original" id="flexboxID_10">
+        <div class="grid_Original" id="gridID_10">
           <div>1</div>
           <div>2</div>
           <div>3</div>
+          <div>4</div>
+          <div>5</div>
+          <div>6</div>
         </div>
         <button type="button" class="change_button" id="change_btn_10">Click Me!</button>
         <br>
@@ -363,25 +375,28 @@
       </section>
 
       <section class="content_container">
-        <h2>Flexbox Example 11: justify-content</h2>
+        <h2>Grid Example 11: justify-content</h2>
         <p>Check the code below and click the button to see the change to the sample content.</p>
         <hr>
         <h2>CSS Code:</h2>
         <div class="pre_block">
           <pre><code>
             div {
-              display: flex;
-              flex-direction: column;
-              justify-content: flex-start;
+              display: grid;
+              grid-template-columns: 100px 100px 100px;
+              justify-content: space-evenly;
             }
           </code></pre>
         </div>
         <hr>
         <h2>Sample Content:</h2>
-        <div class="flexbox_Original" id="flexboxID_11">
+        <div class="grid_Original" id="gridID_11">
           <div>1</div>
           <div>2</div>
           <div>3</div>
+          <div>4</div>
+          <div>5</div>
+          <div>6</div>
         </div>
         <button type="button" class="change_button" id="change_btn_11">Click Me!</button>
         <br>
@@ -389,24 +404,28 @@
       </section>
 
       <section class="content_container">
-        <h2>Flexbox Example 12: justify-content</h2>
+        <h2>Grid Example 12: justify-content</h2>
         <p>Check the code below and click the button to see the change to the sample content.</p>
         <hr>
         <h2>CSS Code:</h2>
         <div class="pre_block">
           <pre><code>
             div {
-              display: flex;
-              justify-content: flex-end;
+              display: grid;
+              grid-template-columns: 100px 100px 100px;
+              justify-content: space-around;
             }
           </code></pre>
         </div>
         <hr>
         <h2>Sample Content:</h2>
-        <div class="flexbox_Original" id="flexboxID_12">
+        <div class="grid_Original" id="gridID_12">
           <div>1</div>
           <div>2</div>
           <div>3</div>
+          <div>4</div>
+          <div>5</div>
+          <div>6</div>
         </div>
         <button type="button" class="change_button" id="change_btn_12">Click Me!</button>
         <br>
@@ -414,25 +433,28 @@
       </section>
 
       <section class="content_container">
-        <h2>Flexbox Example 13: justify-content</h2>
+        <h2>Grid Example 13: justify-content</h2>
         <p>Check the code below and click the button to see the change to the sample content.</p>
         <hr>
         <h2>CSS Code:</h2>
         <div class="pre_block">
           <pre><code>
             div {
-              display: flex;
-              flex-direction: column;
-              justify-content: flex-end;
+              display: grid;
+              grid-template-columns: 100px 100px 100px;
+              justify-content: space-between;
             }
           </code></pre>
         </div>
         <hr>
         <h2>Sample Content:</h2>
-        <div class="flexbox_Original" id="flexboxID_13">
+        <div class="grid_Original" id="gridID_13">
           <div>1</div>
           <div>2</div>
           <div>3</div>
+          <div>4</div>
+          <div>5</div>
+          <div>6</div>
         </div>
         <button type="button" class="change_button" id="change_btn_13">Click Me!</button>
         <br>
@@ -440,24 +462,28 @@
       </section>
 
       <section class="content_container">
-        <h2>Flexbox Example 14: justify-content</h2>
+        <h2>Grid Example 14: justify-content</h2>
         <p>Check the code below and click the button to see the change to the sample content.</p>
         <hr>
         <h2>CSS Code:</h2>
         <div class="pre_block">
           <pre><code>
             div {
-              display: flex;
-              justify-content: space-around;
+              display: grid;
+              grid-template-columns: 100px 100px 100px;
+              justify-content: center;
             }
           </code></pre>
         </div>
         <hr>
         <h2>Sample Content:</h2>
-        <div class="flexbox_Original" id="flexboxID_14">
+        <div class="grid_Original" id="gridID_14">
           <div>1</div>
           <div>2</div>
           <div>3</div>
+          <div>4</div>
+          <div>5</div>
+          <div>6</div>
         </div>
         <button type="button" class="change_button" id="change_btn_14">Click Me!</button>
         <br>
@@ -465,25 +491,28 @@
       </section>
 
       <section class="content_container">
-        <h2>Flexbox Example 15: justify-content</h2>
+        <h2>Grid Example 15: justify-content</h2>
         <p>Check the code below and click the button to see the change to the sample content.</p>
         <hr>
         <h2>CSS Code:</h2>
         <div class="pre_block">
           <pre><code>
             div {
-              display: flex;
-              flex-direction: column;
-              justify-content: space-around;
+              display: grid;
+              grid-template-columns: 100px 100px 100px;
+              justify-content: start;
             }
           </code></pre>
         </div>
         <hr>
         <h2>Sample Content:</h2>
-        <div class="flexbox_Original" id="flexboxID_15">
+        <div class="grid_Original" id="gridID_15">
           <div>1</div>
           <div>2</div>
           <div>3</div>
+          <div>4</div>
+          <div>5</div>
+          <div>6</div>
         </div>
         <button type="button" class="change_button" id="change_btn_15">Click Me!</button>
         <br>
@@ -491,24 +520,28 @@
       </section>
 
       <section class="content_container">
-        <h2>Flexbox Example 16: justify-content</h2>
+        <h2>Grid Example 16: justify-content</h2>
         <p>Check the code below and click the button to see the change to the sample content.</p>
         <hr>
         <h2>CSS Code:</h2>
         <div class="pre_block">
           <pre><code>
             div {
-              display: flex;
-              justify-content: space-between;
+              display: grid;
+              grid-template-columns: 100px 100px 100px;
+              justify-content: end;
             }
           </code></pre>
         </div>
         <hr>
         <h2>Sample Content:</h2>
-        <div class="flexbox_Original" id="flexboxID_16">
+        <div class="grid_Original" id="gridID_16">
           <div>1</div>
           <div>2</div>
           <div>3</div>
+          <div>4</div>
+          <div>5</div>
+          <div>6</div>
         </div>
         <button type="button" class="change_button" id="change_btn_16">Click Me!</button>
         <br>
@@ -516,25 +549,28 @@
       </section>
 
       <section class="content_container">
-        <h2>Flexbox Example 17: justify-content</h2>
+        <h2>Grid Example 17: align-content</h2>
         <p>Check the code below and click the button to see the change to the sample content.</p>
         <hr>
         <h2>CSS Code:</h2>
         <div class="pre_block">
           <pre><code>
             div {
-              display: flex;
-              flex-direction: column;
-              justify-content: space-between;
+              display: grid;
+              grid-template-columns: 100px 100px 100px;
+              align-content: space-evenly;
             }
           </code></pre>
         </div>
         <hr>
         <h2>Sample Content:</h2>
-        <div class="flexbox_Original" id="flexboxID_17">
+        <div class="grid_Original" id="gridID_17">
           <div>1</div>
           <div>2</div>
           <div>3</div>
+          <div>4</div>
+          <div>5</div>
+          <div>6</div>
         </div>
         <button type="button" class="change_button" id="change_btn_17">Click Me!</button>
         <br>
@@ -542,24 +578,28 @@
       </section>
 
       <section class="content_container">
-        <h2>Flexbox Example 18: align-items</h2>
+        <h2>Grid Example 18: align-content</h2>
         <p>Check the code below and click the button to see the change to the sample content.</p>
         <hr>
         <h2>CSS Code:</h2>
         <div class="pre_block">
           <pre><code>
             div {
-              display: flex;
-              align-items: center;
+              display: grid;
+              grid-template-columns: 100px 100px 100px;
+              align-content: space-around;
             }
           </code></pre>
         </div>
         <hr>
         <h2>Sample Content:</h2>
-        <div class="flexbox_Original" id="flexboxID_18">
-          <div style="height:40px;">h = 40px</div>
-          <div style="height:80px;">h = 80px</div>
-          <div style="height:60px;">h = 60px</div>
+        <div class="grid_Original" id="gridID_18">
+          <div>1</div>
+          <div>2</div>
+          <div>3</div>
+          <div>4</div>
+          <div>5</div>
+          <div>6</div>
         </div>
         <button type="button" class="change_button" id="change_btn_18">Click Me!</button>
         <br>
@@ -567,24 +607,28 @@
       </section>
 
       <section class="content_container">
-        <h2>Flexbox Example 19: align-items</h2>
+        <h2>Grid Example 19: align-content</h2>
         <p>Check the code below and click the button to see the change to the sample content.</p>
         <hr>
         <h2>CSS Code:</h2>
         <div class="pre_block">
           <pre><code>
             div {
-              display: flex;
-              align-items: flex-start;
+              display: grid;
+              grid-template-columns: 100px 100px 100px;
+              align-content: space-between;
             }
           </code></pre>
         </div>
         <hr>
         <h2>Sample Content:</h2>
-        <div class="flexbox_Original" id="flexboxID_19">
-          <div style="height:40px;">h = 40px</div>
-          <div style="height:80px;">h = 80px</div>
-          <div style="height:60px;">h = 60px</div>
+        <div class="grid_Original" id="gridID_19">
+          <div>1</div>
+          <div>2</div>
+          <div>3</div>
+          <div>4</div>
+          <div>5</div>
+          <div>6</div>
         </div>
         <button type="button" class="change_button" id="change_btn_19">Click Me!</button>
         <br>
@@ -592,24 +636,28 @@
       </section>
 
       <section class="content_container">
-        <h2>Flexbox Example 20: align-items</h2>
+        <h2>Grid Example 20: align-content</h2>
         <p>Check the code below and click the button to see the change to the sample content.</p>
         <hr>
         <h2>CSS Code:</h2>
         <div class="pre_block">
           <pre><code>
             div {
-              display: flex;
-              align-items: flex-end;
+              display: grid;
+              grid-template-columns: 100px 100px 100px;
+              align-content: center;
             }
           </code></pre>
         </div>
         <hr>
         <h2>Sample Content:</h2>
-        <div class="flexbox_Original" id="flexboxID_20">
-          <div style="height:40px;">h = 40px</div>
-          <div style="height:80px;">h = 80px</div>
-          <div style="height:60px;">h = 60px</div>
+        <div class="grid_Original" id="gridID_20">
+          <div>1</div>
+          <div>2</div>
+          <div>3</div>
+          <div>4</div>
+          <div>5</div>
+          <div>6</div>
         </div>
         <button type="button" class="change_button" id="change_btn_20">Click Me!</button>
         <br>
@@ -617,24 +665,28 @@
       </section>
 
       <section class="content_container">
-        <h2>Flexbox Example 21: align-items</h2>
+        <h2>Grid Example 21: align-content</h2>
         <p>Check the code below and click the button to see the change to the sample content.</p>
         <hr>
         <h2>CSS Code:</h2>
         <div class="pre_block">
           <pre><code>
             div {
-              display: flex;
-              align-items: stretch;
+              display: grid;
+              grid-template-columns: 100px 100px 100px;
+              align-content: start;
             }
           </code></pre>
         </div>
         <hr>
         <h2>Sample Content:</h2>
-        <div class="flexbox_Original" id="flexboxID_21">
+        <div class="grid_Original" id="gridID_21">
           <div>1</div>
           <div>2</div>
           <div>3</div>
+          <div>4</div>
+          <div>5</div>
+          <div>6</div>
         </div>
         <button type="button" class="change_button" id="change_btn_21">Click Me!</button>
         <br>
@@ -642,24 +694,28 @@
       </section>
 
       <section class="content_container">
-        <h2>Flexbox Example 22: align-items</h2>
+        <h2>Grid Example 22: align-content</h2>
         <p>Check the code below and click the button to see the change to the sample content.</p>
         <hr>
         <h2>CSS Code:</h2>
         <div class="pre_block">
           <pre><code>
             div {
-              display: flex;
-              align-items: baseline;
+              display: grid;
+              grid-template-columns: 100px 100px 100px;
+              align-content: end;
             }
           </code></pre>
         </div>
         <hr>
         <h2>Sample Content:</h2>
-        <div class="flexbox_Original" id="flexboxID_22">
-          <div style="font-size: 1em;">_1em_</div>
-          <div style="font-size: 2em;">_2em_</div>
-          <div style="font-size: 1.5em;">_1.5em_</div>
+        <div class="grid_Original" id="gridID_22">
+          <div>1</div>
+          <div>2</div>
+          <div>3</div>
+          <div>4</div>
+          <div>5</div>
+          <div>6</div>
         </div>
         <button type="button" class="change_button" id="change_btn_22">Click Me!</button>
         <br>
@@ -667,22 +723,23 @@
       </section>
 
       <section class="content_container">
-        <h2>Flexbox Example 23: align-content</h2>
+        <h2>Grid Example 23: align-content & justify-content</h2>
         <p>Check the code below and click the button to see the change to the sample content.</p>
         <hr>
         <h2>CSS Code:</h2>
         <div class="pre_block">
           <pre><code>
             div {
-              display: flex;
-              flex-wrap: wrap;
+              display: grid;
+              grid-template-columns: 100px 100px 100px;
               align-content: center;
+              justify-content: center;
             }
           </code></pre>
         </div>
         <hr>
         <h2>Sample Content:</h2>
-        <div class="flexbox_Original" id="flexboxID_23">
+        <div class="grid_Original" id="gridID_23">
           <div>1</div>
           <div>2</div>
           <div>3</div>
@@ -696,22 +753,23 @@
       </section>
 
       <section class="content_container">
-        <h2>Flexbox Example 24: align-content</h2>
+        <h2>Grid Example 24: align-content & justify-content</h2>
         <p>Check the code below and click the button to see the change to the sample content.</p>
         <hr>
         <h2>CSS Code:</h2>
         <div class="pre_block">
           <pre><code>
             div {
-              display: flex;
-              flex-wrap: wrap;
-              align-content: flex-start;
+              display: grid;
+              grid-template-columns: 100px 100px 100px;
+              align-content: space-evenly;
+              justify-content: space-evenly;
             }
           </code></pre>
         </div>
         <hr>
         <h2>Sample Content:</h2>
-        <div class="flexbox_Original" id="flexboxID_24">
+        <div class="grid_Original" id="gridID_24">
           <div>1</div>
           <div>2</div>
           <div>3</div>
@@ -725,285 +783,118 @@
       </section>
 
       <section class="content_container">
-        <h2>Flexbox Example 25: align-content</h2>
-        <p>Check the code below and click the button to see the change to the sample content.</p>
+        <h2>Grid Example 25: grid-column & grid-row</h2>
+        <p>Check the code and see the resulting layout below.</p>
+        <hr>
+        <h2>HTML Code:</h2>
+        <div class="pre_block">
+        <pre><code>
+          &lt;div class="grid_container"&gt; &lt;-----Parent div.
+            &lt;div id="div_1"&gt;1&lt;/div&gt; &lt;---------child div.
+            &lt;div id="div_2"&gt;2&lt;/div&gt;
+            &lt;div&gt;3&lt;/div&gt;
+            &lt;div&gt;4&lt;/div&gt;
+            &lt;div&gt;5&lt;/div&gt;
+            &lt;div&gt;6&lt;/div&gt;
+          &lt;/div&gt;
+        </code></pre>
+        </div>
         <hr>
         <h2>CSS Code:</h2>
         <div class="pre_block">
           <pre><code>
-            div {
-              display: flex;
-              flex-wrap: wrap;
-              align-content: flex-end;
+            .grid_container {
+              margin: 10px auto;
+              padding: 3px;
+              border: 2px solid darkgreen;
+              width: 60%;
+              height: 300px;
+              display: grid;
+              grid-template-columns: auto auto auto;
+              grid-gap: 10px;
             }
+            .grid_container div {
+              background-color: palegreen;
+              border: 2px solid darkgreen;
+              border-radius: 5px;
+              font-size: 1.5em;
+              text-align: center;
+            }
+            #div_1 { grid-column: 1 / 4; }
+            #div_2 { grid-row: 2 / 4; }
           </code></pre>
         </div>
         <hr>
         <h2>Sample Content:</h2>
-        <div class="flexbox_Original" id="flexboxID_25">
-          <div>1</div>
-          <div>2</div>
+        <div class="grid_container">
+          <div id="div_1">1</div>
+          <div id="div_2">2</div>
           <div>3</div>
           <div>4</div>
           <div>5</div>
           <div>6</div>
         </div>
-        <button type="button" class="change_button" id="change_btn_25">Click Me!</button>
-        <br>
-        <button type="button" class="change_button" id="reset_btn_25">Reset</button>
       </section>
 
       <section class="content_container">
-        <h2>Flexbox Example 26: align-content</h2>
-        <p>Check the code below and click the button to see the change to the sample content.</p>
+        <h2>Grid Example 26: grid-area</h2>
+        <p>Check the code and see the resulting layout below.</p>
+        <hr>
+        <h2>HTML Code:</h2>
+        <div class="pre_block">
+        <pre><code>
+          &lt;div class="grid_container_2"&gt; &lt;-----Parent div.
+            &lt;div&gt;1&lt;/div&gt;
+            &lt;div id="area"&gt;2&lt;/div&gt; &lt;------------child div.
+            &lt;div&gt;3&lt;/div&gt;
+            &lt;div&gt;4&lt;/div&gt;
+            &lt;div&gt;5&lt;/div&gt;
+            &lt;div&gt;6&lt;/div&gt;
+            &lt;div&gt;7&lt;/div&gt;
+            &lt;div&gt;8&lt;/div&gt;
+            &lt;div&gt;9&lt;/div&gt;
+          &lt;/div&gt;
+        </code></pre>
+        </div>
         <hr>
         <h2>CSS Code:</h2>
         <div class="pre_block">
           <pre><code>
-            div {
-              display: flex;
-              flex-wrap: wrap;
-              align-content: space-around;
+            .grid_container_2 {
+              margin: 10px auto;
+              padding: 3px;
+              border: 2px solid darkgreen;
+              width: 60%;
+              height: 300px;
+              display: grid;
+              grid-template-columns: auto auto auto auto;
+              grid-gap: 10px;
             }
+            .grid_container_2 div {
+              background-color: palegreen;
+              border: 2px solid darkgreen;
+              border-radius: 5px;
+              font-size: 1.5em;
+              text-align: center;
+            }
+            #area { grid-area: 1 / 2 / 3 / 4; }
+            // grid-area: row-start, column-start, row-end, column-end.
           </code></pre>
         </div>
         <hr>
         <h2>Sample Content:</h2>
-        <div class="flexbox_Original" id="flexboxID_26">
+        <div class="grid_container_2">
           <div>1</div>
-          <div>2</div>
+          <div id="area">2</div>
           <div>3</div>
           <div>4</div>
           <div>5</div>
           <div>6</div>
+          <div>7</div>
+          <div>8</div>
+          <div>9</div>
         </div>
-        <button type="button" class="change_button" id="change_btn_26">Click Me!</button>
-        <br>
-        <button type="button" class="change_button" id="reset_btn_26">Reset</button>
       </section>
-
-      <section class="content_container">
-        <h2>Flexbox Example 27: align-content</h2>
-        <p>Check the code below and click the button to see the change to the sample content.</p>
-        <hr>
-        <h2>CSS Code:</h2>
-        <div class="pre_block">
-          <pre><code>
-            div {
-              display: flex;
-              flex-wrap: wrap;
-              align-content: space-between;
-            }
-          </code></pre>
-        </div>
-        <hr>
-        <h2>Sample Content:</h2>
-        <div class="flexbox_Original" id="flexboxID_27">
-          <div>1</div>
-          <div>2</div>
-          <div>3</div>
-          <div>4</div>
-          <div>5</div>
-          <div>6</div>
-        </div>
-        <button type="button" class="change_button" id="change_btn_27">Click Me!</button>
-        <br>
-        <button type="button" class="change_button" id="reset_btn_27">Reset</button>
-      </section>
-
-      <section class="content_container">
-        <h2>Flexbox Example 28: align-content</h2>
-        <p>Check the code below and click the button to see the change to the sample content.</p>
-        <hr>
-        <h2>CSS Code:</h2>
-        <div class="pre_block">
-          <pre><code>
-            div {
-              display: flex;
-              flex-wrap: wrap;
-              align-content: stretch;
-            }
-          </code></pre>
-        </div>
-        <hr>
-        <h2>Sample Content:</h2>
-        <div class="flexbox_Original" id="flexboxID_28">
-          <div>1</div>
-          <div>2</div>
-          <div>3</div>
-          <div>4</div>
-          <div>5</div>
-          <div>6</div>
-        </div>
-        <button type="button" class="change_button" id="change_btn_28">Click Me!</button>
-        <br>
-        <button type="button" class="change_button" id="reset_btn_28">Reset</button>
-      </section>
-
-      <section class="content_container">
-        <h2>Flexbox Example 29: align-content & justify-content</h2>
-        <p>Check the code below and click the button to see the change to the sample content.</p>
-        <hr>
-        <h2>CSS Code:</h2>
-        <div class="pre_block">
-          <pre><code>
-            div {
-              display: flex;
-              flex-wrap: wrap;
-              align-content: center;
-              justify-content: center;
-            }
-          </code></pre>
-        </div>
-        <hr>
-        <h2>Sample Content:</h2>
-        <div class="flexbox_Original" id="flexboxID_29">
-          <div>1</div>
-          <div>2</div>
-          <div>3</div>
-          <div>4</div>
-          <div>5</div>
-          <div>6</div>
-        </div>
-        <button type="button" class="change_button" id="change_btn_29">Click Me!</button>
-        <br>
-        <button type="button" class="change_button" id="reset_btn_29">Reset</button>
-      </section>
-
-      <section class="content_container">
-        <h2>Flexbox Example 30: align-content & justify-content</h2>
-        <p>Check the code below and click the button to see the change to the sample content.</p>
-        <hr>
-        <h2>CSS Code:</h2>
-        <div class="pre_block">
-          <pre><code>
-            div {
-              display: flex;
-              flex-wrap: wrap;
-              align-content: center;
-              justify-content: center;
-            }
-          </code></pre>
-        </div>
-        <hr>
-        <h2>Sample Content:</h2>
-        <div class="flexbox_Original" id="flexboxID_30">
-          <div>1</div>
-          <div>2</div>
-          <div>3</div>
-        </div>
-        <button type="button" class="change_button" id="change_btn_30">Click Me!</button>
-        <br>
-        <button type="button" class="change_button" id="reset_btn_30">Reset</button>
-      </section>
-
-      <section class="content_container">
-        <h2>Flexbox Example 31: align-content & justify-content</h2>
-        <p>Check the code below and click the button to see the change to the sample content.</p>
-        <hr>
-        <h2>CSS Code:</h2>
-        <div class="pre_block">
-          <pre><code>
-            div {
-              display: flex;
-              flex-wrap: wrap;
-              align-content: center;
-              justify-content: center;
-            }
-          </code></pre>
-        </div>
-        <hr>
-        <h2>Sample Content:</h2>
-        <div class="flexbox_Original" id="flexboxID_31">
-          <div>1</div>
-        </div>
-        <button type="button" class="change_button" id="change_btn_31">Click Me!</button>
-        <br>
-        <button type="button" class="change_button" id="reset_btn_31">Reset</button>
-      </section>
-
-      <section class="content_container">
-        <h2>Flexbox Example 32: align-items & justify-content</h2>
-        <p>Check the code below and click the button to see the change to the sample content.</p>
-        <hr>
-        <h2>CSS Code:</h2>
-        <div class="pre_block">
-          <pre><code>
-            div {
-              display: flex;
-              flex-wrap: wrap;
-              align-items: center;
-              justify-content: center;
-            }
-          </code></pre>
-        </div>
-        <hr>
-        <h2>Sample Content:</h2>
-        <div class="flexbox_Original" id="flexboxID_32">
-          <div>1</div>
-          <div>2</div>
-          <div>3</div>
-          <div>4</div>
-          <div>5</div>
-          <div>6</div>
-        </div>
-        <button type="button" class="change_button" id="change_btn_32">Click Me!</button>
-        <br>
-        <button type="button" class="change_button" id="reset_btn_32">Reset</button>
-      </section>
-
-      <section class="content_container">
-        <h2>Flexbox Example 33: align-items & justify-content</h2>
-        <p>Check the code below and click the button to see the change to the sample content.</p>
-        <hr>
-        <h2>CSS Code:</h2>
-        <div class="pre_block">
-          <pre><code>
-            div {
-              display: flex;
-              flex-wrap: wrap;
-              align-items: center;
-              justify-content: center;
-            }
-          </code></pre>
-        </div>
-        <hr>
-        <h2>Sample Content:</h2>
-        <div class="flexbox_Original" id="flexboxID_33">
-          <div>1</div>
-          <div>2</div>
-          <div>3</div>
-        </div>
-        <button type="button" class="change_button" id="change_btn_33">Click Me!</button>
-        <br>
-        <button type="button" class="change_button" id="reset_btn_33">Reset</button>
-      </section>
-
-      <section class="content_container">
-        <h2>Flexbox Example 34: align-items & justify-content</h2>
-        <p>Check the code below and click the button to see the change to the sample content.</p>
-        <hr>
-        <h2>CSS Code:</h2>
-        <div class="pre_block">
-          <pre><code>
-            div {
-              display: flex;
-              flex-wrap: wrap;
-              align-items: center;
-              justify-content: center;
-            }
-          </code></pre>
-        </div>
-        <hr>
-        <h2>Sample Content:</h2>
-        <div class="flexbox_Original" id="flexboxID_34">
-          <div>1</div>
-        </div>
-        <button type="button" class="change_button" id="change_btn_34">Click Me!</button>
-        <br>
-        <button type="button" class="change_button" id="reset_btn_34">Reset</button>
-      </section>
-
 
             <!-- Back to the top of the page button. -->
       <button type="button" class="pageTop" title="Click the button to go back to the top of the page.">Up</button>
