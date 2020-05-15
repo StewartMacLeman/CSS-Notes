@@ -6,15 +6,15 @@
     <meta name="author" content="This website contains examples of CSS topics. It is for the purpose of revision.">
 
     <link rel="stylesheet" href="../css/main.css">
-    <link rel="stylesheet" href="../css/transition.css">
-    <script src="../scripts/transition.js" defer></script>
+    <link rel="stylesheet" href="../css/animation.css">
+    <script src="../scripts/animation.js" defer></script>
     <script src="../scripts/upToTop.js" defer></script>
-    <title>CSS Notes: Transitions</title>
+    <title>CSS Notes: Animations</title>
   </head>
 
   <body>
     <header>
-      <h1>CCS Notes: Transitions</h1>
+      <h1>CCS Notes: Animations</h1>
     </header>
 
     <nav>
@@ -33,13 +33,13 @@
         <a href="flexbox.html">Flexbox</a>
         <a href="grid.html">Grid</a>
         <a href="transforms.html">Transforms</a>
-        <a href="#">Transitions</a>
-        <a href="animation.html">Animations</a>
+        <a href="transition.html">Transitions</a>
+        <a href="#">Animations</a>
       </div>
     </nav>
 
     <main>
-      <p>The examples below relate to various CSS transition techniques.</p>
+      <p>The examples below relate to various CSS animation techniques.</p>
       <p>Review the code per section, then click the buttons to see the outcomes.</p>
 
       <section class="content_container">
@@ -81,27 +81,32 @@
         </div>
         <hr>
         <h2>Sample Content:</h2>
-        <div class="transition_Original">
+        <div class="animation_Original">
           <div>div</div>
         </div>
       </section>
 
       <section class="content_container">
-        <h2>Transition Example 1: transition: duration</h2>
+        <h2>Animation Example 1: animation-name & animation-duration</h2>
         <p>Check the code below and click the button to see the change to the sample content.</p>
         <hr>
         <h2>CSS Code:</h2>
         <div class="pre_block">
           <pre><code>
+            @keyframes colour_change {
+              from {background-color: linen;}
+              to   {background-color: darkgreen;}
+            }
+
             div {
-              width: 200px;
-              transition: 2s;
+              animation-name: colour_change;
+              animation-duration: 5s
             }
           </code></pre>
         </div>
         <hr>
         <h2>Sample Content:</h2>
-        <div class="transition_Original" id="transitionID_1">
+        <div class="animation_Original" id="animationID_1">
           <div>div</div>
         </div>
         <button type="button" class="change_button" id="change_btn_1">Click Me!</button>
@@ -110,21 +115,29 @@
       </section>
 
       <section class="content_container">
-        <h2>Transition Example 2: transition: duration</h2>
+        <h2>Animation Example 2: animation-name & animation-duration</h2>
         <p>Check the code below and click the button to see the change to the sample content.</p>
         <hr>
         <h2>CSS Code:</h2>
         <div class="pre_block">
           <pre><code>
+            @keyframes colour_size_change {
+              from {background-color: linen;
+                    }
+              to   {background-color: darkgreen;
+                    width: 300px;
+                    }
+            }
+
             div {
-              height: 100px;
-              transition: 3s;
+              animation-name: colour_size_change;
+              animation-duration: 5s
             }
           </code></pre>
         </div>
         <hr>
         <h2>Sample Content:</h2>
-        <div class="transition_Original" id="transitionID_2">
+        <div class="animation_Original" id="animationID_2">
           <div>div</div>
         </div>
         <button type="button" class="change_button" id="change_btn_2">Click Me!</button>
@@ -133,22 +146,29 @@
       </section>
 
       <section class="content_container">
-        <h2>Transition Example 3: transition: durations</h2>
+        <h2>Animation Example 3: animation-name & animation-duration</h2>
         <p>Check the code below and click the button to see the change to the sample content.</p>
         <hr>
         <h2>CSS Code:</h2>
         <div class="pre_block">
           <pre><code>
+            @keyframes colour_size_change_2 {
+              from {
+                    }
+              to   {background-color: darkgreen;
+                    width: 300px;
+                    }
+            }
+
             div {
-              width: 200px;
-              height: 100px;
-              transition:  width 0.5s, height 3s;
+              animation-name: colour_size_change_2;
+              animation-duration: 5s
             }
           </code></pre>
         </div>
         <hr>
         <h2>Sample Content:</h2>
-        <div class="transition_Original" id="transitionID_3">
+        <div class="animation_Original" id="animationID_3">
           <div>div</div>
         </div>
         <button type="button" class="change_button" id="change_btn_3">Click Me!</button>
@@ -157,22 +177,28 @@
       </section>
 
       <section class="content_container">
-        <h2>Transition Example 4: transition: durations</h2>
+        <h2>Animation Example 4: animation-name & animation-duration</h2>
         <p>Check the code below and click the button to see the change to the sample content.</p>
         <hr>
         <h2>CSS Code:</h2>
         <div class="pre_block">
           <pre><code>
+            @keyframes colour_size_change_3 {
+              0%   { background-color: linen; }
+              33%  { background-color: palegreen; width: 300px; }
+              66%  { background-color: darkgreen; width: 300px; }
+              100% { height: 120px; }
+            }
+
             div {
-              width: 200px;
-              height: 100px;
-              transition: 3s;
+              animation-name: colour_size_change_3;
+              animation-duration: 9s
             }
           </code></pre>
         </div>
         <hr>
         <h2>Sample Content:</h2>
-        <div class="transition_Original" id="transitionID_4">
+        <div class="animation_Original" id="animationID_4">
           <div>div</div>
         </div>
         <button type="button" class="change_button" id="change_btn_4">Click Me!</button>
@@ -181,23 +207,29 @@
       </section>
 
       <section class="content_container">
-        <h2>Transition Example 5: transition-timing-function</h2>
+        <h2>Animation Example 5: animation-delay</h2>
         <p>Check the code below and click the button to see the change to the sample content.</p>
         <hr>
         <h2>CSS Code:</h2>
         <div class="pre_block">
           <pre><code>
+            @keyframes colour_size_change_3 {
+              0%   { background-color: linen; }
+              33%  { background-color: palegreen; width: 300px; }
+              66%  { background-color: darkgreen; width: 300px; }
+              100% { height: 120px; }
+            }
+
             div {
-              width: 400px;
-              height: 100px;
-              transition: 5s;
-              transition-timing-function: linear;
+              animation-name: colour_size_change_3;
+              animation-duration: 9s;
+              animation-delay: 3s;
             }
           </code></pre>
         </div>
         <hr>
         <h2>Sample Content:</h2>
-        <div class="transition_Original" id="transitionID_5">
+        <div class="animation_Original" id="animationID_5">
           <div>div</div>
         </div>
         <button type="button" class="change_button" id="change_btn_5">Click Me!</button>
@@ -206,23 +238,30 @@
       </section>
 
       <section class="content_container">
-        <h2>Transition Example 6: transition-timing-function</h2>
+        <h2>Animation Example 6: animation-delay & animation-fill-mode</h2>
         <p>Check the code below and click the button to see the change to the sample content.</p>
         <hr>
         <h2>CSS Code:</h2>
         <div class="pre_block">
           <pre><code>
+            @keyframes colour_size_change_3 {
+              0%   { background-color: linen; }
+              33%  { background-color: palegreen; width: 300px; }
+              66%  { background-color: darkgreen; width: 300px; }
+              100% { height: 120px; }
+            }
+
             div {
-              width: 400px;
-              height: 100px;
-              transition: 5s;
-              transition-timing-function: ease;
+              animation-name: colour_size_change_3;
+              animation-duration: 9s;
+              animation-delay: -3s;
+              animation-fill-mode: forwards;
             }
           </code></pre>
         </div>
         <hr>
         <h2>Sample Content:</h2>
-        <div class="transition_Original" id="transitionID_6">
+        <div class="animation_Original" id="animationID_6">
           <div>div</div>
         </div>
         <button type="button" class="change_button" id="change_btn_6">Click Me!</button>
@@ -231,23 +270,31 @@
       </section>
 
       <section class="content_container">
-        <h2>Transition Example 7: transition-timing-function</h2>
+        <h2>Animation Example 7: animation-iteration-count</h2>
         <p>Check the code below and click the button to see the change to the sample content.</p>
         <hr>
         <h2>CSS Code:</h2>
         <div class="pre_block">
           <pre><code>
+            @keyframes box_move {
+              0%   { top: 0px;  left: 0px; }
+              25%  { top: 0px;  left: 250px; }
+              50%  { top: 45px; left: 250px; }
+              75%  { top: 45px; left: 0px; }
+              100% { top: 0px;  left: 0px; }
+            }
+
             div {
-              width: 400px;
-              height: 100px;
-              transition: 5s;
-              transition-timing-function: ease-in;
+              animation-name: box_move;
+              animation-duration: 5s;
+              position: relative;
+              animation-iteration-count: 2;
             }
           </code></pre>
         </div>
         <hr>
         <h2>Sample Content:</h2>
-        <div class="transition_Original" id="transitionID_7">
+        <div class="animation_Original" id="animationID_7">
           <div>div</div>
         </div>
         <button type="button" class="change_button" id="change_btn_7">Click Me!</button>
@@ -256,23 +303,31 @@
       </section>
 
       <section class="content_container">
-        <h2>Transition Example 8: transition-timing-function</h2>
+        <h2>Animation Example 8: animation-iteration-count</h2>
         <p>Check the code below and click the button to see the change to the sample content.</p>
         <hr>
         <h2>CSS Code:</h2>
         <div class="pre_block">
           <pre><code>
+            @keyframes box_move {
+              0%   { top: 0px;  left: 0px; }
+              25%  { top: 0px;  left: 250px; }
+              50%  { top: 45px; left: 250px; }
+              75%  { top: 45px; left: 0px; }
+              100% { top: 0px;  left: 0px; }
+            }
+
             div {
-              width: 400px;
-              height: 100px;
-              transition: 5s;
-              transition-timing-function: ease-out;
+              animation-name: box_move;
+              animation-duration: 5s;
+              position: relative;
+              animation-iteration-count: infinite;
             }
           </code></pre>
         </div>
         <hr>
         <h2>Sample Content:</h2>
-        <div class="transition_Original" id="transitionID_8">
+        <div class="animation_Original" id="animationID_8">
           <div>div</div>
         </div>
         <button type="button" class="change_button" id="change_btn_8">Click Me!</button>
@@ -281,23 +336,32 @@
       </section>
 
       <section class="content_container">
-        <h2>Transition Example 9: transition-timing-function</h2>
+        <h2>Animation Example 9: animation-direction</h2>
         <p>Check the code below and click the button to see the change to the sample content.</p>
         <hr>
         <h2>CSS Code:</h2>
         <div class="pre_block">
           <pre><code>
+            @keyframes box_move {
+              0%   { top: 0px;  left: 0px; }
+              25%  { top: 0px;  left: 250px; }
+              50%  { top: 45px; left: 250px; }
+              75%  { top: 45px; left: 0px; }
+              100% { top: 0px;  left: 0px; }
+            }
+
             div {
-              width: 400px;
-              height: 100px;
-              transition: 5s;
-              transition-timing-function: ease-in-out;
+              animation-name: box_move;
+              animation-duration: 5s;
+              position: relative;
+              animation-iteration-count: infinite;
+              animation-direction: alternate;
             }
           </code></pre>
         </div>
         <hr>
         <h2>Sample Content:</h2>
-        <div class="transition_Original" id="transitionID_9">
+        <div class="animation_Original" id="animationID_9">
           <div>div</div>
         </div>
         <button type="button" class="change_button" id="change_btn_9">Click Me!</button>
@@ -306,123 +370,39 @@
       </section>
 
       <section class="content_container">
-        <h2>Transition Example 10: transition-delay</h2>
+        <h2>Animation Example 10: animation-timing-function</h2>
         <p>Check the code below and click the button to see the change to the sample content.</p>
         <hr>
         <h2>CSS Code:</h2>
         <div class="pre_block">
           <pre><code>
+            @keyframes box_move {
+              0%   { top: 0px;  left: 0px; }
+              25%  { top: 0px;  left: 250px; }
+              50%  { top: 45px; left: 250px; }
+              75%  { top: 45px; left: 0px; }
+              100% { top: 0px;  left: 0px; }
+            }
+
             div {
-              width: 400px;
-              height: 100px;
-              transition: 3s;
-              transition-delay: 3s;
+              animation-name: box_move;
+              animation-duration: 5s;
+              position: relative;
+              animation-iteration-count: infinite;
+              animation-direction: alternate;
+              animation-timing-function: ease-in-out;
             }
           </code></pre>
         </div>
         <hr>
         <h2>Sample Content:</h2>
-        <div class="transition_Original" id="transitionID_10">
+        <div class="animation_Original" id="animationID_10">
           <div>div</div>
         </div>
         <button type="button" class="change_button" id="change_btn_10">Click Me!</button>
         <br>
         <button type="button" class="change_button" id="reset_btn_10">Reset</button>
       </section>
-
-      <section class="content_container">
-        <h2>Transition Example 11: transition with transform</h2>
-        <p>Check the code below and click the button to see the change to the sample content.</p>
-        <hr>
-        <h2>CSS Code:</h2>
-        <div class="pre_block">
-          <pre><code>
-            div {
-              transform: rotate(360deg);
-              transition: 3s;
-            }
-          </code></pre>
-        </div>
-        <hr>
-        <h2>Sample Content:</h2>
-        <div class="transition_Original" id="transitionID_11">
-          <div>div</div>
-        </div>
-        <button type="button" class="change_button" id="change_btn_11">Click Me!</button>
-        <br>
-        <button type="button" class="change_button" id="reset_btn_11">Reset</button>
-      </section>
-
-      <section class="content_container">
-        <h2>Transition Example 12: transition with transform</h2>
-        <p>Check the code below and click the button to see the change to the sample content.</p>
-        <hr>
-        <h2>CSS Code:</h2>
-        <div class="pre_block">
-          <pre><code>
-            div {
-              transform: scale(2);
-              transition: 3s;
-            }
-          </code></pre>
-        </div>
-        <hr>
-        <h2>Sample Content:</h2>
-        <div class="transition_Original" id="transitionID_12">
-          <div>div</div>
-        </div>
-        <button type="button" class="change_button" id="change_btn_12">Click Me!</button>
-        <br>
-        <button type="button" class="change_button" id="reset_btn_12">Reset</button>
-      </section>
-
-      <section class="content_container">
-        <h2>Transition Example 13: transition with transform</h2>
-        <p>Check the code below and click the button to see the change to the sample content.</p>
-        <hr>
-        <h2>CSS Code:</h2>
-        <div class="pre_block">
-          <pre><code>
-            div {
-              transform: scaleY(2) rotateY(360deg);
-              transition: 3s;
-            }
-          </code></pre>
-        </div>
-        <hr>
-        <h2>Sample Content:</h2>
-        <div class="transition_Original" id="transitionID_13">
-          <div>div</div>
-        </div>
-        <button type="button" class="change_button" id="change_btn_13">Click Me!</button>
-        <br>
-        <button type="button" class="change_button" id="reset_btn_13">Reset</button>
-      </section>
-
-      <section class="content_container">
-        <h2>Transition Example 14: shorthand (property duration type delay)</h2>
-        <p>Check the code below and click the button to see the change to the sample content.</p>
-        <hr>
-        <h2>CSS Code:</h2>
-        <div class="pre_block">
-          <pre><code>
-            div {
-              width: 300px;
-              transition: 5s ease-out 2s;
-            }
-          </code></pre>
-        </div>
-        <hr>
-        <h2>Sample Content:</h2>
-        <div class="transition_Original" id="transitionID_14">
-          <div>div</div>
-        </div>
-        <button type="button" class="change_button" id="change_btn_14">Click Me!</button>
-        <br>
-        <button type="button" class="change_button" id="reset_btn_14">Reset</button>
-      </section>
-
-
 
             <!-- Back to the top of the page button. -->
       <button type="button" class="pageTop" title="Click the button to go back to the top of the page.">Up</button>
