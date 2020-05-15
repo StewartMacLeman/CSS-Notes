@@ -54,32 +54,35 @@ changeSampleContent("11", "textID_", "textChange_", "textChangeHelper", "text_Or
 // Text Example 12: text-shadow
 changeSampleContent("12", "textID_", "textChange_", "textChangeHelper", "text_Original");
 
-// Text Example 13: letter-spacing
+// Text Example 13: text-shadow
 changeSampleContent("13", "textID_", "textChange_", "textChangeHelper", "text_Original");
 
-// Text Example 14: word-spacing
+// Text Example 14: letter-spacing
 changeSampleContent("14", "textID_", "textChange_", "textChangeHelper", "text_Original");
 
 // Text Example 15: word-spacing
 changeSampleContent("15", "textID_", "textChange_", "textChangeHelper", "text_Original");
 
-// Text Example 16: white-space
+// Text Example 16: word-spacing
 changeSampleContent("16", "textID_", "textChange_", "textChangeHelper", "text_Original");
 
-// Text Example 17: overflow
-changeSampleContent("17", "textID_", "textChange_", "textChangeHelper_2", "text_Original_2");
+// Text Example 17: white-space
+changeSampleContent("17", "textID_", "textChange_", "textChangeHelper", "text_Original");
 
-// Text Example 18: overflow-x
+// Text Example 18: overflow
 changeSampleContent("18", "textID_", "textChange_", "textChangeHelper_2", "text_Original_2");
 
-// Text Example 19: text-justify
+// Text Example 19: overflow-x
 changeSampleContent("19", "textID_", "textChange_", "textChangeHelper_2", "text_Original_2");
 
-// Text Example 20: word-wrap
+// Text Example 20: text-justify
 changeSampleContent("20", "textID_", "textChange_", "textChangeHelper_2", "text_Original_2");
 
-// Text Example 21: writing-mode
+// Text Example 21: word-wrap
 changeSampleContent("21", "textID_", "textChange_", "textChangeHelper_2", "text_Original_2");
 
 // Text Example 22: writing-mode
 changeSampleContent("22", "textID_", "textChange_", "textChangeHelper_2", "text_Original_2");
+
+// Text Example 23: writing-mode
+changeSampleContent("23", "textID_", "textChange_", "textChangeHelper_2", "text_Original_2");

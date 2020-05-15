@@ -73,24 +73,28 @@ This avoids repeating the properties within the individual change classes. -----
 .textChange_12 {
   text-shadow: 3px 5px 5px tomato;
 }
-/* Text Example 13: letter-spacing */
+/* Text Example 13: text-shadow */
 .textChange_13 {
-  letter-spacing: 4px;
+  text-shadow: -1px 0px tomato, 0px 1px tomato, 1px 0px tomato, 0px -1px tomato;
 }
-/* Text Example 14: word-spacing */
+/* Text Example 14: letter-spacing */
 .textChange_14 {
-  word-spacing: 10px;
+  letter-spacing: 4px;
 }
 /* Text Example 15: word-spacing */
 .textChange_15 {
+  word-spacing: 10px;
+}
+/* Text Example 16: word-spacing */
+.textChange_16 {
   word-spacing: -10px;
 }
-/* Text Example 16: white-space */
-.textChange_16 {
+/* Text Example 17: white-space */
+.textChange_17 {
   white-space: nowrap;
 }
 
-/* Code for the resized content element; applicable to examples 17 and above.----- */
+/* Code for the resized content element; applicable to examples 18 and above.----- */
 
 .text_Original_2 {
   border: 2px solid darkgreen;
@@ -123,31 +127,31 @@ This avoids repeating the properties within the individual change classes. -----
 }
 /* CSS Change Classes. ------------------------------------------------------*/
 
-/* Text Example 17: overflow */
-.textChange_17 {
+/* Text Example 18: overflow */
+.textChange_18 {
   overflow: visible;
 }
-/* Text Example 18: overflow-x */
-.textChange_18 {
+/* Text Example 19: overflow-x */
+.textChange_19 {
   overflow: auto;
   overflow-x: scroll;
 }
-/* Text Example 19: text-justify */
-.textChange_19 {
+/* Text Example 20: text-justify */
+.textChange_20 {
   text-align: justify;
   text-justify: inter-word;
 }
-/* Text Example 20: word-wrap */
-.textChange_20 {
-  word-wrap: break-word;
-}
-/* Text Example 21: writing-mode */
+/* Text Example 21: word-wrap */
 .textChange_21 {
-  height: 200px;
-  writing-mode: vertical-rl;
+  word-wrap: break-word;
 }
 /* Text Example 22: writing-mode */
 .textChange_22 {
+  height: 200px;
+  writing-mode: vertical-rl;
+}
+/* Text Example 23: writing-mode */
+.textChange_23 {
   height: 200px;
   writing-mode: vertical-lr;
 }

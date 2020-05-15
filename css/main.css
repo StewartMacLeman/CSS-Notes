@@ -20,6 +20,7 @@ h1 {
   margin: 0 auto;
   padding: 10px;
   text-align: center;
+  text-shadow: -2px 0px linen, 0px 2px linen, 2px 0px linen, 0px -2px linen;
 }
 p {
   font-size: 2em;
@@ -73,7 +74,7 @@ nav {
 }
 .dropdown_Content a {
   display: block;
-  font-size: 2em;
+  font-size: 1.5em;
   color: darkgreen;
   text-align: center;
   text-decoration: none;
@@ -92,8 +93,9 @@ nav:hover .dropdown_Content {
 }
  a:hover{
   background: darkgreen;
-  color: white;
+  color: linen;
   border: 2px solid black;
+  font-size: 2em;
 }
 
 /* Home Page------------------------------------- */
@@ -104,7 +106,7 @@ nav:hover .dropdown_Content {
   height: 60vh;
   margin: 0 auto;
   background-color: linen;
-  border: 2px solid white;
+  border: 2px solid linen;
   overflow-x: scroll;
 }
 #home_page_image_container:hover {
@@ -142,7 +144,7 @@ img {
   width: 85%;
   margin: 0 auto 10px;
   background-color: linen;
-  border: 2px solid white;
+  border: 2px solid linen;
   border-radius: 5px;
 }
 .content_container:hover {
@@ -188,6 +190,6 @@ pre, code {
 }
 .pageTop:hover {
   background-color: darkgreen;
-  color: white;
+  color: linen;
   cursor: pointer;
 }
